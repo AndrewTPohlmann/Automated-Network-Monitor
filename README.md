@@ -14,10 +14,10 @@ Design and implementation of a system that uses the MVC architectural pattern to
 **Currently being rapid-prototyped in C#.**
 
 **Will be ported to:**
-Angular.js on the front-end;
-Node.js on the back-end;
-MongoDB for data persistence;
-JSON for data;
-....all using HTML5/JS.
+- Angular.js on the front-end;
+- Node.js on the back-end;
+- MongoDB for data persistence;
+- JSON for data;
+- HTML5/JS.
 
 
