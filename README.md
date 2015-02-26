@@ -8,11 +8,11 @@ Design and implementation of a system that uses the MVC architectural pattern to
 
 
 **System Use Cases:**
-Item 1: Create and begin ping jobs, or delete currently running jobs.
-Item 2: Create visual projections in the GUI based on persisted data sets from the back-end.
-Item 3: Allow some CRUD operations against the back-end DB
+- Create and begin ping jobs, or delete currently running jobs.
+- Create visual projections in the GUI based on persisted data sets from the back-end.
+- Allow some CRUD operations against the back-end DB datasets.
 
-Currently being PoC'd in C#.
+**Currently being rapid-prototyped in C#.**
 
 **Will be ported to:**
 Angular.js on the front-end;
