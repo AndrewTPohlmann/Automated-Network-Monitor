@@ -18,6 +18,6 @@ Design and implementation of a system that uses the MVC architectural pattern to
 - Node.js on the back-end;
 - MongoDB for data persistence;
 - JSON for data;
-- HTML5/JS.
+- HTML5/JS for language.
 
 
