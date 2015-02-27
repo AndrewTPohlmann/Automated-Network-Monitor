@@ -136,8 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bitmap1.bmp" />
-    <Content Include="cross.png" />
-    <Content Include="tick.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
