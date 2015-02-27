@@ -11,7 +11,7 @@ Design and implementation of a system that uses the MVC architectural pattern to
 - Create visual projections in the GUI based on persisted data sets from the back-end.
 - Allow some CRUD operations against the back-end DB datasets.
 
-**Currently being rapid-prototyped in C#.**
+**Currently being rapid-prototyped in C#.NET (4.5.1)**
 
 **Will be ported to:**
 - Angular.js on the front-end;
