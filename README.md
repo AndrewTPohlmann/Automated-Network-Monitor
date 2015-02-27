@@ -20,5 +20,6 @@ Design and implementation of a system that uses the MVC architectural pattern to
 - JSON for data;
 - HTML5/JS for language.
 
-**Version:-> ASP.NET Framework: Web Forms / MVC / Web API**
+**Version:-> ASP.NET Framework:**
+- Web Forms / MVC / Web API
 
