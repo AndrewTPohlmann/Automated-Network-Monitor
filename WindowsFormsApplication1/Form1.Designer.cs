@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pingIntervalTxtBox = new System.Windows.Forms.TextBox();
@@ -54,6 +54,7 @@
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.loadDataSetBtn = new System.Windows.Forms.Button();
             this.refreshDataListBtn = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,19 +236,19 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(12, 306);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(822, 381);
             this.chart1.TabIndex = 24;
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -264,9 +265,9 @@
             // 
             this.loadDataSetBtn.Location = new System.Drawing.Point(864, 360);
             this.loadDataSetBtn.Name = "loadDataSetBtn";
-            this.loadDataSetBtn.Size = new System.Drawing.Size(100, 29);
+            this.loadDataSetBtn.Size = new System.Drawing.Size(100, 27);
             this.loadDataSetBtn.TabIndex = 26;
-            this.loadDataSetBtn.Text = "Load Data Set";
+            this.loadDataSetBtn.Text = "Load";
             this.loadDataSetBtn.UseVisualStyleBackColor = true;
             this.loadDataSetBtn.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -274,17 +275,28 @@
             // 
             this.refreshDataListBtn.Location = new System.Drawing.Point(970, 360);
             this.refreshDataListBtn.Name = "refreshDataListBtn";
-            this.refreshDataListBtn.Size = new System.Drawing.Size(124, 29);
+            this.refreshDataListBtn.Size = new System.Drawing.Size(124, 27);
             this.refreshDataListBtn.TabIndex = 27;
-            this.refreshDataListBtn.Text = "Refresh Data Sets";
+            this.refreshDataListBtn.Text = "Refresh";
             this.refreshDataListBtn.UseVisualStyleBackColor = true;
             this.refreshDataListBtn.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1100, 360);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(89, 27);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Clear";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 839);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.refreshDataListBtn);
             this.Controls.Add(this.loadDataSetBtn);
             this.Controls.Add(this.listBox3);
@@ -341,6 +353,7 @@
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button loadDataSetBtn;
         private System.Windows.Forms.Button refreshDataListBtn;
+        private System.Windows.Forms.Button button4;
     }
 }
 
