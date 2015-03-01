@@ -15,6 +15,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Collections;
+using System.Net.NetworkInformation;
 
 namespace WindowsFormsApplication1
 {
@@ -26,14 +27,9 @@ namespace WindowsFormsApplication1
 
         string batPath;
         string batTxt;
-        string resultFilename;
+        string resultPath;
+        int orderNum;
         Process newBat;
-        string batPID;
-        string str;
-        bool isValid;
-
-        DateTime tstamp;
-        Int16 orderNum;
 
         public Form1()
         {
@@ -44,7 +40,8 @@ namespace WindowsFormsApplication1
         private void setValuesButton_Click(object sender, EventArgs e)
         {
             int i;
-            isValid = true;
+            bool isValid = true;
+            string batPID;
 
             switch (setValuesButton.Text.ToString())
             {
@@ -76,7 +73,8 @@ namespace WindowsFormsApplication1
                     }
                     else { remoteHostTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
 
-                    tstamp = DateTime.Now;
+                    DateTime tstamp = DateTime.Now;
+                    string str;
 
                     if (isValid == true)
                     {
@@ -85,6 +83,12 @@ namespace WindowsFormsApplication1
                         listBox1.Items.Add("Order #" + orderNum + " - " + tstamp.ToString() + ": Script settings validated.");
                         listBox1.Items.Add("---] Config: " + str);
                         setValuesButton.Text = "Generate Batch File";
+
+                        sampleDurationTxtBox.Enabled = false;
+                        pingIntervalTxtBox.Enabled = false;
+                        remoteHostTxtBox.Enabled = false;
+                        packetsPerPingTxtBox.Enabled = false;
+
                     }
                     else
                     {
@@ -104,11 +108,6 @@ namespace WindowsFormsApplication1
 
                 case ("Generate Batch File"):
 
-                    sampleDurationTxtBox.Enabled = false;
-                    pingIntervalTxtBox.Enabled = false;
-                    remoteHostTxtBox.Enabled = false;
-                    packetsPerPingTxtBox.Enabled = false;
-
                     str = "-U: " + remoteHostTxtBox.Text + " -P:" + packetsPerPingTxtBox.Text + " -I:" + pingIntervalTxtBox.Text + " -D:" + sampleDurationTxtBox.Text;
 
                     int ind = remoteHostTxtBox.FindString(str, -1);
@@ -118,18 +117,20 @@ namespace WindowsFormsApplication1
                         usableURLList.Add(remoteHostTxtBox.Text);
                     }
 
-                    string[] split = remoteHostTxtBox.Text.ToString().Split('.');
-                    resultFilename = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-results.txt";
-                    batPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-" + split[1] + ".bat";
+                    string[] ipstring = remoteHostTxtBox.Text.ToString().Split('.');
+                    resultPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-results.txt";
+                    batPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-" + ipstring[1] + ".bat";
+
+                    Console.WriteLine(ipstring.ToString());
 
                     batTxt =
                         "@ECHO OFF" + Environment.NewLine +
-                        "SET IPADDRESS=" + split[1].ToString() + "." + split[2].ToString() + Environment.NewLine +
+                        "SET IPADDRESS=" + ipstring.ToString() + Environment.NewLine + //+ "." + ipstring[2].ToString() + Environment.NewLine +
                         "SET INTERVAL=" + int.Parse(pingIntervalTxtBox.Text) + Environment.NewLine +
                         "SET PACKETSPERPING=" + int.Parse(packetsPerPingTxtBox.Text) + Environment.NewLine +
                         ":PINGINTERVAL" + Environment.NewLine +
-                        @"ECHO Date:%Date% Time:%Time% >>" + resultFilename + Environment.NewLine +
-                        @"C:\windows\system32\ping %IPADDRESS% -n %PACKETSPERPING% >>" + resultFilename + Environment.NewLine +
+                        @"ECHO Date:%Date% Time:%Time% >>" + resultPath + Environment.NewLine +
+                        @"C:\windows\system32\ping %IPADDRESS% -n %PACKETSPERPING% >>" + resultPath + Environment.NewLine +
                         "timeout %INTERVAL%" + Environment.NewLine +
                         "GOTO PINGINTERVAL";
 
@@ -181,14 +182,14 @@ namespace WindowsFormsApplication1
 
         private void clearAndDeleteButton_Click(object sender, EventArgs e)
         {
-            tstamp = DateTime.Now;
+           DateTime tstamp = DateTime.Now;
   
             setValuesButton.Text = "Validate Script Settings";
             listBox1.Items.Add("Current Settings cleared.");
             sampleDurationTxtBox.Text = ""; sampleDurationTxtBox.BackColor = Color.White; sampleDurationTxtBox.Enabled = true;
             packetsPerPingTxtBox.Text = "";  packetsPerPingTxtBox.BackColor = Color.White; packetsPerPingTxtBox.Enabled = true;
             pingIntervalTxtBox.Text = "";  pingIntervalTxtBox.BackColor = Color.White; pingIntervalTxtBox.Enabled = true;
-            remoteHostTxtBox.Text = "http://www.";  remoteHostTxtBox.BackColor = Color.White; remoteHostTxtBox.Enabled = true;
+            remoteHostTxtBox.Text = "www.";  remoteHostTxtBox.BackColor = Color.White; remoteHostTxtBox.Enabled = true;
 
         }
 
@@ -204,29 +205,26 @@ namespace WindowsFormsApplication1
 
         public static Boolean Connect(string host, int port)
         {
-            WebHeaderCollection headers = null;
-            HttpWebResponse response = null;    
+
+            Ping pingTest = new Ping();
+            int timeout = 10;
+            string data = "aaaa";
+            byte[] buffer = Encoding.ASCII.GetBytes(data);
 
             try
             {
-               
-                HttpWebRequest request = WebRequest.Create(host) as HttpWebRequest;
-                request.Method = "HEAD";
-                response = request.GetResponse() as HttpWebResponse;
-                headers = response.Headers;
+            PingReply pingTestReply = pingTest.Send(host, timeout, buffer);
 
-                response.Close();
-                return true;
-                 
-            }
-            catch (Exception)
+            if (pingTestReply.Status == IPStatus.Success)
             {
-                if (response == null)
-                    return false;
-
-                response.Close();
+       //         Console.WriteLine("true");
+                return true;
+            }
+            else
                 return false;
             }
+            catch
+            { return false; }
 
         }
 
@@ -300,7 +298,8 @@ namespace WindowsFormsApplication1
                 listBox1.Items.Add("Success: Batch File Process with PID:" + pid + " terminated.");
                 listBox2.Items.Remove(procString);
 
-                listBox3.Items.Add(resultFilename);
+                if (!(listBox3.Items.Contains(resultPath)))
+                    listBox3.Items.Add(resultPath);  
 
      //           Console.WriteLine(splita[0] + " " + splita[1] + " " + splita[2]);
             }
@@ -341,6 +340,9 @@ namespace WindowsFormsApplication1
                 Regex r_dateTime = new Regex(re1_dateTime + re2_dateTime, RegexOptions.IgnoreCase | RegexOptions.Singleline);
                 Regex r_rtt = new Regex(re1_rtt + re2_rtt + re3_rtt + re4_rtt + re5_rtt + re6_rtt, RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
+                Match dateTime;
+                Match rtt; 
+
                 string line;
 
                 List<int> x_rtt = new List<int>();
@@ -355,9 +357,8 @@ namespace WindowsFormsApplication1
 
                             while ((line = rdr.ReadLine()) != null)
                             {
-
-                                Match dateTime = r_dateTime.Match(line);
-                                Match rtt = r_rtt.Match(line);
+                                dateTime = r_dateTime.Match(line);
+                                rtt = r_rtt.Match(line);
 
                                 if (dateTime.Success)
                                 {
@@ -373,6 +374,8 @@ namespace WindowsFormsApplication1
                          //           Console.Write("(" + rttval + ")" + "\n");
                                 }
                             }
+
+                            rdr.Dispose();
                         }
                   //      Console.Write("x: " + x_rtt.Count);
                //         Console.Write("\ny: " + y_time.Count);
@@ -388,6 +391,8 @@ namespace WindowsFormsApplication1
                             chart1.Series["Series1"].Points.AddXY( y_time[z], x_rtt[z]);
                             z++;
                         }
+
+                        fileStream.Dispose();
                   }
 
                     listBox1.Items.Add("Success: "+ tmpResultFileName[1] + " loaded.");
