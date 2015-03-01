@@ -82,8 +82,8 @@ namespace WindowsFormsApplication1
                     }
 
                     string ipstring = remoteHostTxtBox.Text.ToString();
-                    resultPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-results.txt";
-                    batPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-" + ipstring[1] + ".bat";
+                    resultPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-" + ipstring + "-results.txt";
+                    batPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-" + ipstring + ".bat";
 
                     Console.WriteLine(ipstring.ToString());
 
@@ -122,11 +122,8 @@ namespace WindowsFormsApplication1
                     try
                     {
                         newBat = Process.Start(batPath);
-         
-                        batPID = "PID: " + newBat.Id + " " + batPath;
 
-                        listBox1.Items.Add("---] Success: Batch File Process (" + newBat.Id + ") started.");
-                        listBox2.Items.Add(batPID);
+                        listBox1.Items.Add("---] Success: Ping test started.");
 
                         setValuesButton.Text = ("Validate Script Settings");
                         modifyScriptTxtBoxes(true);
@@ -247,29 +244,6 @@ namespace WindowsFormsApplication1
 
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string procString = (string) listBox2.SelectedItem;
-
-            if (!string.IsNullOrWhiteSpace(procString))
-            {
-                string[] splita = procString.Split(' ');
-                int pid = Int32.Parse(splita[1]);
-
-                Process proc = Process.GetProcessById(pid);
-                proc.Kill();
-
-                listBox1.Items.Add("Success: Batch File Process with PID:" + pid + " terminated.");
-                listBox2.Items.Remove(procString);
-
-                if (!(listBox3.Items.Contains(resultPath)))
-                    listBox3.Items.Add(resultPath);  
-
-     //           Console.WriteLine(splita[0] + " " + splita[1] + " " + splita[2]);
-            }
 
         }
 
@@ -447,6 +421,11 @@ namespace WindowsFormsApplication1
                 packetsPerPingTxtBox.BackColor = Color.White; packetsPerPingTxtBox.Enabled = true;
                 remoteHostTxtBox.BackColor = Color.White; remoteHostTxtBox.Enabled = true;
             }
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
