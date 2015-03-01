@@ -39,8 +39,6 @@ namespace WindowsFormsApplication1
 
         private void setValuesButton_Click(object sender, EventArgs e)
         {
-            int i;
-            bool isValid = true;
             string batPID;
 
             switch (setValuesButton.Text.ToString())
@@ -48,76 +46,42 @@ namespace WindowsFormsApplication1
 
                 case ("Validate Script Settings"):
 
-                    if (!(int.TryParse(pingIntervalTxtBox.Text, out i)) || (string.IsNullOrWhiteSpace(pingIntervalTxtBox.Text)) || i <= 0)
-                    {
-                        pingIntervalTxtBox.BackColor = Color.FromArgb(255, 192, 192);
-                        isValid = false;
-                    }
-                    else { pingIntervalTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
-                    if (!(int.TryParse(packetsPerPingTxtBox.Text, out i)) || (string.IsNullOrWhiteSpace(packetsPerPingTxtBox.Text)) || i <= 0)
-                    {
-                        packetsPerPingTxtBox.BackColor = Color.FromArgb(255, 192, 192);
-                        isValid = false;
-                    }
-                    else { packetsPerPingTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
-                    if (!(int.TryParse(sampleDurationTxtBox.Text, out i)) || (string.IsNullOrWhiteSpace(sampleDurationTxtBox.Text)) || i <= 0)
-                    {
-                        sampleDurationTxtBox.BackColor = Color.FromArgb(255, 192, 192);
-                        isValid = false;
-                    }
-                    else { sampleDurationTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
-                    if (string.IsNullOrWhiteSpace(remoteHostTxtBox.Text) || !Connect(remoteHostTxtBox.Text, 80) || i <= 0)
-                    {
-                        remoteHostTxtBox.BackColor = Color.FromArgb(255, 192, 192);
-                        isValid = false;
-                    }
-                    else { remoteHostTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
-
                     DateTime tstamp = DateTime.Now;
-                    string str;
+                    string batconfigStr;
 
-                    if (isValid == true)
+                    if (validateScriptSettings())
                     {
-                        str = "-U: " + remoteHostTxtBox.Text + " -P:" + packetsPerPingTxtBox.Text + " -I:" + pingIntervalTxtBox.Text + " -D:" + sampleDurationTxtBox.Text;
+                        batconfigStr = "-U: " + remoteHostTxtBox.Text + " -P:" + packetsPerPingTxtBox.Text + " -I:" + pingIntervalTxtBox.Text + " -D:" + sampleDurationTxtBox.Text;
 
                         listBox1.Items.Add("Order #" + orderNum + " - " + tstamp.ToString() + ": Script settings validated.");
-                        listBox1.Items.Add("---] Config: " + str);
+                        listBox1.Items.Add("---] Config: " + batconfigStr);
                         setValuesButton.Text = "Generate Batch File";
 
-                        sampleDurationTxtBox.Enabled = false;
-                        pingIntervalTxtBox.Enabled = false;
-                        remoteHostTxtBox.Enabled = false;
-                        packetsPerPingTxtBox.Enabled = false;
+                        modifyScriptTxtBoxes(false);
 
                     }
                     else
                     {
-
-                        listBox1.Items.Add("Error: " + " Script settings could not be validated.");
                         MessageBox.Show("Errors exist in the configuration.");
                         setValuesButton.Text = "Validate Script Settings";
 
-                        sampleDurationTxtBox.BackColor = Color.White; sampleDurationTxtBox.Enabled = true;
-                        pingIntervalTxtBox.BackColor = Color.White; pingIntervalTxtBox.Enabled = true;
-                        packetsPerPingTxtBox.BackColor = Color.White; packetsPerPingTxtBox.Enabled = true;
-                        remoteHostTxtBox.BackColor = Color.White; remoteHostTxtBox.Enabled = true;
-                        isValid = true;
+                        modifyScriptTxtBoxes(true);
                     }
 
                     break;
 
                 case ("Generate Batch File"):
 
-                    str = "-U: " + remoteHostTxtBox.Text + " -P:" + packetsPerPingTxtBox.Text + " -I:" + pingIntervalTxtBox.Text + " -D:" + sampleDurationTxtBox.Text;
+                    batconfigStr = "-U: " + remoteHostTxtBox.Text + " -P:" + packetsPerPingTxtBox.Text + " -I:" + pingIntervalTxtBox.Text + " -D:" + sampleDurationTxtBox.Text;
 
-                    int ind = remoteHostTxtBox.FindString(str, -1);
+                    int ind = remoteHostTxtBox.FindString(batconfigStr, -1);
                     if (ind == -1)
                     {
                         remoteHostTxtBox.Items.Add(remoteHostTxtBox.Text);
                         usableURLList.Add(remoteHostTxtBox.Text);
                     }
 
-                    string[] ipstring = remoteHostTxtBox.Text.ToString().Split('.');
+                    string ipstring = remoteHostTxtBox.Text.ToString();
                     resultPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-results.txt";
                     batPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-" + ipstring[1] + ".bat";
 
@@ -125,7 +89,7 @@ namespace WindowsFormsApplication1
 
                     batTxt =
                         "@ECHO OFF" + Environment.NewLine +
-                        "SET IPADDRESS=" + ipstring.ToString() + Environment.NewLine + //+ "." + ipstring[2].ToString() + Environment.NewLine +
+                        "SET IPADDRESS=" + ipstring + Environment.NewLine + //+ "." + ipstring[2].ToString() + Environment.NewLine +
                         "SET INTERVAL=" + int.Parse(pingIntervalTxtBox.Text) + Environment.NewLine +
                         "SET PACKETSPERPING=" + int.Parse(packetsPerPingTxtBox.Text) + Environment.NewLine +
                         ":PINGINTERVAL" + Environment.NewLine +
@@ -165,6 +129,7 @@ namespace WindowsFormsApplication1
                         listBox2.Items.Add(batPID);
 
                         setValuesButton.Text = ("Validate Script Settings");
+                        modifyScriptTxtBoxes(true);
 
                         orderNum++;
                         break;
@@ -186,10 +151,12 @@ namespace WindowsFormsApplication1
   
             setValuesButton.Text = "Validate Script Settings";
             listBox1.Items.Add("Current Settings cleared.");
-            sampleDurationTxtBox.Text = ""; sampleDurationTxtBox.BackColor = Color.White; sampleDurationTxtBox.Enabled = true;
-            packetsPerPingTxtBox.Text = "";  packetsPerPingTxtBox.BackColor = Color.White; packetsPerPingTxtBox.Enabled = true;
-            pingIntervalTxtBox.Text = "";  pingIntervalTxtBox.BackColor = Color.White; pingIntervalTxtBox.Enabled = true;
-            remoteHostTxtBox.Text = "www.";  remoteHostTxtBox.BackColor = Color.White; remoteHostTxtBox.Enabled = true;
+            modifyScriptTxtBoxes(true);
+
+            sampleDurationTxtBox.Text = ""; 
+            packetsPerPingTxtBox.Text = "";  
+            pingIntervalTxtBox.Text = "";  
+            remoteHostTxtBox.Text = "www."; 
 
         }
 
@@ -364,21 +331,17 @@ namespace WindowsFormsApplication1
                                 {
                                     DateTime time1 = Convert.ToDateTime(dateTime.Groups[1].ToString());
                                     y_time.Add(time1);
-                         //           Console.Write("(" + time1.ToString() + ")" + "\n");
                                 }
                                 else if (rtt.Success)
                                 {
 
                                     int rttval = int.Parse(rtt.Groups[5].ToString());
                                     x_rtt.Add(rttval);
-                         //           Console.Write("(" + rttval + ")" + "\n");
                                 }
                             }
 
                             rdr.Dispose();
                         }
-                  //      Console.Write("x: " + x_rtt.Count);
-               //         Console.Write("\ny: " + y_time.Count);
 
                         chart1.Titles.Clear();   // Unnecessary if you have already clear
                         Title chart1Title = new Title(path, Docking.Top, new Font("Verdana", 12), Color.Black);
@@ -427,6 +390,63 @@ namespace WindowsFormsApplication1
         private void button4_Click_1(object sender, EventArgs e)
         {
             listBox3.Items.Clear();
+        }
+
+        private bool validateScriptSettings()
+        {
+            int i;
+            bool sentinel = true; 
+
+            if (!(int.TryParse(pingIntervalTxtBox.Text, out i)) || (string.IsNullOrWhiteSpace(pingIntervalTxtBox.Text)) || i <= 0)
+            {
+                pingIntervalTxtBox.BackColor = Color.FromArgb(255, 192, 192);
+                listBox1.Items.Add("Error: Invalid ping interval value.");
+                sentinel = false;
+            }
+            else { pingIntervalTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
+            if (!(int.TryParse(packetsPerPingTxtBox.Text, out i)) || (string.IsNullOrWhiteSpace(packetsPerPingTxtBox.Text)) || i <= 0)
+            {
+                packetsPerPingTxtBox.BackColor = Color.FromArgb(255, 192, 192);
+                listBox1.Items.Add("Error: Invalid packets per ping value.");
+                sentinel = false;
+            }
+            else { packetsPerPingTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
+            if (!(int.TryParse(sampleDurationTxtBox.Text, out i)) || (string.IsNullOrWhiteSpace(sampleDurationTxtBox.Text)) || i <= 0)
+            {
+                sampleDurationTxtBox.BackColor = Color.FromArgb(255, 192, 192);
+                listBox1.Items.Add("Error: Invalid packets per ping value.");
+                sentinel = false;
+            }
+            else { sampleDurationTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
+            if (string.IsNullOrWhiteSpace(remoteHostTxtBox.Text) || !Connect(remoteHostTxtBox.Text, 80) || i <= 0)
+            {
+                remoteHostTxtBox.BackColor = Color.FromArgb(255, 192, 192);
+                listBox1.Items.Add("Error: Remote host unresponsive.");
+                sentinel = false;
+            }
+            else { remoteHostTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
+
+            if (sentinel) return true;
+            else return false;
+        }
+
+        private void modifyScriptTxtBoxes(bool vector)
+        { 
+
+            if (!vector)    
+            {
+                sampleDurationTxtBox.Enabled = false;
+                pingIntervalTxtBox.Enabled = false;
+                remoteHostTxtBox.Enabled = false;
+                packetsPerPingTxtBox.Enabled = false;
+            }
+            else 
+            {
+                sampleDurationTxtBox.BackColor = Color.White; sampleDurationTxtBox.Enabled = true;
+                pingIntervalTxtBox.BackColor = Color.White; pingIntervalTxtBox.Enabled = true;
+                packetsPerPingTxtBox.BackColor = Color.White; packetsPerPingTxtBox.Enabled = true;
+                remoteHostTxtBox.BackColor = Color.White; remoteHostTxtBox.Enabled = true;
+            }
         }
     }
 
