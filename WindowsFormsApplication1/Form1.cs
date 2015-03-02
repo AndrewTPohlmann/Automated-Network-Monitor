@@ -23,6 +23,12 @@ namespace WindowsFormsApplication1
     {
         List<String> usableURLList = new List<string>();
         List<Process> runningBats = new List<Process>();
+        List<int> x_rtt = new List<int>();
+        List<DateTime> y_time = new List<DateTime>();
+
+        DirectoryInfo dinfo = new DirectoryInfo(@"C:\");
+        FileInfo[] Files;
+        string listBox3Path;
         //List<String> usableConfig = new List<string>();
 
         string batPath;
@@ -39,7 +45,6 @@ namespace WindowsFormsApplication1
 
         private void setValuesButton_Click(object sender, EventArgs e)
         {
-            string batPID;
 
             switch (setValuesButton.Text.ToString())
             {
@@ -89,7 +94,7 @@ namespace WindowsFormsApplication1
 
                     batTxt =
                         "@ECHO OFF" + Environment.NewLine +
-                        "SET IPADDRESS=" + ipstring + Environment.NewLine + //+ "." + ipstring[2].ToString() + Environment.NewLine +
+                        "SET IPADDRESS=" + ipstring + Environment.NewLine + 
                         "SET INTERVAL=" + int.Parse(pingIntervalTxtBox.Text) + Environment.NewLine +
                         "SET PACKETSPERPING=" + int.Parse(packetsPerPingTxtBox.Text) + Environment.NewLine +
                         ":PINGINTERVAL" + Environment.NewLine +
@@ -260,97 +265,36 @@ namespace WindowsFormsApplication1
         private void button4_Click(object sender, EventArgs e)
         {
             string path = (string)listBox3.SelectedItem;
-            string[] tmpResultFileName;
+            string[] tmpResultFileName = path.Split('\\');
 
-            if (!string.IsNullOrWhiteSpace(path))
-            {
-                tmpResultFileName = path.Split('\\');
+            x_rtt.Clear();
+            y_time.Clear();
 
-                string re1_dateTime = ".*?";	// Non-greedy match on filler
-                string re2_dateTime = "((?:(?:[0-1][0-9])|(?:[2][0-3])|(?:[0-9])):(?:[0-5][0-9])(?::[0-5][0-9])?(?:\\s?(?:am|AM|pm|PM))?)";	// HourMinuteSec 1
-                
-
-                string re1_rtt = ".*?";	// Non-greedy match on filler
-                string re2_rtt = "(Average)";	// Word 1
-                string re3_rtt = "(\\s+)";	// White Space 1
-                string re4_rtt = "(=)";	// Any Single Character 1
-                string re5_rtt = "(\\s+)";	// White Space 2
-                string re6_rtt = "(\\d+)";	// Integer Number 1
-                
-
-                Regex r_dateTime = new Regex(re1_dateTime + re2_dateTime, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-                Regex r_rtt = new Regex(re1_rtt + re2_rtt + re3_rtt + re4_rtt + re5_rtt + re6_rtt, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-
-                Match dateTime;
-                Match rtt; 
-
-                string line;
-
-                List<int> x_rtt = new List<int>();
-                List<DateTime> y_time = new List<DateTime>();
-
-                try
-                { 
-                    using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                    {
-                        using (StreamReader rdr = new StreamReader(fileStream))
-                        {
-
-                            while ((line = rdr.ReadLine()) != null)
-                            {
-                                dateTime = r_dateTime.Match(line);
-                                rtt = r_rtt.Match(line);
-
-                                if (dateTime.Success)
-                                {
-                                    DateTime time1 = Convert.ToDateTime(dateTime.Groups[1].ToString());
-                                    y_time.Add(time1);
-                                }
-                                else if (rtt.Success)
-                                {
-
-                                    int rttval = int.Parse(rtt.Groups[5].ToString());
-                                    x_rtt.Add(rttval);
-                                }
-                            }
-
-                            rdr.Dispose();
-                        }
-
-                        chart1.Titles.Clear();   // Unnecessary if you have already clear
-                        Title chart1Title = new Title(path, Docking.Top, new Font("Verdana", 12), Color.Black);
-                        chart1.Titles.Add(chart1Title);
-                        chart1.Series["Series1"].Points.Clear();
-
-                        int z=0;
-                        while (z < x_rtt.Count)
-                        {
-                            chart1.Series["Series1"].Points.AddXY( y_time[z], x_rtt[z]);
-                            z++;
-                        }
-
-                        fileStream.Dispose();
-                  }
-
-                    listBox1.Items.Add("Success: "+ tmpResultFileName[1] + " loaded.");
-                }
-                catch (Exception)
+                if (!string.IsNullOrWhiteSpace(path))
                 {
+
+                    Title chart1Title = new Title("Loading....", Docking.Top, new Font("Verdana", 12), Color.Black);
+                    chart1.Titles.Clear();
+                    chart1.Titles.Add(chart1Title);
+                    chart1.Series["Series1"].Points.Clear();
+
+                    Job job = new Job(path);
+                    backgroundWorker1.RunWorkerAsync(job);
+
+                } 
+               else
                     listBox1.Items.Add("Error: " + tmpResultFileName[1] + " could not be loaded.");
-                }
-
-            }
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
 
         }
+    
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             DirectoryInfo dinfo = new DirectoryInfo(@"C:\");
             FileInfo[] Files = dinfo.GetFiles("*.txt");
+
+            listBox3.Items.Clear();
 
             foreach (FileInfo file in Files) { 
 
@@ -406,7 +350,6 @@ namespace WindowsFormsApplication1
 
         private void modifyScriptTxtBoxes(bool vector)
         { 
-
             if (!vector)    
             {
                 sampleDurationTxtBox.Enabled = false;
@@ -427,6 +370,200 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (scriptsRadioBtn.Checked) Files = dinfo.GetFiles("*.bat");
+            else Files = dinfo.GetFiles("*.txt"); 
+
+            listBox3Path = (string)listBox3.SelectedItem;
+
+            System.IO.File.Delete(listBox3Path);
+
+            listBox3.Items.Clear();
+
+            foreach (FileInfo file in Files)
+            {
+                if (!(listBox3.Items.Contains("C:\\" + file.Name.ToString())))
+                    listBox3.Items.Add("C:\\" + file.Name);
+            }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            FileInfo[] Files = dinfo.GetFiles("*.bat");
+            string path = (string)listBox3.SelectedItem;
+
+                System.IO.File.Delete(path);
+
+                listBox3.Items.Clear();
+
+                foreach (FileInfo file in Files)
+                {
+                    if (!(listBox3.Items.Contains("C:\\" + file.Name.ToString())))
+                        listBox3.Items.Add("C:\\" + file.Name);
+                }
+
+        }
+
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            FileInfo[] Files = dinfo.GetFiles("*.bat");
+
+            listBox3.Items.Clear();
+
+            foreach (FileInfo file in Files)
+            {
+
+                if (!(listBox3.Items.Contains("C:\\" + file.Name.ToString())))
+                    listBox3.Items.Add("C:\\" + file.Name);
+            }
+        }
+
+        private void dataSetsRadioBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            FileInfo[] Files = dinfo.GetFiles("*.txt");
+
+            listBox3.Items.Clear();
+
+            foreach (FileInfo file in Files)
+            {
+
+                if (!(listBox3.Items.Contains("C:\\" + file.Name.ToString())))
+                    listBox3.Items.Add("C:\\" + file.Name);
+            }
+        }
+
+    private bool processData(string path)
+    {
+
+            string[] tmpResultFileName;
+
+            tmpResultFileName = path.Split('\\');
+
+            Match dateTime;
+            Match rtt;
+
+            string line;
+
+            try
+            {
+
+                using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader rdr = new StreamReader(fileStream))
+                    {
+
+                        while ((line = rdr.ReadLine()) != null)
+                        {
+
+                            if (line.Contains("Pi") || (line.Contains("Re")) || line.Contains("Pa") || line.Contains("Ap") || string.IsNullOrWhiteSpace(line))
+                                continue;
+
+                            dateTime = RegexObjects.dateTimeObject.Match(line);
+                            rtt = RegexObjects.rttDelayObject.Match(line);
+
+                            if (dateTime.Success)
+                            { y_time.Add(Convert.ToDateTime(dateTime.Groups[1].ToString())); }
+                            else if (rtt.Success)
+                            { x_rtt.Add(int.Parse(rtt.Groups[5].ToString())); }
+                        }
+
+                        fileStream.Close();
+                        rdr.Dispose();
+                    }
+
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+
+    private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+    {
+        Job job = e.Argument as Job;
+
+        if (processData(job.resultPath))
+            job.didLoad = true;
+        else
+            job.didLoad = false;
+
+        e.Result = job;
     }
 
-}
+    private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+    {
+
+        Job job = e.Result as Job;
+
+        if (job.didLoad)
+        { 
+            int z = 0;
+
+            Title chart1Title = new Title(job.resultPath, Docking.Top, new Font("Verdana", 12), Color.Black);
+            chart1.Titles.Clear();
+            chart1.Titles.Add(chart1Title);
+
+                while (z < x_rtt.Count)
+                {
+                    chart1.Series["Series1"].Points.AddXY(y_time[z], x_rtt[z]);
+                    z++;
+                }
+        }
+        else
+            listBox1.Items.Add("Error: " + job.resultFilename + " could not be loaded.");
+    }
+
+
+    }
+
+    class Job
+    {
+        public bool didLoad { get; set; }
+        public string resultPath { get; set; }
+        public string resultFilename { get; set; }
+
+        public Job(string setpath)
+        {
+            resultPath = setpath;
+
+            string[] tmpResultFileName = resultPath.Split('\\');
+            resultFilename = tmpResultFileName[1];
+        }
+
+        public Job() {}
+
+    }
+    
+    public static class RegexObjects
+    {
+        private static string re1_dateTime = ".*?";	// Non-greedy match on filler
+        private static string re2_dateTime = "((?:(?:[0-1][0-9])|(?:[2][0-3])|(?:[0-9])):(?:[0-5][0-9])(?::[0-5][0-9])?(?:\\s?(?:am|AM|pm|PM))?)";	// HourMinuteSec 1
+
+        private static string re1_rtt = ".*?";	// Non-greedy match on filler
+        private static string re2_rtt = "(Average)";	// Word 1
+        private static string re3_rtt = "(\\s+)";	// White Space 1
+        private static string re4_rtt = "(=)";	// Any Single Character 1
+        private static string re5_rtt = "(\\s+)";	// White Space 2
+        private static string re6_rtt = "(\\d+)";	// Integer Number 1
+
+        private static string regexStringDateTime = re1_dateTime + re2_dateTime;
+        private static string regexStringRTT = re1_rtt + re2_rtt + re3_rtt + re4_rtt + re5_rtt + re6_rtt;
+
+        public static Regex dateTimeObject = new Regex(regexStringDateTime, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+        public static Regex rttDelayObject = new Regex(regexStringRTT, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+
+    }
+
+
+
+    }
+
+    
+

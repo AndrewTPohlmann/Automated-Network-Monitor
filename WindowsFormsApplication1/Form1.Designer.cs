@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pingIntervalTxtBox = new System.Windows.Forms.TextBox();
@@ -49,10 +49,14 @@
             this.remoteHostTxtBox = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.listBox3 = new System.Windows.Forms.ListBox();
             this.loadDataSetBtn = new System.Windows.Forms.Button();
             this.refreshDataListBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.deleteData = new System.Windows.Forms.Button();
+            this.scriptsRadioBtn = new System.Windows.Forms.RadioButton();
+            this.dataSetsRadioBtn = new System.Windows.Forms.RadioButton();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,37 +219,28 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea8.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart1.Legends.Add(legend8);
             this.chart1.Location = new System.Drawing.Point(12, 306);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chart1.Series.Add(series3);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series8.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chart1.Series.Add(series8);
             this.chart1.Size = new System.Drawing.Size(822, 381);
             this.chart1.TabIndex = 24;
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(862, 46);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(325, 199);
-            this.listBox3.TabIndex = 25;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
-            // 
             // loadDataSetBtn
             // 
-            this.loadDataSetBtn.Location = new System.Drawing.Point(862, 260);
+            this.loadDataSetBtn.Location = new System.Drawing.Point(1003, 310);
             this.loadDataSetBtn.Name = "loadDataSetBtn";
-            this.loadDataSetBtn.Size = new System.Drawing.Size(100, 40);
+            this.loadDataSetBtn.Size = new System.Drawing.Size(89, 38);
             this.loadDataSetBtn.TabIndex = 26;
             this.loadDataSetBtn.Text = "Load";
             this.loadDataSetBtn.UseVisualStyleBackColor = true;
@@ -253,9 +248,9 @@
             // 
             // refreshDataListBtn
             // 
-            this.refreshDataListBtn.Location = new System.Drawing.Point(968, 260);
+            this.refreshDataListBtn.Location = new System.Drawing.Point(1003, 262);
             this.refreshDataListBtn.Name = "refreshDataListBtn";
-            this.refreshDataListBtn.Size = new System.Drawing.Size(124, 40);
+            this.refreshDataListBtn.Size = new System.Drawing.Size(89, 40);
             this.refreshDataListBtn.TabIndex = 27;
             this.refreshDataListBtn.Text = "Refresh";
             this.refreshDataListBtn.UseVisualStyleBackColor = true;
@@ -263,7 +258,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1098, 260);
+            this.button4.Location = new System.Drawing.Point(1098, 306);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(89, 40);
             this.button4.TabIndex = 28;
@@ -271,15 +266,66 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(862, 42);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(325, 212);
+            this.listBox3.TabIndex = 25;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
+            // 
+            // deleteData
+            // 
+            this.deleteData.Location = new System.Drawing.Point(1098, 262);
+            this.deleteData.Name = "deleteData";
+            this.deleteData.Size = new System.Drawing.Size(89, 38);
+            this.deleteData.TabIndex = 29;
+            this.deleteData.Text = "Delete";
+            this.deleteData.UseVisualStyleBackColor = true;
+            this.deleteData.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // scriptsRadioBtn
+            // 
+            this.scriptsRadioBtn.AutoSize = true;
+            this.scriptsRadioBtn.Location = new System.Drawing.Point(862, 262);
+            this.scriptsRadioBtn.Name = "scriptsRadioBtn";
+            this.scriptsRadioBtn.Size = new System.Drawing.Size(57, 17);
+            this.scriptsRadioBtn.TabIndex = 30;
+            this.scriptsRadioBtn.TabStop = true;
+            this.scriptsRadioBtn.Text = "Scripts";
+            this.scriptsRadioBtn.UseVisualStyleBackColor = true;
+            this.scriptsRadioBtn.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // dataSetsRadioBtn
+            // 
+            this.dataSetsRadioBtn.AutoSize = true;
+            this.dataSetsRadioBtn.Location = new System.Drawing.Point(862, 282);
+            this.dataSetsRadioBtn.Name = "dataSetsRadioBtn";
+            this.dataSetsRadioBtn.Size = new System.Drawing.Size(72, 17);
+            this.dataSetsRadioBtn.TabIndex = 31;
+            this.dataSetsRadioBtn.TabStop = true;
+            this.dataSetsRadioBtn.Text = "Data Sets";
+            this.dataSetsRadioBtn.UseVisualStyleBackColor = true;
+            this.dataSetsRadioBtn.CheckedChanged += new System.EventHandler(this.dataSetsRadioBtn_CheckedChanged);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 839);
+            this.Controls.Add(this.dataSetsRadioBtn);
+            this.Controls.Add(this.scriptsRadioBtn);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.deleteData);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.refreshDataListBtn);
             this.Controls.Add(this.loadDataSetBtn);
-            this.Controls.Add(this.listBox3);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.remoteHostTxtBox);
@@ -326,10 +372,14 @@
         private System.Windows.Forms.ComboBox remoteHostTxtBox;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.Button loadDataSetBtn;
         private System.Windows.Forms.Button refreshDataListBtn;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button deleteData;
+        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.RadioButton scriptsRadioBtn;
+        private System.Windows.Forms.RadioButton dataSetsRadioBtn;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
