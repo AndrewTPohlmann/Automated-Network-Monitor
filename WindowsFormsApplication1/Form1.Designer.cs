@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pingIntervalTxtBox = new System.Windows.Forms.TextBox();
@@ -219,30 +219,30 @@
             // 
             // chart1
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart1.Legends.Add(legend8);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(12, 306);
             this.chart1.Name = "chart1";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            series8.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series8.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chart1.Series.Add(series8);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(822, 381);
             this.chart1.TabIndex = 24;
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // loadDataSetBtn
             // 
-            this.loadDataSetBtn.Location = new System.Drawing.Point(1003, 310);
+            this.loadDataSetBtn.Location = new System.Drawing.Point(1003, 308);
             this.loadDataSetBtn.Name = "loadDataSetBtn";
             this.loadDataSetBtn.Size = new System.Drawing.Size(89, 38);
             this.loadDataSetBtn.TabIndex = 26;
-            this.loadDataSetBtn.Text = "Load";
+            this.loadDataSetBtn.Text = "Load to Graph";
             this.loadDataSetBtn.UseVisualStyleBackColor = true;
             this.loadDataSetBtn.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -300,7 +300,7 @@
             // dataSetsRadioBtn
             // 
             this.dataSetsRadioBtn.AutoSize = true;
-            this.dataSetsRadioBtn.Location = new System.Drawing.Point(862, 282);
+            this.dataSetsRadioBtn.Location = new System.Drawing.Point(862, 285);
             this.dataSetsRadioBtn.Name = "dataSetsRadioBtn";
             this.dataSetsRadioBtn.Size = new System.Drawing.Size(72, 17);
             this.dataSetsRadioBtn.TabIndex = 31;

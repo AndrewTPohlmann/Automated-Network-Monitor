@@ -2,19 +2,12 @@
 using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net.Sockets;
-using System.Net;
 using System.Diagnostics;
-using System.Threading;
 using System.Windows.Forms.DataVisualization.Charting;
-using System.Collections;
 using System.Net.NetworkInformation;
 
 namespace WindowsFormsApplication1
@@ -28,7 +21,7 @@ namespace WindowsFormsApplication1
 
         DirectoryInfo dinfo = new DirectoryInfo(@"C:\");
         FileInfo[] Files;
-        string listBox3Path;
+     //   string listBox3ItemPath;
         //List<String> usableConfig = new List<string>();
 
         string batPath;
@@ -265,44 +258,29 @@ namespace WindowsFormsApplication1
         private void button4_Click(object sender, EventArgs e)
         {
             string path = (string)listBox3.SelectedItem;
-            string[] tmpResultFileName = path.Split('\\');
 
-            x_rtt.Clear();
-            y_time.Clear();
-
-                if (!string.IsNullOrWhiteSpace(path))
+                if (!string.IsNullOrWhiteSpace(path) && dataSetsRadioBtn.Checked)
                 {
+                    x_rtt.Clear();
+                    y_time.Clear();
 
-                    Title chart1Title = new Title("Loading....", Docking.Top, new Font("Verdana", 12), Color.Black);
-                    chart1.Titles.Clear();
-                    chart1.Titles.Add(chart1Title);
-                    chart1.Series["Series1"].Points.Clear();
+                        Title chart1Title = new Title("Loading....", Docking.Top, new Font("Verdana", 12), Color.Black);
+                        chart1.Titles.Clear();
+                        chart1.Titles.Add(chart1Title);
+                        chart1.Series["Series1"].Points.Clear();
 
-                    Job job = new Job(path);
-                    backgroundWorker1.RunWorkerAsync(job);
-
-                } 
-               else
-                    listBox1.Items.Add("Error: " + tmpResultFileName[1] + " could not be loaded.");
+                        Job job = new Job(path);
+                        backgroundWorker1.RunWorkerAsync(job);
+                 }
+            
 
         }
     
 
         private void button5_Click(object sender, EventArgs e)
-        {
-
-            DirectoryInfo dinfo = new DirectoryInfo(@"C:\");
-            FileInfo[] Files = dinfo.GetFiles("*.txt");
-
-            listBox3.Items.Clear();
-
-            foreach (FileInfo file in Files) { 
-
-                if (!(listBox3.Items.Contains("C:\\" + file.Name.ToString())))         
-                    listBox3.Items.Add("C:\\" + file.Name);  
-           }
-
-
+        {   
+            if (dataSetsRadioBtn.Checked || scriptsRadioBtn.Checked)
+                refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -373,82 +351,32 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (scriptsRadioBtn.Checked) Files = dinfo.GetFiles("*.bat");
-            else Files = dinfo.GetFiles("*.txt"); 
-
-            listBox3Path = (string)listBox3.SelectedItem;
-
-            System.IO.File.Delete(listBox3Path);
-
-            listBox3.Items.Clear();
-
-            foreach (FileInfo file in Files)
-            {
-                if (!(listBox3.Items.Contains("C:\\" + file.Name.ToString())))
-                    listBox3.Items.Add("C:\\" + file.Name);
-            }
+            System.IO.File.Delete((string)listBox3.SelectedItem);
+            refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
         }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            FileInfo[] Files = dinfo.GetFiles("*.bat");
-            string path = (string)listBox3.SelectedItem;
-
-                System.IO.File.Delete(path);
-
-                listBox3.Items.Clear();
-
-                foreach (FileInfo file in Files)
-                {
-                    if (!(listBox3.Items.Contains("C:\\" + file.Name.ToString())))
-                        listBox3.Items.Add("C:\\" + file.Name);
-                }
-
-        }
-
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            FileInfo[] Files = dinfo.GetFiles("*.bat");
-
-            listBox3.Items.Clear();
-
-            foreach (FileInfo file in Files)
-            {
-
-                if (!(listBox3.Items.Contains("C:\\" + file.Name.ToString())))
-                    listBox3.Items.Add("C:\\" + file.Name);
-            }
+            loadDataSetBtn.Enabled = false;
+            refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
         }
 
         private void dataSetsRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
-            FileInfo[] Files = dinfo.GetFiles("*.txt");
-
-            listBox3.Items.Clear();
-
-            foreach (FileInfo file in Files)
-            {
-
-                if (!(listBox3.Items.Contains("C:\\" + file.Name.ToString())))
-                    listBox3.Items.Add("C:\\" + file.Name);
-            }
+            loadDataSetBtn.Enabled = true;
+            refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
         }
+
+
+
 
     private bool processData(string path)
     {
 
-            string[] tmpResultFileName;
-
-            tmpResultFileName = path.Split('\\');
-
-            Match dateTime;
-            Match rtt;
-
-            string line;
-
             try
             {
+                Match dateTime;
+                Match rtt;
+                string line;
 
                 using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
@@ -515,9 +443,33 @@ namespace WindowsFormsApplication1
                     chart1.Series["Series1"].Points.AddXY(y_time[z], x_rtt[z]);
                     z++;
                 }
+
+                listBox1.Items.Add("Success: " + job.resultFilename + " loaded into graph.");
         }
         else
-            listBox1.Items.Add("Error: " + job.resultFilename + " could not be loaded.");
+            listBox1.Items.Add("Error: " + job.resultFilename + " could not be loaded into graph.");
+    }
+        
+    public void refreshListBox3(bool type, string itempath)
+    {   //true == script, false == bat
+
+        if (type)
+            Files = dinfo.GetFiles("*.bat");
+        else
+            Files = dinfo.GetFiles("*.txt");
+
+            listBox3.Items.Clear();
+            foreach (FileInfo file in Files)
+            {
+                if (string.IsNullOrWhiteSpace(itempath)) 
+                    listBox3.Items.Add("C:\\" + file.Name);
+                else 
+                {
+                    if (!(listBox3.Items.Contains(itempath)))
+                       listBox3.Items.Add("C:\\" + file.Name);
+                }
+            }
+
     }
 
 
