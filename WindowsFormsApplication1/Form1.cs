@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         List<String> usableURLList = new List<string>();
         List<DateTime> y_time = new List<DateTime>();
         List<int> x_rtt = new List<int>();
-        DirectoryInfo dinfo = new DirectoryInfo(@"C:\");
+        DirectoryInfo dinfo = new DirectoryInfo(@"D:\");
         FileInfo[] Files;
 
         string resultPath;
