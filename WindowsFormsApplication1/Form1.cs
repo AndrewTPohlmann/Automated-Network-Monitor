@@ -15,20 +15,15 @@ namespace WindowsFormsApplication1
     public partial class Form1 : Form
     {
         List<String> usableURLList = new List<string>();
-        List<Process> runningBats = new List<Process>();
-        List<int> x_rtt = new List<int>();
         List<DateTime> y_time = new List<DateTime>();
-
+        List<int> x_rtt = new List<int>();
         DirectoryInfo dinfo = new DirectoryInfo(@"C:\");
         FileInfo[] Files;
-     //   string listBox3ItemPath;
-        //List<String> usableConfig = new List<string>();
 
+        string resultPath;
         string batPath;
         string batTxt;
-        string resultPath;
-        int orderNum;
-        Process newBat;
+        string batconfigStr;
 
         public Form1()
         {
@@ -39,20 +34,16 @@ namespace WindowsFormsApplication1
         private void setValuesButton_Click(object sender, EventArgs e)
         {
 
-            switch (setValuesButton.Text.ToString())
+            switch (setValuesButton.Text)
             {
-
+                   
                 case ("Validate Script Settings"):
-
-                    DateTime tstamp = DateTime.Now;
-                    string batconfigStr;
 
                     if (validateScriptSettings())
                     {
-                        batconfigStr = "-U: " + remoteHostTxtBox.Text + " -P:" + packetsPerPingTxtBox.Text + " -I:" + pingIntervalTxtBox.Text + " -D:" + sampleDurationTxtBox.Text;
+                        batconfigStr = "-U: " + remoteHostTxtBox.Text + " -P: " + packetsPerPingTxtBox.Text + " -I: " + pingIntervalTxtBox.Text + " -D: " + sampleDurationTxtBox.Text;
 
-                        listBox1.Items.Add("Order #" + orderNum + " - " + tstamp.ToString() + ": Script settings validated.");
-                        listBox1.Items.Add("---] Config: " + batconfigStr);
+                        listBox1.Items.Add("Current script settings validated.");
                         setValuesButton.Text = "Generate Batch File";
 
                         modifyScriptTxtBoxes(false);
@@ -70,24 +61,19 @@ namespace WindowsFormsApplication1
 
                 case ("Generate Batch File"):
 
-                    batconfigStr = "-U: " + remoteHostTxtBox.Text + " -P:" + packetsPerPingTxtBox.Text + " -I:" + pingIntervalTxtBox.Text + " -D:" + sampleDurationTxtBox.Text;
-
-                    int ind = remoteHostTxtBox.FindString(batconfigStr, -1);
-                    if (ind == -1)
+                    if (!remoteHostTxtBox.Items.Contains(remoteHostTxtBox.Text))
                     {
                         remoteHostTxtBox.Items.Add(remoteHostTxtBox.Text);
                         usableURLList.Add(remoteHostTxtBox.Text);
                     }
 
-                    string ipstring = remoteHostTxtBox.Text.ToString();
-                    resultPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-" + ipstring + "-results.txt";
-                    batPath = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-" + ipstring + ".bat";
-
-                    Console.WriteLine(ipstring.ToString());
+                    string common = "C:\\" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + "-" + remoteHostTxtBox.Text;
+                    resultPath = common + "-results.txt";
+                    batPath = common + ".bat";
 
                     batTxt =
                         "@ECHO OFF" + Environment.NewLine +
-                        "SET IPADDRESS=" + ipstring + Environment.NewLine + 
+                        "SET IPADDRESS=" + remoteHostTxtBox.Text + Environment.NewLine + 
                         "SET INTERVAL=" + int.Parse(pingIntervalTxtBox.Text) + Environment.NewLine +
                         "SET PACKETSPERPING=" + int.Parse(packetsPerPingTxtBox.Text) + Environment.NewLine +
                         ":PINGINTERVAL" + Environment.NewLine +
@@ -96,22 +82,23 @@ namespace WindowsFormsApplication1
                         "timeout %INTERVAL%" + Environment.NewLine +
                         "GOTO PINGINTERVAL";
 
-                    try
-                    {
-                        System.IO.StreamWriter writer = new System.IO.StreamWriter(batPath);
-                        writer.Write(batTxt);
-                        writer.Close();
+                            try
+                            {
+                                System.IO.StreamWriter writer = new System.IO.StreamWriter(batPath);
+                                writer.WriteLine("REM "+batconfigStr);
+                                writer.Write(batTxt);
+                                writer.Close();
 
-                        listBox1.Items.Add("---] Success: Batch file created.");
-                        setValuesButton.Text = "Start Batch File";
+                                listBox1.Items.Add("---] Success: Batch file created.");
+                                setValuesButton.Text = "Start Batch File";
 
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show("Error: Unable to create batch file.");
-                        listBox1.Items.Add("---] Error: Unable to create batch file.");
-                        setValuesButton.Text = "Generate Batch File";
-                    }
+                            }
+                            catch (Exception)
+                            {
+                                MessageBox.Show("Error: Unable to create batch file.");
+                                listBox1.Items.Add("---] Error: Unable to create batch file.");
+                                setValuesButton.Text = "Generate Batch File";
+                            }
 
                     break;
 
@@ -119,14 +106,12 @@ namespace WindowsFormsApplication1
 
                     try
                     {
-                        newBat = Process.Start(batPath);
+                        Process newBat = Process.Start(batPath);
 
                         listBox1.Items.Add("---] Success: Ping test started.");
-
                         setValuesButton.Text = ("Validate Script Settings");
                         modifyScriptTxtBoxes(true);
 
-                        orderNum++;
                         break;
                     }
                     catch (Exception)
@@ -134,6 +119,7 @@ namespace WindowsFormsApplication1
                         MessageBox.Show("Error: Unable to create start batch file.");
                         listBox1.Items.Add("---] Error: Unable to start batch file.");
                         setValuesButton.Text = ("Start Batch File");
+
                         break;
                     }
 
@@ -142,8 +128,10 @@ namespace WindowsFormsApplication1
 
         private void clearAndDeleteButton_Click(object sender, EventArgs e)
         {
-           DateTime tstamp = DateTime.Now;
-  
+            if (string.IsNullOrWhiteSpace(sampleDurationTxtBox.Text) && string.IsNullOrWhiteSpace(packetsPerPingTxtBox.Text) &&
+                     string.IsNullOrWhiteSpace(pingIntervalTxtBox.Text) && remoteHostTxtBox.Text.Equals("www."))
+                return;
+
             setValuesButton.Text = "Validate Script Settings";
             listBox1.Items.Add("Current Settings cleared.");
             modifyScriptTxtBoxes(true);
@@ -190,16 +178,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hostPic_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -225,17 +203,8 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void remoteHostTxtBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        public void validateSettings()
         {
 
         }
@@ -259,23 +228,55 @@ namespace WindowsFormsApplication1
         {
             string path = (string)listBox3.SelectedItem;
 
-                if (!string.IsNullOrWhiteSpace(path) && dataSetsRadioBtn.Checked)
+            if (!string.IsNullOrWhiteSpace(path))
+            {
+                x_rtt.Clear();
+                y_time.Clear();
+
+                if (loadDataSetBtn.Text.Equals("Load to Graph"))
                 {
-                    x_rtt.Clear();
-                    y_time.Clear();
+                    Title chart1Title = new Title("Loading....", Docking.Top, new Font("Verdana", 12), Color.Black);
+                    chart1.Titles.Clear();
+                    chart1.Titles.Add(chart1Title);
+                    chart1.Series["Series1"].Points.Clear();
 
-                        Title chart1Title = new Title("Loading....", Docking.Top, new Font("Verdana", 12), Color.Black);
-                        chart1.Titles.Clear();
-                        chart1.Titles.Add(chart1Title);
-                        chart1.Series["Series1"].Points.Clear();
+                    JobState job = new JobState(path);
+                    backgroundWorker1.RunWorkerAsync(job);
+                }
+                else if (loadDataSetBtn.Text.Equals("Load to Settings"))
+                {
+                    try
+                    {
+                        System.IO.StreamReader reader = new System.IO.StreamReader(path);
+                        string line = reader.ReadLine();
+                        reader.Close();
 
-                        Job job = new Job(path);
-                        backgroundWorker1.RunWorkerAsync(job);
-                 }
-            
+                        if (!line.Contains("REM"))
+                        {
+                            listBox1.Items.Add("Error: Unable to extract script parameters.");
+                            setValuesButton.Text = "Validate Script Settings";
+                            return;
+                        }
 
+                        string[] parameters = line.Split(' ');
+                        remoteHostTxtBox.Text = parameters[2];
+                        packetsPerPingTxtBox.Text = parameters[4];
+                        pingIntervalTxtBox.Text = parameters[6];
+                        sampleDurationTxtBox.Text = parameters[8];
+
+                            listBox1.Items.Add("Success: Parameters from script file " + path + " extracted.");
+                            setValuesButton.Text = "Validate Script Settings";
+
+                    }
+                    catch (Exception)
+                    {
+                            listBox1.Items.Add("Error: Unable to open the script file.");
+                            setValuesButton.Text = "Validate Script Settings";
+                    }
+
+                }
+            }
         }
-    
 
         private void button5_Click(object sender, EventArgs e)
         {   
@@ -296,28 +297,28 @@ namespace WindowsFormsApplication1
             if (!(int.TryParse(pingIntervalTxtBox.Text, out i)) || (string.IsNullOrWhiteSpace(pingIntervalTxtBox.Text)) || i <= 0)
             {
                 pingIntervalTxtBox.BackColor = Color.FromArgb(255, 192, 192);
-                listBox1.Items.Add("Error: Invalid ping interval value.");
+                listBox1.Items.Add("---] Error: Invalid ping interval value.");
                 sentinel = false;
             }
             else { pingIntervalTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
             if (!(int.TryParse(packetsPerPingTxtBox.Text, out i)) || (string.IsNullOrWhiteSpace(packetsPerPingTxtBox.Text)) || i <= 0)
             {
                 packetsPerPingTxtBox.BackColor = Color.FromArgb(255, 192, 192);
-                listBox1.Items.Add("Error: Invalid packets per ping value.");
+                listBox1.Items.Add("---] Error: Invalid packets per ping value.");
                 sentinel = false;
             }
             else { packetsPerPingTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
             if (!(int.TryParse(sampleDurationTxtBox.Text, out i)) || (string.IsNullOrWhiteSpace(sampleDurationTxtBox.Text)) || i <= 0)
             {
                 sampleDurationTxtBox.BackColor = Color.FromArgb(255, 192, 192);
-                listBox1.Items.Add("Error: Invalid packets per ping value.");
+                listBox1.Items.Add("---] Error: Invalid packets per ping value.");
                 sentinel = false;
             }
             else { sampleDurationTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
             if (string.IsNullOrWhiteSpace(remoteHostTxtBox.Text) || !Connect(remoteHostTxtBox.Text, 80) || i <= 0)
             {
                 remoteHostTxtBox.BackColor = Color.FromArgb(255, 192, 192);
-                listBox1.Items.Add("Error: Remote host unresponsive.");
+                listBox1.Items.Add("---] Error: Remote host unresponsive.");
                 sentinel = false;
             }
             else { remoteHostTxtBox.BackColor = Color.FromArgb(128, 255, 128); }
@@ -351,27 +352,28 @@ namespace WindowsFormsApplication1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            System.IO.File.Delete((string)listBox3.SelectedItem);
-            refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
+            if (!string.IsNullOrWhiteSpace((string)listBox3.SelectedItem))
+            {
+                System.IO.File.Delete((string)listBox3.SelectedItem);
+                refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
+            }
         }
+
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            loadDataSetBtn.Enabled = false;
+            loadDataSetBtn.Text = "Load to Settings";
             refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
         }
 
         private void dataSetsRadioBtn_CheckedChanged(object sender, EventArgs e)
         {
-            loadDataSetBtn.Enabled = true;
+            loadDataSetBtn.Text = "Load to Graph";
             refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
         }
 
 
-
-
     private bool processData(string path)
     {
-
             try
             {
                 Match dateTime;
@@ -379,10 +381,8 @@ namespace WindowsFormsApplication1
                 string line;
 
                 using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                {
                     using (StreamReader rdr = new StreamReader(fileStream))
                     {
-
                         while ((line = rdr.ReadLine()) != null)
                         {
 
@@ -402,8 +402,6 @@ namespace WindowsFormsApplication1
                         rdr.Dispose();
                     }
 
-                }
-
                 return true;
             }
             catch (Exception)
@@ -415,7 +413,7 @@ namespace WindowsFormsApplication1
 
     private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
     {
-        Job job = e.Argument as Job;
+        JobState job = e.Argument as JobState;
 
         if (processData(job.resultPath))
             job.didLoad = true;
@@ -427,8 +425,7 @@ namespace WindowsFormsApplication1
 
     private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
     {
-
-        Job job = e.Result as Job;
+        JobState job = e.Result as JobState;
 
         if (job.didLoad)
         { 
@@ -460,39 +457,34 @@ namespace WindowsFormsApplication1
 
             listBox3.Items.Clear();
             foreach (FileInfo file in Files)
-            {
-                if (string.IsNullOrWhiteSpace(itempath)) 
-                    listBox3.Items.Add("C:\\" + file.Name);
-                else 
-                {
-                    if (!(listBox3.Items.Contains(itempath)))
-                       listBox3.Items.Add("C:\\" + file.Name);
-                }
-            }
+            {   listBox3.Items.Add("C:\\" + file.Name); }
+    }
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
 
     }
 
 
     }
 
-    class Job
+    class JobState
     {
         public bool didLoad { get; set; }
         public string resultPath { get; set; }
         public string resultFilename { get; set; }
 
-        public Job(string setpath)
+        public JobState() {}
+        
+        public JobState(string setpath)
         {
             resultPath = setpath;
 
             string[] tmpResultFileName = resultPath.Split('\\');
             resultFilename = tmpResultFileName[1];
         }
-
-        public Job() {}
-
     }
-    
+
     public static class RegexObjects
     {
         private static string re1_dateTime = ".*?";	// Non-greedy match on filler
@@ -512,10 +504,7 @@ namespace WindowsFormsApplication1
         public static Regex rttDelayObject = new Regex(regexStringRTT, RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
     }
-
-
-
-    }
+}
 
     
 

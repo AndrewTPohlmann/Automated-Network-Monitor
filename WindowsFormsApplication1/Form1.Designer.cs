@@ -72,7 +72,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 200);
+            this.label2.Location = new System.Drawing.Point(39, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 2;
@@ -88,9 +88,9 @@
             // 
             // setValuesButton
             // 
-            this.setValuesButton.Location = new System.Drawing.Point(16, 258);
+            this.setValuesButton.Location = new System.Drawing.Point(16, 256);
             this.setValuesButton.Name = "setValuesButton";
-            this.setValuesButton.Size = new System.Drawing.Size(150, 42);
+            this.setValuesButton.Size = new System.Drawing.Size(150, 40);
             this.setValuesButton.TabIndex = 5;
             this.setValuesButton.Text = "Validate Script Settings";
             this.setValuesButton.UseVisualStyleBackColor = true;
@@ -98,9 +98,9 @@
             // 
             // clearValuesButton
             // 
-            this.clearValuesButton.Location = new System.Drawing.Point(173, 258);
+            this.clearValuesButton.Location = new System.Drawing.Point(172, 256);
             this.clearValuesButton.Name = "clearValuesButton";
-            this.clearValuesButton.Size = new System.Drawing.Size(150, 42);
+            this.clearValuesButton.Size = new System.Drawing.Size(150, 40);
             this.clearValuesButton.TabIndex = 6;
             this.clearValuesButton.Text = "Clear Settings";
             this.clearValuesButton.UseVisualStyleBackColor = true;
@@ -109,7 +109,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(341, 42);
+            this.listBox1.Location = new System.Drawing.Point(341, 33);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(493, 212);
             this.listBox1.TabIndex = 7;
@@ -117,7 +117,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(447, 260);
+            this.button1.Location = new System.Drawing.Point(447, 256);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 40);
             this.button1.TabIndex = 8;
@@ -128,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 49);
+            this.label4.Location = new System.Drawing.Point(25, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 13);
             this.label4.TabIndex = 10;
@@ -137,7 +137,7 @@
             // packetsPerPingTxtBox
             // 
             this.packetsPerPingTxtBox.BackColor = System.Drawing.Color.White;
-            this.packetsPerPingTxtBox.Location = new System.Drawing.Point(139, 46);
+            this.packetsPerPingTxtBox.Location = new System.Drawing.Point(139, 49);
             this.packetsPerPingTxtBox.Name = "packetsPerPingTxtBox";
             this.packetsPerPingTxtBox.Size = new System.Drawing.Size(56, 20);
             this.packetsPerPingTxtBox.TabIndex = 11;
@@ -146,7 +146,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(203, 53);
+            this.label5.Location = new System.Drawing.Point(203, 56);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 13);
             this.label5.TabIndex = 12;
@@ -174,7 +174,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(13, 154);
+            this.label8.Location = new System.Drawing.Point(13, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 13);
             this.label8.TabIndex = 17;
@@ -182,7 +182,7 @@
             // 
             // sampleDurationTxtBox
             // 
-            this.sampleDurationTxtBox.Location = new System.Drawing.Point(141, 151);
+            this.sampleDurationTxtBox.Location = new System.Drawing.Point(141, 142);
             this.sampleDurationTxtBox.Name = "sampleDurationTxtBox";
             this.sampleDurationTxtBox.Size = new System.Drawing.Size(56, 20);
             this.sampleDurationTxtBox.TabIndex = 18;
@@ -191,7 +191,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(203, 158);
+            this.label9.Location = new System.Drawing.Point(203, 145);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 13);
             this.label9.TabIndex = 19;
@@ -209,7 +209,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(341, 260);
+            this.button3.Location = new System.Drawing.Point(341, 256);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 40);
             this.button3.TabIndex = 23;
@@ -226,21 +226,21 @@
             this.chart1.Location = new System.Drawing.Point(12, 306);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(822, 381);
+            this.chart1.Size = new System.Drawing.Size(822, 521);
             this.chart1.TabIndex = 24;
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // loadDataSetBtn
             // 
-            this.loadDataSetBtn.Location = new System.Drawing.Point(1003, 308);
+            this.loadDataSetBtn.Location = new System.Drawing.Point(972, 288);
             this.loadDataSetBtn.Name = "loadDataSetBtn";
-            this.loadDataSetBtn.Size = new System.Drawing.Size(89, 38);
+            this.loadDataSetBtn.Size = new System.Drawing.Size(120, 22);
             this.loadDataSetBtn.TabIndex = 26;
             this.loadDataSetBtn.Text = "Load to Graph";
             this.loadDataSetBtn.UseVisualStyleBackColor = true;
@@ -248,9 +248,9 @@
             // 
             // refreshDataListBtn
             // 
-            this.refreshDataListBtn.Location = new System.Drawing.Point(1003, 262);
+            this.refreshDataListBtn.Location = new System.Drawing.Point(972, 256);
             this.refreshDataListBtn.Name = "refreshDataListBtn";
-            this.refreshDataListBtn.Size = new System.Drawing.Size(89, 40);
+            this.refreshDataListBtn.Size = new System.Drawing.Size(120, 23);
             this.refreshDataListBtn.TabIndex = 27;
             this.refreshDataListBtn.Text = "Refresh";
             this.refreshDataListBtn.UseVisualStyleBackColor = true;
@@ -258,9 +258,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1098, 306);
+            this.button4.Location = new System.Drawing.Point(1098, 288);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 40);
+            this.button4.Size = new System.Drawing.Size(89, 22);
             this.button4.TabIndex = 28;
             this.button4.Text = "Clear";
             this.button4.UseVisualStyleBackColor = true;
@@ -269,7 +269,7 @@
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(862, 42);
+            this.listBox3.Location = new System.Drawing.Point(862, 33);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(325, 212);
             this.listBox3.TabIndex = 25;
@@ -277,9 +277,9 @@
             // 
             // deleteData
             // 
-            this.deleteData.Location = new System.Drawing.Point(1098, 262);
+            this.deleteData.Location = new System.Drawing.Point(1098, 256);
             this.deleteData.Name = "deleteData";
-            this.deleteData.Size = new System.Drawing.Size(89, 38);
+            this.deleteData.Size = new System.Drawing.Size(89, 23);
             this.deleteData.TabIndex = 29;
             this.deleteData.Text = "Delete";
             this.deleteData.UseVisualStyleBackColor = true;
@@ -288,7 +288,7 @@
             // scriptsRadioBtn
             // 
             this.scriptsRadioBtn.AutoSize = true;
-            this.scriptsRadioBtn.Location = new System.Drawing.Point(862, 262);
+            this.scriptsRadioBtn.Location = new System.Drawing.Point(862, 256);
             this.scriptsRadioBtn.Name = "scriptsRadioBtn";
             this.scriptsRadioBtn.Size = new System.Drawing.Size(57, 17);
             this.scriptsRadioBtn.TabIndex = 30;
@@ -300,7 +300,7 @@
             // dataSetsRadioBtn
             // 
             this.dataSetsRadioBtn.AutoSize = true;
-            this.dataSetsRadioBtn.Location = new System.Drawing.Point(862, 285);
+            this.dataSetsRadioBtn.Location = new System.Drawing.Point(862, 279);
             this.dataSetsRadioBtn.Name = "dataSetsRadioBtn";
             this.dataSetsRadioBtn.Size = new System.Drawing.Size(72, 17);
             this.dataSetsRadioBtn.TabIndex = 31;
@@ -346,6 +346,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
