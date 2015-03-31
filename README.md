@@ -20,7 +20,7 @@ Design and implementation of a system that uses the MVC architectural pattern to
 
 
 
-FUTURE TODO:
+**FUTURE TODO:**
 **Version:-> Open-Source:**
 - Angular.js on the front-end;
 - Node.js on the back-end;
