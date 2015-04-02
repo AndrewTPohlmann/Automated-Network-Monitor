@@ -8,4 +8,4 @@ The goal of this project is to gather and persist ping data (RTT times / %Loss),
 - Allow some CRUD operations against the back-end DB datasets.
 
 **Current Build:**
-- http://goo.gl/eJXYeC
+- http://goo.gl/psPd6c
