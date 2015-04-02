@@ -3,7 +3,7 @@
 The goal of this project is to gather and persist ping data (RTT times / %Loss), and then transform this data into visual projections for the purposes of analysis.
 
 **Architectural Requirements:**
-Design and implementation of a system that uses the MVC architectural pattern to present a front-end UI, process data, and persist the data in a database in the back-end.
+- Design and implementation of a system that uses the MVC architectural pattern to present a front-end UI, process data, and persist the data in a database in the back-end.
 
 **System Use Cases:**
 - Create and begin ping jobs, or delete currently running jobs.
