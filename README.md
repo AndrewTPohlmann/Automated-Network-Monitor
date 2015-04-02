@@ -9,5 +9,3 @@ Design and implementation of a system that uses the MVC architectural pattern to
 - Create and begin ping jobs, or delete currently running jobs.
 - Create visual projections in the GUI based on persisted data sets from the back-end.
 - Allow some CRUD operations against the back-end DB datasets.
-
-- //
