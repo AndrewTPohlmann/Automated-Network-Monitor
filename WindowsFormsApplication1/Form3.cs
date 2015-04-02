@@ -16,17 +16,9 @@ namespace WindowsFormsApplication1
         List<int> x_rtt = new List<int>();
         DirectoryInfo dinfo = new DirectoryInfo(@"D:\");
 
-        BackgroundWorker uibackgroundworker;
-
         public Form3()
         {
             InitializeComponent();
-        }
-
-        public Form3(BackgroundWorker x)
-        {
-            InitializeComponent();
-            uibackgroundworker = x;
         }
 
         public void Form3_Load(object sender, EventArgs e )
@@ -92,20 +84,6 @@ namespace WindowsFormsApplication1
             else
                 job.didLoad = false;
 
-            /*
-            int z = 0;
-
-                    Title chart1Title = new Title(job.resultPath, Docking.Top, new Font("Verdana", 12), Color.Black);
-                    this.chart1.Titles.Clear();
-                    this.chart1.Titles.Add(chart1Title);
-
-                    while (z < x_rtt.Count)
-                    {
-                        this.chart1.Series["Series1"].Points.AddXY(y_time[z], x_rtt[z]);
-                        z++;
-                    }
-
-            */
             e.Result = job;
         }
 
@@ -116,11 +94,10 @@ namespace WindowsFormsApplication1
 
             Console.Write("WRAAA");
 
-
                 int z = 0;
 
                 Title chart1Title = new Title(job.resultPath, Docking.Top, new Font("Verdana", 12), Color.Black);
-               this.chart1.Titles.Clear();
+                this.chart1.Titles.Clear();
                 this.chart1.Titles.Add(chart1Title);
 
                 while (z < x_rtt.Count)

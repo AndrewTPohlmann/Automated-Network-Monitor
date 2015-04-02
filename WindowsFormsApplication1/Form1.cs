@@ -13,21 +13,37 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        DirectoryInfo dinfo = new DirectoryInfo(@"D:\");
-        List<DateTime> y_time = new List<DateTime>();
-        List<int> x_rtt = new List<int>();
-
-        /*
-        List<String> usableURLList = new List<string>();
-        List<DateTime> y_time = new List<DateTime>();
-        List<int> x_rtt = new List<int>();
-        DirectoryInfo dinfo = new DirectoryInfo(@"D:\");
-        FileInfo[] Files;
-        */
-
         public Form1()
         {   InitializeComponent();  }
+       
+        private void Form1_Load(object sender, EventArgs e)
+        {}
 
+        private void loadToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            showForm(2);
+
+        }    
+        private void dataSetsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showForm(3);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 newForm2 = new Form2();
+            newForm2.ShowDialog();
+        }
+
+    private void label1_Click(object sender, EventArgs e)
+    {
+
+    }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -67,213 +83,15 @@ namespace WindowsFormsApplication1
         {
 
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            /*
-            string path = (string)listBox3.SelectedItem;
-
-            if (!string.IsNullOrWhiteSpace(path))
-            {
-                x_rtt.Clear();
-                y_time.Clear();
-
-                if (loadDataSetBtn.Text.Equals("Load to Graph"))
-                {
-                    Title chart1Title = new Title("Loading....", Docking.Top, new Font("Verdana", 12), Color.Black);
-                    chart1.Titles.Clear();
-                    chart1.Titles.Add(chart1Title);
-                    chart1.Series["Series1"].Points.Clear();
-
-                    JobState job = new JobState(path);
-                    backgroundWorker1.RunWorkerAsync(job);
-                }
-                else if (loadDataSetBtn.Text.Equals("Load to Settings"))
-                {
-                    try
-                    {
-                        System.IO.StreamReader reader = new System.IO.StreamReader(path);
-                        string line = reader.ReadLine();
-                        reader.Close();
-
-                        if (!line.Contains("REM"))
-                        {
-                            listBox1.Items.Add("Error: Unable to extract script parameters.");
-                            setValuesButton.Text = "Validate Script Settings";
-                            return;
-                        }
-
-                        string[] parameters = line.Split(' ');
-                        remoteHostTxtBox.Text = parameters[2];
-                        packetsPerPingTxtBox.Text = parameters[4];
-                        pingIntervalTxtBox.Text = parameters[6];
-                        sampleDurationTxtBox.Text = parameters[8];
-
-                            listBox1.Items.Add("Success: Parameters from script file " + path + " extracted.");
-                            setValuesButton.Text = "Validate Script Settings";
-
-                    }
-                    catch (Exception)
-                    {
-                            listBox1.Items.Add("Error: Unable to open the script file.");
-                            setValuesButton.Text = "Validate Script Settings";
-                    }
-
-                }
-            }
-             */
-        }
-
-
-
-        /*
-    private bool processData(string path)
-    {
-            try
-            {
-                Match dateTime, rtt;
-                string line;
-
-                using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                    using (StreamReader rdr = new StreamReader(fileStream))
-                    {
-                        while ((line = rdr.ReadLine()) != null)
-                        {
-                            if (line.Contains("Pi") || (line.Contains("Re")) || line.Contains("Pa") || line.Contains("Ap") || string.IsNullOrWhiteSpace(line))
-                                continue;
-
-                            dateTime = RegexObjects.dateTimeObject.Match(line);
-                            rtt = RegexObjects.rttDelayObject.Match(line);
-
-                            if (dateTime.Success)
-                            { y_time.Add(Convert.ToDateTime(dateTime.Groups[1].ToString())); }
-                            else if (rtt.Success)
-                            { x_rtt.Add(int.Parse(rtt.Groups[5].ToString())); }
-                        }
-                    }
-
-                return true;
-            }
-            catch (Exception)
-            {   return false;   }
-
-    }
-        */
-    public void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-    {
-        JobState job = e.Argument as JobState;
-
-        if (processData(job.resultPath))
-            job.didLoad = true;
-        else
-            job.didLoad = false;
-
-        Console.Write("\n"+ job.didLoad);
-        e.Result = job;
-    }
-
-    public void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-    {
-
-        JobState job = e.Result as JobState;
-
-        Console.Write("WRAAA");
-
-        if (job.didLoad)
-        { 
-            int z = 0;
-
-            Title chart1Title = new Title(job.resultPath, Docking.Top, new Font("Verdana", 12), Color.Black);
-            chart1.Titles.Clear();
-            chart1.Titles.Add(chart1Title);
-
-                while (z < x_rtt.Count)
-                {
-                    chart1.Series["Series1"].Points.AddXY(y_time[z], x_rtt[z]);
-                    z++;
-                }
-
-        }
-        else
-            Console.Write("Error: " + job.resultFilename + " could not be loaded into graph.");
-    }
-        
-    private void loadToolStripMenuItem1_Click(object sender, EventArgs e)
-    {
-        showForm(2);
-
-    }    
-    private void dataSetsToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-        /*
-        OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
-        openFileDialog1.InitialDirectory = dinfo.ToString();
-        openFileDialog1.Filter = "txt files (*.txt)|*.txt";
-        openFileDialog1.FilterIndex = 2;
-        openFileDialog1.RestoreDirectory = true;
-
-        if (openFileDialog1.ShowDialog() == DialogResult.OK)
-        {
-            string file = openFileDialog1.FileName;
-
-            x_rtt.Clear();
-            y_time.Clear();
-
-            Title chart1Title = new Title("Loading....", Docking.Top, new Font("Verdana", 12), Color.Black);
-            chart1.Titles.Clear();
-            chart1.Titles.Add(chart1Title);
-            chart1.Series["Series1"].Points.Clear();
-
-            Console.Write("\nMade it here");
-
-            JobState job = new JobState(file);
-            backgroundWorker1.RunWorkerAsync(job);
-
-        }
-       */  
-
-        showForm(3);
-    }
-
-    private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
-    {
-        Application.Exit();
-    }
-    private void label1_Click(object sender, EventArgs e)
-    {
-
-    }
-
     private void toolStripMenuItem1_Click(object sender, EventArgs e)
     {
 
-    }
-
-
-    
-
-    private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-        Application.Exit();
-    }
-
-    private void newToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-        Form2 newForm2 = new Form2();
-        newForm2.ShowDialog();
     }
 
     private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
     {
 
     }
-
-
 
     private void setSaveDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
     {
@@ -289,78 +107,37 @@ namespace WindowsFormsApplication1
     {
     }
 
-    private void showForm(int x)
-    {
-        if (x==2)
+        private void showForm(int x)
         {
-            Form2 newForm2 = new Form2();
-            newForm2.ShowDialog();
-        }
-        else
-        {
-            Form3 newForm3 = new Form3(backgroundWorker1);
-            newForm3.ShowDialog();
-        }
-    }
-
-    private bool processData(string path)
-    {
-        try
-        {
-            Match dateTime, rtt;
-            string line;
-
-            using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-            using (StreamReader rdr = new StreamReader(fileStream))
+            if (x==2)
             {
-                while ((line = rdr.ReadLine()) != null)
-                {
-
-                    if (string.IsNullOrWhiteSpace(line) || line.Contains("Pi") || 
-                        (line.Contains("Re")) || line.Contains("Pa") || line.Contains("Ap") )
-                        continue;
-
-                 //      Console.Write(line + "\n");
-
-                    dateTime = RegexObjects.dateTimeObject.Match(line);
-                    rtt = RegexObjects.rttDelayObject.Match(line);
-
-            //        Console.Write("\n" + dateTime.ToString() + " " + rtt.ToString());
-
-                    if (dateTime.Success)
-                    { y_time.Add(Convert.ToDateTime(dateTime.Groups[1].ToString())); }
-                    else if (rtt.Success)
-                    { x_rtt.Add(int.Parse(rtt.Groups[5].ToString())); }
-
-                    Console.Write("\n" + dateTime.Groups[1].ToString() + " " + rtt.Groups[5].ToString());
-                }
+                Form2 newForm2 = new Form2();
+                newForm2.ShowDialog();
             }
-
-            return true;
+            else
+            {
+                Form3 newForm3 = new Form3();
+                newForm3.ShowDialog();
+            }
         }
-        catch (Exception)
-        { return false; }
-
-    }
-
-    }
-    public class JobState
-    {
-        public bool didLoad { get; set; }
-        public string resultPath { get; set; }
-        public string resultFilename { get; set; }
-
-        public JobState() { }
-
-        public JobState(string setpath)
+        }
+        public class JobState
         {
-            resultPath = setpath;
+            public bool didLoad { get; set; }
+            public string resultPath { get; set; }
+            public string resultFilename { get; set; }
 
-            string[] tmpResultFileName = resultPath.Split('\\');
+            public JobState() { }
 
-            resultFilename = tmpResultFileName[1];
+            public JobState(string setpath)
+            {
+                resultPath = setpath;
+
+                string[] tmpResultFileName = resultPath.Split('\\');
+
+                resultFilename = tmpResultFileName[1];
+            }
         }
-    }
 
     public static class RegexObjects
     {
