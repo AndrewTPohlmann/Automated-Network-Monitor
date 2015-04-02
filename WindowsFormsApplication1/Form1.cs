@@ -1,25 +1,29 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Diagnostics;
+using System.Text.RegularExpressions;
 using System.Windows.Forms.DataVisualization.Charting;
-using System.Net.NetworkInformation;
+using System.Drawing;
+using System.Collections.Generic;
+
 
 
 namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-     //   List<String> usableURLList = new List<string>();
+        DirectoryInfo dinfo = new DirectoryInfo(@"D:\");
+        List<DateTime> y_time = new List<DateTime>();
+        List<int> x_rtt = new List<int>();
+
+        /*
+        List<String> usableURLList = new List<string>();
         List<DateTime> y_time = new List<DateTime>();
         List<int> x_rtt = new List<int>();
         DirectoryInfo dinfo = new DirectoryInfo(@"D:\");
         FileInfo[] Files;
+        */
 
         public Form1()
         {   InitializeComponent();  }
@@ -63,15 +67,11 @@ namespace WindowsFormsApplication1
         {
 
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
         private void button4_Click(object sender, EventArgs e)
         {
             /*
@@ -128,42 +128,9 @@ namespace WindowsFormsApplication1
              */
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {   
-            if (dataSetsRadioBtn.Checked || scriptsRadioBtn.Checked)
-                refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {   listBox3.Items.Clear();  }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace((string)listBox3.SelectedItem))
-            {
-                System.IO.File.Delete((string)listBox3.SelectedItem);
-                refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
-            }
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            loadDataSetBtn.Text = "Load to Settings";
-            refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
-        }
-
-        private void dataSetsRadioBtn_CheckedChanged(object sender, EventArgs e)
-        {
-            loadDataSetBtn.Text = "Load to Graph";
-            refreshListBox3(scriptsRadioBtn.Checked, (string)listBox3.SelectedItem);
-        }
 
 
+        /*
     private bool processData(string path)
     {
             try
@@ -194,9 +161,9 @@ namespace WindowsFormsApplication1
             catch (Exception)
             {   return false;   }
 
-        }
-
-    private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+    }
+        */
+    public void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
     {
         JobState job = e.Argument as JobState;
 
@@ -205,12 +172,16 @@ namespace WindowsFormsApplication1
         else
             job.didLoad = false;
 
+        Console.Write("\n"+ job.didLoad);
         e.Result = job;
     }
 
-    private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+    public void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
     {
+
         JobState job = e.Result as JobState;
+
+        Console.Write("WRAAA");
 
         if (job.didLoad)
         { 
@@ -231,24 +202,48 @@ namespace WindowsFormsApplication1
             Console.Write("Error: " + job.resultFilename + " could not be loaded into graph.");
     }
         
-    public void refreshListBox3(bool type, string itempath)
-    {   //true == script, false == bat
-
-        if (type)
-            Files = dinfo.GetFiles("*.bat");
-        else
-            Files = dinfo.GetFiles("*.txt");
-
-            listBox3.Items.Clear();
-            foreach (FileInfo file in Files)
-            {   listBox3.Items.Add(dinfo.ToString() + file.Name); }
-    }
-
-    private void Form1_Load(object sender, EventArgs e)
+    private void loadToolStripMenuItem1_Click(object sender, EventArgs e)
     {
+        showForm(2);
 
+    }    
+    private void dataSetsToolStripMenuItem_Click(object sender, EventArgs e)
+    {
+        /*
+        OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+        openFileDialog1.InitialDirectory = dinfo.ToString();
+        openFileDialog1.Filter = "txt files (*.txt)|*.txt";
+        openFileDialog1.FilterIndex = 2;
+        openFileDialog1.RestoreDirectory = true;
+
+        if (openFileDialog1.ShowDialog() == DialogResult.OK)
+        {
+            string file = openFileDialog1.FileName;
+
+            x_rtt.Clear();
+            y_time.Clear();
+
+            Title chart1Title = new Title("Loading....", Docking.Top, new Font("Verdana", 12), Color.Black);
+            chart1.Titles.Clear();
+            chart1.Titles.Add(chart1Title);
+            chart1.Series["Series1"].Points.Clear();
+
+            Console.Write("\nMade it here");
+
+            JobState job = new JobState(file);
+            backgroundWorker1.RunWorkerAsync(job);
+
+        }
+       */  
+
+        showForm(3);
     }
 
+    private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+    {
+        Application.Exit();
+    }
     private void label1_Click(object sender, EventArgs e)
     {
 
@@ -259,13 +254,7 @@ namespace WindowsFormsApplication1
 
     }
 
-    private void loadToolStripMenuItem1_Click(object sender, EventArgs e)
-    {
 
-        Form2 newForm2 = new Form2();
-        newForm2.ShowDialog();
-
-    }
     
 
     private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -284,10 +273,7 @@ namespace WindowsFormsApplication1
 
     }
 
-    private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
-    {
 
-    }
 
     private void setSaveDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
     {
@@ -303,21 +289,75 @@ namespace WindowsFormsApplication1
     {
     }
 
+    private void showForm(int x)
+    {
+        if (x==2)
+        {
+            Form2 newForm2 = new Form2();
+            newForm2.ShowDialog();
+        }
+        else
+        {
+            Form3 newForm3 = new Form3(backgroundWorker1);
+            newForm3.ShowDialog();
+        }
     }
 
-    class JobState
+    private bool processData(string path)
+    {
+        try
+        {
+            Match dateTime, rtt;
+            string line;
+
+            using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            using (StreamReader rdr = new StreamReader(fileStream))
+            {
+                while ((line = rdr.ReadLine()) != null)
+                {
+
+                    if (string.IsNullOrWhiteSpace(line) || line.Contains("Pi") || 
+                        (line.Contains("Re")) || line.Contains("Pa") || line.Contains("Ap") )
+                        continue;
+
+                 //      Console.Write(line + "\n");
+
+                    dateTime = RegexObjects.dateTimeObject.Match(line);
+                    rtt = RegexObjects.rttDelayObject.Match(line);
+
+            //        Console.Write("\n" + dateTime.ToString() + " " + rtt.ToString());
+
+                    if (dateTime.Success)
+                    { y_time.Add(Convert.ToDateTime(dateTime.Groups[1].ToString())); }
+                    else if (rtt.Success)
+                    { x_rtt.Add(int.Parse(rtt.Groups[5].ToString())); }
+
+                    Console.Write("\n" + dateTime.Groups[1].ToString() + " " + rtt.Groups[5].ToString());
+                }
+            }
+
+            return true;
+        }
+        catch (Exception)
+        { return false; }
+
+    }
+
+    }
+    public class JobState
     {
         public bool didLoad { get; set; }
         public string resultPath { get; set; }
         public string resultFilename { get; set; }
 
-        public JobState() {}
-        
+        public JobState() { }
+
         public JobState(string setpath)
         {
             resultPath = setpath;
 
             string[] tmpResultFileName = resultPath.Split('\\');
+
             resultFilename = tmpResultFileName[1];
         }
     }
@@ -341,6 +381,7 @@ namespace WindowsFormsApplication1
         public static Regex rttDelayObject = new Regex(regexStringRTT, RegexOptions.IgnoreCase | RegexOptions.Singleline);
 
     }
+
 }
 
     

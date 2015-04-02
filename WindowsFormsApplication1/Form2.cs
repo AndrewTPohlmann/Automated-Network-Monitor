@@ -17,8 +17,6 @@ namespace WindowsFormsApplication1
         List<String> usableURLList = new List<string>();
         DirectoryInfo dinfo = new DirectoryInfo(@"D:\");
 
-     //   string[] preloadargs;
-
         string resultPath;
         string batPath;
         string batTxt;
@@ -28,15 +26,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        /*
-        public Form2(string[] args )
-        {
-            InitializeComponent();
 
-    //        preloadargs = args;
-            
-        }
-        */
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -109,35 +99,38 @@ namespace WindowsFormsApplication1
                         @"ECHO Date:%Date% Time:%Time% >>" + resultPath + Environment.NewLine +
                         @"C:\windows\system32\ping %IPADDRESS% -n %PACKETSPERPING% >>" + resultPath; 
 
-                    using (StreamWriter writer = new System.IO.StreamWriter(batPath))
-                    {
-                        try
+                        using (StreamWriter writer = new System.IO.StreamWriter(batPath))
                         {
-                            writer.WriteLine("REM " + batconfigStr);
-                            writer.Write(batTxt);
-                            writer.Close();
+                            try
+                            {
+                                writer.WriteLine("REM " + batconfigStr);
+                                writer.Write(batTxt);
+                                writer.Close();
 
-                            step2.ForeColor = Color.Green;
-                            step3.ForeColor = Color.Blue;
-                            setValuesButton.Text = "Start Ping Task";
+                                step2.ForeColor = Color.Green;
+                                step3.ForeColor = Color.Blue;
+                                setValuesButton.Text = "Start Ping Task";
 
+                                if (autoExecutePingTasksToolStripMenuItem.Checked) 
+                                    setValuesButton.PerformClick();
+ 
+
+                            }
+                            catch (Exception)
+                            {
+                                MessageBox.Show("Error: Unable to create batch file.");
+
+                                step2.ForeColor = Color.Black;
+                                step3.ForeColor = Color.Black;
+                                setValuesButton.Text = "Generate Batch File";
+                            }
                         }
-                        catch (Exception)
-                        {
-                            MessageBox.Show("Error: Unable to create batch file.");
-
-                            step2.ForeColor = Color.Black;
-                            step3.ForeColor = Color.Black;
-                            setValuesButton.Text = "Generate Batch File";
-                        }
-                    }
                     break;
 
                 case ("Start Ping Task"):
 
                     try
                     { 
-
                         Random rnd = new Random();
 
                         String args = @"/CREATE /SC minute /MO " + pingIntervalNumeric.Text + " /TN PingTask" + rnd.Next(101) + "_" + remoteHostTxtBox.Text + " /TR " + batPath + " /ED " +
@@ -279,43 +272,39 @@ namespace WindowsFormsApplication1
                 string file = openFileDialog1.FileName;
 
                 using (FileStream fileStream = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                using (StreamReader rdr = new StreamReader(fileStream))
-                {
-                    try
+                    using (StreamReader rdr = new StreamReader(fileStream))
                     {
-                        string line = rdr.ReadLine();
-
-                       // Console.Write(line);
-
-                        rdr.Close();
-
-                        if (!line.Contains("REM"))
+                        try
                         {
-                            //       listBox1.Items.Add("Error: Unable to extract script parameters.");
-                            //       setValuesButton.Text = "Validate Script Settings";
-                            return;
+                            string line = rdr.ReadLine();
+
+                            if (!line.Contains("REM"))
+                            {
+                                //       listBox1.Items.Add("Error: Unable to extract script parameters.");
+                                //       setValuesButton.Text = "Validate Script Settings";
+                                return;
+                            }
+
+                            string[] parameters = line.Split(' ');
+                            string[] form2args = new string[] { parameters[2], parameters[4], parameters[6], parameters[8] };
+
+                            pingIntervalNumeric.Value = int.Parse(form2args[2]);
+                            packetsPerPingNumeric.Value = int.Parse(form2args[1]);
+                            remoteHostTxtBox.Text = form2args[0];
+                            dateTimePicker1.Value = DateTime.Parse(form2args[3]);
+
+                            step1.ForeColor = step2.ForeColor = step3.ForeColor = Color.Black;
+                            lockScriptSettings(false);
+                            setValuesButton.Text = "Validate Script Settings";
+
+                            lockScriptSettings(false);
+
                         }
-
-                        string[] parameters = line.Split(' ');
-                        string[] form2args = new string[] { parameters[2], parameters[4], parameters[6], parameters[8] };
-
-                        pingIntervalNumeric.Value = int.Parse(form2args[2]);
-                        packetsPerPingNumeric.Value = int.Parse(form2args[1]);
-                        remoteHostTxtBox.Text = form2args[0];
-                        dateTimePicker1.Value = DateTime.Parse(form2args[3]);
-
-                        step1.ForeColor = step2.ForeColor = step3.ForeColor = Color.Black;
-                        lockScriptSettings(false);
-                        setValuesButton.Text = "Validate Script Settings";
-
-                        lockScriptSettings(false);
-
-                    }
-                    catch (Exception)
-                    {
-                        //                         listBox1.Items.Add("Error: Unable to open the script file.");
-                        //                         setValuesButton.Text = "Validate Script Settings";
-                    }
+                        catch (Exception)
+                        {
+                            //                         listBox1.Items.Add("Error: Unable to open the script file.");
+                            //                         setValuesButton.Text = "Validate Script Settings";
+                        }
 
                 }
 
@@ -332,20 +321,14 @@ namespace WindowsFormsApplication1
             this.Close();
         }
 
-        private void autoClearAfterExecuteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            autoClearAfterExecuteToolStripMenuItem.Checked = !(autoClearAfterExecuteToolStripMenuItem.Checked);
-        }
-
-        private void autoExecutePingTasksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            autoExecutePingTasksToolStripMenuItem.Checked = !(autoExecutePingTasksToolStripMenuItem.Checked);
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-         
+        
+        private void autoExecutePingTasksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            autoExecutePingTasksToolStripMenuItem.Checked = !(autoExecutePingTasksToolStripMenuItem.Checked);
+        } 
     }
 }

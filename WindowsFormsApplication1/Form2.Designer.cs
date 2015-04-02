@@ -54,7 +54,6 @@
             this.loadExistingFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scriptSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoExecutePingTasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.autoClearAfterExecuteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.packetsPerPingNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pingIntervalNumeric)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -279,7 +278,7 @@
             this.scriptSettingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(792, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(358, 24);
             this.menuStrip1.TabIndex = 59;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -296,7 +295,7 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
@@ -304,7 +303,7 @@
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -327,8 +326,7 @@
             // scriptSettingsToolStripMenuItem
             // 
             this.scriptSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.autoExecutePingTasksToolStripMenuItem,
-            this.autoClearAfterExecuteToolStripMenuItem});
+            this.autoExecutePingTasksToolStripMenuItem});
             this.scriptSettingsToolStripMenuItem.Name = "scriptSettingsToolStripMenuItem";
             this.scriptSettingsToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.scriptSettingsToolStripMenuItem.Text = "Generator Settings";
@@ -336,29 +334,23 @@
             // autoExecutePingTasksToolStripMenuItem
             // 
             this.autoExecutePingTasksToolStripMenuItem.Name = "autoExecutePingTasksToolStripMenuItem";
-            this.autoExecutePingTasksToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.autoExecutePingTasksToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.autoExecutePingTasksToolStripMenuItem.Text = "Auto-Execute Task ";
             this.autoExecutePingTasksToolStripMenuItem.Click += new System.EventHandler(this.autoExecutePingTasksToolStripMenuItem_Click);
-            // 
-            // autoClearAfterExecuteToolStripMenuItem
-            // 
-            this.autoClearAfterExecuteToolStripMenuItem.Name = "autoClearAfterExecuteToolStripMenuItem";
-            this.autoClearAfterExecuteToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.autoClearAfterExecuteToolStripMenuItem.Text = "Auto-Clear After Execute";
-            this.autoClearAfterExecuteToolStripMenuItem.Click += new System.EventHandler(this.autoClearAfterExecuteToolStripMenuItem_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(792, 556);
+            this.ClientSize = new System.Drawing.Size(358, 246);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.clearValuesButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.setValuesButton);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -405,6 +397,5 @@
         private System.Windows.Forms.ToolStripMenuItem loadExistingFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scriptSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoExecutePingTasksToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem autoClearAfterExecuteToolStripMenuItem;
     }
 }
