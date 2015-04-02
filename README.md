@@ -11,15 +11,8 @@ Design and implementation of a system that uses the MVC architectural pattern to
 - Create visual projections in the GUI based on persisted data sets from the back-end.
 - Allow some CRUD operations against the back-end DB datasets.
 
-**Currently being rapid-prototyped in C#.NET (4.5.1)**
-
-**Version:-> Open-Source:**
-- Angular.js on the front-end;
-- Node.js on the back-end;
-- MongoDB for data persistence;
-- JSON for data;
-- HTML5/JS for language.
-
-**Version:-> ASP.NET Framework:**
-- Web Forms / MVC / Web API / SQL + ADO .NET
-
+**TODO List:**
+- Port txtFile data into BSON document sets.
+- Implement MongoDB backend connectivity to persist the data documents.
+- Implement UI controls to maintain the data document sets and load sets into the graph.
+- //
