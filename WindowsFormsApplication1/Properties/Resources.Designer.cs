@@ -63,9 +63,9 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cancel_128 {
+        internal static System.Drawing.Bitmap _6a010534b1db25970b0147e0ae51b2970b_800wi {
             get {
-                object obj = ResourceManager.GetObject("cancel-128", resourceCulture);
+                object obj = ResourceManager.GetObject("6a010534b1db25970b0147e0ae51b2970b-800wi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icon_delete {
+        internal static System.Drawing.Bitmap left_arrow_512 {
             get {
-                object obj = ResourceManager.GetObject("icon_delete", resourceCulture);
+                object obj = ResourceManager.GetObject("left_arrow-512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

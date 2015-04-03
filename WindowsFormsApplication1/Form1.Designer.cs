@@ -47,7 +47,7 @@
             this.helpToolStripMenuItem});
             this.systemMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.systemMenuStrip.Name = "systemMenuStrip";
-            this.systemMenuStrip.Size = new System.Drawing.Size(552, 24);
+            this.systemMenuStrip.Size = new System.Drawing.Size(941, 24);
             this.systemMenuStrip.TabIndex = 35;
             this.systemMenuStrip.Text = "menuStrip1";
             // 
@@ -109,8 +109,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 220);
+            this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources._6a010534b1db25970b0147e0ae51b2970b_800wi;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(941, 478);
             this.Controls.Add(this.systemMenuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.Text = "Automated Network Monitor";
             this.Load += new System.EventHandler(this.Form1_Load);

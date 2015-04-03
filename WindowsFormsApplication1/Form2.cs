@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
     public partial class Form2 : Form
     {
         List<String> usableURLList = new List<string>();
-        DirectoryInfo dinfo = new DirectoryInfo(@"D:\");
+        DirectoryInfo dinfo = new DirectoryInfo(@"C:\");
 
         string resultPath;
         string batPath;
@@ -63,7 +63,6 @@ namespace WindowsFormsApplication1
                       
                         setValuesButton.Text = "Generate Batch File";
                         step1.ForeColor = Color.Green;
-
                         lockScriptSettings(true);
 
                     }
@@ -77,6 +76,8 @@ namespace WindowsFormsApplication1
 
                         lockScriptSettings(false);
                     }
+
+                    backButton.Visible = true;
 
                     break;
 
@@ -113,8 +114,7 @@ namespace WindowsFormsApplication1
 
                                 if (autoExecutePingTasksToolStripMenuItem.Checked) 
                                     setValuesButton.PerformClick();
- 
-
+                                
                             }
                             catch (Exception)
                             {
@@ -125,6 +125,9 @@ namespace WindowsFormsApplication1
                                 setValuesButton.Text = "Generate Batch File";
                             }
                         }
+
+                        backButton.Visible = true;
+
                     break;
 
                 case ("Start Ping Task"):
@@ -138,12 +141,16 @@ namespace WindowsFormsApplication1
 
                   //      Console.WriteLine(args);
 
+                        backButton.Visible = false;
                         Process newBat = Process.Start("schtasks", args);
 
                         setValuesButton.Text = ("Validate Script Settings");
 
-                        lockScriptSettings(false);
-                        clearScriptSettings();
+                            if (autoCleToolStripMenuItem.Checked)
+                            {
+                                lockScriptSettings(false);
+                                clearScriptSettings();
+                            }
 
                         break;
                     }
@@ -311,6 +318,21 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void backButton_Click(object sender, EventArgs e)
+        {
+ //           switch (setValuesButton.Text)
+     //       {
+     //           case ("Generate Batch File" || "Start Ping Task"):
+
+                    step1.ForeColor = step2.ForeColor = step3.ForeColor = Color.Black;
+                    setValuesButton.Text = "Validate Script Settings";
+                    lockScriptSettings(false);
+                    backButton.Visible = false;
+              //      break;
+     //       }
+        } 
+
+
         private void scriptActionsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -329,6 +351,12 @@ namespace WindowsFormsApplication1
         private void autoExecutePingTasksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             autoExecutePingTasksToolStripMenuItem.Checked = !(autoExecutePingTasksToolStripMenuItem.Checked);
-        } 
+        }
+
+        private void autoCleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            autoCleToolStripMenuItem.Checked = !(autoCleToolStripMenuItem.Checked);
+        }
+
     }
 }
