@@ -27,20 +27,11 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form2_Load(object sender, EventArgs e)
-        {                
-            
-            dateTimePicker1.MinDate = DateTime.Now.AddDays(1);
+        {
+
+            startDatePicker.MinDate = DateTime.Now;
+            endDatePicker.MinDate = DateTime.Now.AddDays(1);
             remoteHostTxtBox.Items.Add("www.utexas.edu");
             remoteHostTxtBox.Items.Add("www.nus.edu");
             remoteHostTxtBox.Items.Add("www.ox.ac.uk");
@@ -57,11 +48,10 @@ namespace WindowsFormsApplication1
 
                     if (validateURL())
                     {
-                        batconfigStr = "-U: " + remoteHostTxtBox.Text + " -P: " + packetsPerPingNumeric.Text + " -I: " + pingIntervalNumeric.Text + " -D: " + dateTimePicker1.Value.ToString("MM/dd/yyyy"); 
+                        batconfigStr = "-U: " + remoteHostTxtBox.Text + " -P: " + packetsPerPingNumeric.Text + " -I: " + pingIntervalNumeric.Text + " -D: " + endDatePicker.Value.ToString("MM/dd/yyyy"); 
 
-                      //    Console.Write(batconfigStr);
-                      
                         setValuesButton.Text = "Generate Batch File";
+                        backButton.Visible = true;
                         step1.ForeColor = Color.Green;
                         lockScriptSettings(true);
 
@@ -73,11 +63,9 @@ namespace WindowsFormsApplication1
                         setValuesButton.Text = "Validate Script Settings";
                         step1.ForeColor = Color.Black;
                         remoteHostTxtBox.BackColor = Color.White;
-
+                        backButton.Visible = false;
                         lockScriptSettings(false);
                     }
-
-                    backButton.Visible = true;
 
                     break;
 
@@ -101,7 +89,6 @@ namespace WindowsFormsApplication1
                         @"C:\windows\system32\ping %IPADDRESS% -n %PACKETSPERPING% >>" + resultPath; 
 
                         using (StreamWriter writer = new System.IO.StreamWriter(batPath))
-                        {
                             try
                             {
                                 writer.WriteLine("REM " + batconfigStr);
@@ -119,11 +106,10 @@ namespace WindowsFormsApplication1
                             {
                                 MessageBox.Show("Error: Unable to create batch file.");
 
-                                step2.ForeColor = Color.Black;
-                                step3.ForeColor = Color.Black;
+                                step2.ForeColor = step3.ForeColor = Color.Black;
                                 setValuesButton.Text = "Generate Batch File";
                             }
-                        }
+                        
 
                         backButton.Visible = true;
 
@@ -135,21 +121,18 @@ namespace WindowsFormsApplication1
                     { 
                         Random rnd = new Random();
 
-                        String args = @"/CREATE /SC minute /MO " + pingIntervalNumeric.Text + " /TN PingTask" + rnd.Next(101) + "_" + remoteHostTxtBox.Text + " /TR " + batPath + " /ED " +
-                              dateTimePicker1.Value.ToString("MM/dd/yyyy");     
+                        String args = @"/CREATE /SC minute /MO " + pingIntervalNumeric.Text + " /TN PingTask" + rnd.Next(101) + "_" + 
+                            remoteHostTxtBox.Text + " /SD " + startDatePicker.Value.ToString("MM/dd/yyyy")  + " /ED " + endDatePicker.Value.ToString("MM/dd/yyyy") + " /TR " + batPath;     
 
-                  //      Console.WriteLine(args);
+                        Console.WriteLine(args);
 
-                        backButton.Visible = false;
                         Process newBat = Process.Start("schtasks", args);
 
-                        setValuesButton.Text = ("Validate Script Settings");
+                        resetScriptProcess();
+                        lockScriptSettings(false);
 
                             if (autoCleToolStripMenuItem.Checked)
-                            {
-                                lockScriptSettings(false);
-                                clearScriptSettings();
-                            }
+                            {   clearScriptSettings();  }
 
                         break;
                     }
@@ -164,106 +147,8 @@ namespace WindowsFormsApplication1
                     }
 
             }
-        }
+        } 
         
-        private bool validateURL()
-        {
-            bool ispingable = true;
-
-            if (string.IsNullOrWhiteSpace(remoteHostTxtBox.Text) || !Connect(remoteHostTxtBox.Text, 80) )
-            {
-                remoteHostTxtBox.BackColor = Color.FromArgb(255, 192, 192);
-                ispingable = false;
-            }
-            else { remoteHostTxtBox.BackColor = Color.White; }
-
-            return ispingable;
-        
-        }
-        
-        private void lockScriptSettings(bool locked)
-        {
-            if (locked)
-            {
-                pingIntervalNumeric.Enabled = false;
-                packetsPerPingNumeric.Enabled = false;
-                remoteHostTxtBox.Enabled = false;
-                dateTimePicker1.Enabled = false;
-            }
-            else
-            {
-                pingIntervalNumeric.Enabled = true;
-                packetsPerPingNumeric.Enabled = true;
-                remoteHostTxtBox.Enabled = true;
-                dateTimePicker1.Enabled = true;
-            }   
-        }
-
-        private void clearScriptSettings() 
-        {
-
-                packetsPerPingNumeric.Value = 1;
-                pingIntervalNumeric.Value = 1;
-                dateTimePicker1.MinDate = DateTime.Now.AddDays(1);
-                remoteHostTxtBox.Text = "";
-
-            step1.ForeColor = step2.ForeColor = step3.ForeColor = Color.Black;
-            lockScriptSettings(false);
-            setValuesButton.Text = "Validate Script Settings";
-        
-        }
-
-        public static Boolean Connect(string host, int port)
-        {
-
-            Ping pingTest = new Ping();
-            int timeout = 10;
-            string data = "aaaa";
-            byte[] buffer = Encoding.ASCII.GetBytes(data);
-
-            try
-            {
-                PingReply pingTestReply = pingTest.Send(host, timeout, buffer);
-
-                if (pingTestReply.Status == IPStatus.Success) return true;    
-                else return false;
-            }
-            catch
-            { return false; }
-
-        }
-
-
-        private void pingIntervalNumeric_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clearValuesButton_Click(object sender, EventArgs e)
-        {
-            clearScriptSettings();
-        }
-
         private void loadExistingFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -297,12 +182,9 @@ namespace WindowsFormsApplication1
                             pingIntervalNumeric.Value = int.Parse(form2args[2]);
                             packetsPerPingNumeric.Value = int.Parse(form2args[1]);
                             remoteHostTxtBox.Text = form2args[0];
-                            dateTimePicker1.Value = DateTime.Parse(form2args[3]);
+                            endDatePicker.Value = DateTime.Parse(form2args[3]);
 
-                            step1.ForeColor = step2.ForeColor = step3.ForeColor = Color.Black;
-                            lockScriptSettings(false);
-                            setValuesButton.Text = "Validate Script Settings";
-
+                            resetScriptProcess();
                             lockScriptSettings(false);
 
                         }
@@ -317,25 +199,81 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void backButton_Click(object sender, EventArgs e)
+        private bool validateURL()
         {
- //           switch (setValuesButton.Text)
-     //       {
-     //           case ("Generate Batch File" || "Start Ping Task"):
+            bool ispingable = true;
 
-                    step1.ForeColor = step2.ForeColor = step3.ForeColor = Color.Black;
-                    setValuesButton.Text = "Validate Script Settings";
-                    lockScriptSettings(false);
-                    backButton.Visible = false;
-              //      break;
-     //       }
-        } 
+            if (string.IsNullOrWhiteSpace(remoteHostTxtBox.Text) || !Connect(remoteHostTxtBox.Text, 80) )
+            {
+                remoteHostTxtBox.BackColor = Color.FromArgb(255, 192, 192);
+                ispingable = false;
+            }
+            else { remoteHostTxtBox.BackColor = Color.White; }
 
-
-        private void scriptActionsToolStripMenuItem_Click(object sender, EventArgs e)
+            return ispingable;
+        
+        }
+        
+        private void lockScriptSettings(bool locked)
         {
+            if (locked)
+            {
+                pingIntervalNumeric.Enabled = false;
+                packetsPerPingNumeric.Enabled = false;
+                remoteHostTxtBox.Enabled = false;
+                startDatePicker.Enabled = false;    
+                endDatePicker.Enabled = false;
+            }
+            else
+            {
+                pingIntervalNumeric.Enabled = true;
+                packetsPerPingNumeric.Enabled = true;
+                remoteHostTxtBox.Enabled = true;
+                startDatePicker.Enabled = true;    
+                endDatePicker.Enabled = true;
+            }   
+        }
+
+        private void clearScriptSettings() 
+        {
+            packetsPerPingNumeric.Value = 1;
+            pingIntervalNumeric.Value = 1;
+            endDatePicker.MinDate = DateTime.Now.AddDays(1);
+            remoteHostTxtBox.Text = "";
 
         }
+
+        private void resetScriptProcess()
+        {
+            step1.ForeColor = step2.ForeColor = step3.ForeColor = Color.Black;
+            lockScriptSettings(false);
+            setValuesButton.Text = "Validate Script Settings";
+        }
+
+        public static Boolean Connect(string host, int port)
+        {
+
+            Ping pingTest = new Ping();
+            int timeout = 10;
+            string data = "aaaa";
+            byte[] buffer = Encoding.ASCII.GetBytes(data);
+
+            try
+            {
+                PingReply pingTestReply = pingTest.Send(host, timeout, buffer);
+
+                if (pingTestReply.Status == IPStatus.Success) return true;    
+                else return false;
+            }
+            catch
+            { return false; }
+
+        }
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            resetScriptProcess();
+
+        } 
 
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -356,6 +294,53 @@ namespace WindowsFormsApplication1
         {
             autoCleToolStripMenuItem.Checked = !(autoCleToolStripMenuItem.Checked);
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void pingIntervalNumeric_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+        private void scriptActionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void startDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+       
 
     }
 }

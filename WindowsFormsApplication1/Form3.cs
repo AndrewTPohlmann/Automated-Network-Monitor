@@ -81,8 +81,6 @@ namespace WindowsFormsApplication1
 
             JobState job = e.Result as JobState;
 
-            Console.Write("WRAAA");
-
                 int z = 0;
 
                 while (z < x_rtt.Count)
@@ -103,22 +101,13 @@ namespace WindowsFormsApplication1
                 Match dateTime, rtt;
                 string line;
 
-                /*
-                string file = new StreamReader(path).ReadToEnd();
-                string[] lines = file.Split('\n');
-                MessageBox.Show(lines.GetLength(0).ToString());
-                */
-
                 using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
                     System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
                     if (Path.GetExtension(path).Equals(".raw"))
                     {
-
                         sb.Append(Path.GetDirectoryName(path) + @"\").Append(Path.GetFileNameWithoutExtension(path)).Append(".bin");
-
-             //           MessageBox.Show(sb.ToString());
 
                         using (StreamWriter wtr = new StreamWriter(sb.ToString()))
                             using (StreamReader rdr = new StreamReader(fileStream))
@@ -129,17 +118,11 @@ namespace WindowsFormsApplication1
                                                 line.Contains("Re") || (line.Contains("Pa")) || line.Contains("Ap"))
                                             continue;
 
-                                        //      Console.Write(line + "\n");
-
                                         dateTime = RegexObjects.dateTimeObject.Match(line);
                                         rtt = RegexObjects.rttDelayObject.Match(line);
 
                                         sb.Clear();
                                         sb.Append(dateTime.Groups[1]).Append(" ").Append(dateTime.Groups[2]).Append(" ");
-
-                               //         MessageBox.Show(sb.ToString());
-
-                               //         MessageBox.Show(DateTime.Parse(sb.ToString()).ToString());
 
                                         if (dateTime.Success)
                                         {

@@ -32,7 +32,6 @@
             this.remoteHostTxtBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.clearValuesButton = new System.Windows.Forms.Button();
             this.setValuesButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,8 +39,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.endDatePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.step1 = new System.Windows.Forms.Label();
             this.step2 = new System.Windows.Forms.Label();
             this.step3 = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@
             this.autoExecutePingTasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoCleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backButton = new System.Windows.Forms.Button();
+            this.startDatePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.packetsPerPingNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pingIntervalNumeric)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,7 +90,7 @@
             // 
             this.remoteHostTxtBox.BackColor = System.Drawing.SystemColors.Window;
             this.remoteHostTxtBox.FormattingEnabled = true;
-            this.remoteHostTxtBox.Location = new System.Drawing.Point(120, 106);
+            this.remoteHostTxtBox.Location = new System.Drawing.Point(122, 144);
             this.remoteHostTxtBox.Name = "remoteHostTxtBox";
             this.remoteHostTxtBox.Size = new System.Drawing.Size(165, 21);
             this.remoteHostTxtBox.TabIndex = 43;
@@ -98,7 +99,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(57, 80);
+            this.label8.Location = new System.Drawing.Point(57, 106);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 41;
@@ -114,19 +115,9 @@
             this.label4.TabIndex = 39;
             this.label4.Text = "Packets per Ping";
             // 
-            // clearValuesButton
-            // 
-            this.clearValuesButton.Location = new System.Drawing.Point(12, 171);
-            this.clearValuesButton.Name = "clearValuesButton";
-            this.clearValuesButton.Size = new System.Drawing.Size(101, 27);
-            this.clearValuesButton.TabIndex = 38;
-            this.clearValuesButton.Text = "Reset Params";
-            this.clearValuesButton.UseVisualStyleBackColor = true;
-            this.clearValuesButton.Click += new System.EventHandler(this.clearValuesButton_Click);
-            // 
             // setValuesButton
             // 
-            this.setValuesButton.Location = new System.Drawing.Point(185, 171);
+            this.setValuesButton.Location = new System.Drawing.Point(185, 220);
             this.setValuesButton.Name = "setValuesButton";
             this.setValuesButton.Size = new System.Drawing.Size(164, 27);
             this.setValuesButton.TabIndex = 37;
@@ -137,7 +128,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 109);
+            this.label2.Location = new System.Drawing.Point(23, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 35;
@@ -179,12 +170,13 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(12, 204);
+            this.button2.Location = new System.Drawing.Point(12, 220);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 27);
+            this.button2.Size = new System.Drawing.Size(66, 27);
             this.button2.TabIndex = 48;
             this.button2.Text = "Return ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -204,20 +196,22 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "Up to 1439 Minutes (24H)";
             // 
-            // dateTimePicker1
+            // endDatePicker
             // 
-            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(124, 74);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(106, 20);
-            this.dateTimePicker1.TabIndex = 52;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            this.endDatePicker.CustomFormat = "MM/dd/yyyy";
+            this.endDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.endDatePicker.Location = new System.Drawing.Point(124, 106);
+            this.endDatePicker.Name = "endDatePicker";
+            this.endDatePicker.Size = new System.Drawing.Size(106, 20);
+            this.endDatePicker.TabIndex = 52;
+            this.endDatePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.startDatePicker);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.endDatePicker);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
@@ -228,10 +222,19 @@
             this.groupBox1.Controls.Add(this.packetsPerPingNumeric);
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(337, 138);
+            this.groupBox1.Size = new System.Drawing.Size(337, 187);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(54, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "Start Date";
             // 
             // step1
             // 
@@ -266,7 +269,7 @@
             this.groupBox2.Controls.Add(this.step1);
             this.groupBox2.Controls.Add(this.step3);
             this.groupBox2.Controls.Add(this.step2);
-            this.groupBox2.Location = new System.Drawing.Point(185, 204);
+            this.groupBox2.Location = new System.Drawing.Point(185, 253);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(164, 34);
             this.groupBox2.TabIndex = 58;
@@ -350,26 +353,35 @@
             // 
             // backButton
             // 
-            this.backButton.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.left_arrow_512;
             this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.backButton.Location = new System.Drawing.Point(151, 171);
+            this.backButton.Location = new System.Drawing.Point(151, 220);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(38, 27);
             this.backButton.TabIndex = 60;
+            this.backButton.Text = "<";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Visible = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // startDatePicker
+            // 
+            this.startDatePicker.CustomFormat = "MM/dd/yyyy";
+            this.startDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.startDatePicker.Location = new System.Drawing.Point(124, 77);
+            this.startDatePicker.Name = "startDatePicker";
+            this.startDatePicker.Size = new System.Drawing.Size(106, 20);
+            this.startDatePicker.TabIndex = 54;
+            this.startDatePicker.ValueChanged += new System.EventHandler(this.startDatePicker_ValueChanged);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(354, 242);
+            this.ClientSize = new System.Drawing.Size(354, 312);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.clearValuesButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.setValuesButton);
             this.Controls.Add(this.menuStrip1);
@@ -399,7 +411,6 @@
         private System.Windows.Forms.ComboBox remoteHostTxtBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button clearValuesButton;
         private System.Windows.Forms.Button setValuesButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -407,7 +418,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker endDatePicker;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label step1;
         private System.Windows.Forms.Label step2;
@@ -423,5 +434,7 @@
         private System.Windows.Forms.ToolStripMenuItem autoExecutePingTasksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoCleToolStripMenuItem;
         private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker startDatePicker;
     }
 }
