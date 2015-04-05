@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
                     }
 
                     string common = dinfo.ToString() + remoteHostTxtBox.Text + "-" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm");
-                    resultPath = common + "-results.txt";
+                    resultPath = common + "-results.raw";
                     batPath = common + ".bat";
 
                     batTxt =
@@ -106,7 +106,6 @@ namespace WindowsFormsApplication1
                             {
                                 writer.WriteLine("REM " + batconfigStr);
                                 writer.Write(batTxt);
-                                writer.Close();
 
                                 step2.ForeColor = Color.Green;
                                 step3.ForeColor = Color.Blue;

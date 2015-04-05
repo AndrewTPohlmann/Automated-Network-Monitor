@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
+
 namespace WindowsFormsApplication1
 {
     public partial class Form3 : Form
@@ -14,7 +15,7 @@ namespace WindowsFormsApplication1
 
         List<DateTime> y_time = new List<DateTime>();
         List<int> x_rtt = new List<int>();
-        DirectoryInfo dinfo = new DirectoryInfo(@"D:\");
+        DirectoryInfo dinfo = new DirectoryInfo(@"C:\");
 
         public Form3()
         {
@@ -23,8 +24,8 @@ namespace WindowsFormsApplication1
 
         public void Form3_Load(object sender, EventArgs e )
         {
-            backgroundWorker1.DoWork += backgroundWorker1_DoWork;
-            backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
+            backgroundWorker1.DoWork +=backgroundWorker1_DoWork;
+            backgroundWorker1.RunWorkerCompleted +=backgroundWorker1_RunWorkerCompleted;
         }
 
         private void loadDataSetToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,25 +33,17 @@ namespace WindowsFormsApplication1
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
             openFileDialog1.InitialDirectory = dinfo.ToString();
-            openFileDialog1.Filter = "txt files (*.txt)|*.txt";
-            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.Filter = "converted data (*.bin)|*.bin|raw data (*.raw)|*.raw";
+            openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    string file = openFileDialog1.FileName;
+                    clearGraph();
 
-                    x_rtt.Clear();
-                    y_time.Clear();
+                    chart1.Titles.Add(new Title("Loading...", Docking.Top, new Font("Verdana", 12), Color.Black));
 
-                    Title chart1Title = new Title("Loading....", Docking.Top, new Font("Verdana", 12), Color.Black);
-                    chart1.Titles.Clear();
-                    chart1.Titles.Add(chart1Title);
-                    chart1.Series["Series1"].Points.Clear();
-
-                    Console.Write("\nMade it here");
-
-                    JobState job = new JobState(file);
+                    JobState job = new JobState(openFileDialog1.FileName);
                     backgroundWorker1.RunWorkerAsync(job);
 
                 }
@@ -78,13 +71,9 @@ namespace WindowsFormsApplication1
         public void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             JobState job = e.Argument as JobState;
+            processData(job.resultPath);
 
-            if (processData(job.resultPath))
-                job.didLoad = true;
-            else
-                job.didLoad = false;
-
-            e.Result = job;
+             e.Result = job;
         }
 
         public void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -96,16 +85,15 @@ namespace WindowsFormsApplication1
 
                 int z = 0;
 
-                Title chart1Title = new Title(job.resultPath, Docking.Top, new Font("Verdana", 12), Color.Black);
-                this.chart1.Titles.Clear();
-                this.chart1.Titles.Add(chart1Title);
-
                 while (z < x_rtt.Count)
                 {
                     this.chart1.Series["Series1"].Points.AddXY(y_time[z], x_rtt[z]);
                     z++;
                 }
 
+                chart1.Titles.Clear();
+                chart1.Titles.Add(new Title(job.resultPath, Docking.Top, new Font("Verdana", 12), Color.Black));
+                this.Text = this.Text + " ---[ " + job.resultPath + " ]";
         }
 
         private bool processData(string path)
@@ -115,32 +103,79 @@ namespace WindowsFormsApplication1
                 Match dateTime, rtt;
                 string line;
 
+                /*
+                string file = new StreamReader(path).ReadToEnd();
+                string[] lines = file.Split('\n');
+                MessageBox.Show(lines.GetLength(0).ToString());
+                */
+
                 using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                using (StreamReader rdr = new StreamReader(fileStream))
                 {
-                    while ((line = rdr.ReadLine()) != null)
+                    if (Path.GetExtension(path).Equals(".raw"))
                     {
+                        System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
-                        if (string.IsNullOrWhiteSpace(line) || line.Contains("Pi") ||
-                            (line.Contains("Re")) || line.Contains("Pa") || line.Contains("Ap"))
-                            continue;
+                        sb.Append(Path.GetDirectoryName(path) + @"\").Append(Path.GetFileNameWithoutExtension(path)).Append(".bin");
 
-                        //      Console.Write(line + "\n");
+             //           MessageBox.Show(sb.ToString());
 
-                        dateTime = RegexObjects.dateTimeObject.Match(line);
-                        rtt = RegexObjects.rttDelayObject.Match(line);
+                        using (StreamWriter wtr = new StreamWriter(sb.ToString()))
+                            using (StreamReader rdr = new StreamReader(fileStream))
+                            {
+                                while ((line = rdr.ReadLine()) != null)
+                                {
+                                    if (string.IsNullOrWhiteSpace(line) || line.Contains("Pi") ||
+                                            line.Contains("Re") || (line.Contains("Pa")) || line.Contains("Ap"))
+                                        continue;
 
-                        //        Console.Write("\n" + dateTime.ToString() + " " + rtt.ToString());
+                                    //      Console.Write(line + "\n");
 
-                        if (dateTime.Success)
-                        { y_time.Add(Convert.ToDateTime(dateTime.Groups[1].ToString())); }
-                        else if (rtt.Success)
-                        { x_rtt.Add(int.Parse(rtt.Groups[5].ToString())); }
+                                    dateTime = RegexObjects.dateTimeObject.Match(line);
+                                    rtt = RegexObjects.rttDelayObject.Match(line);
 
-                        Console.Write("\n" + dateTime.Groups[1].ToString() + " " + rtt.Groups[5].ToString());
+                                    sb.Clear();
+                                    sb.Append(dateTime.Groups[1]).Append(" ").Append(dateTime.Groups[2]).Append(" ");
+
+                           //         MessageBox.Show(sb.ToString());
+
+                           //         MessageBox.Show(DateTime.Parse(sb.ToString()).ToString());
+
+                                    if (dateTime.Success)
+                                    {
+                                        y_time.Add(DateTime.Parse(sb.ToString()));
+                                            wtr.Write(sb.ToString());
+                                    }
+                                    else if (rtt.Success)
+                                    { 
+                                        x_rtt.Add(int.Parse(rtt.Groups[5].ToString()));
+                                             wtr.Write(rtt.Groups[5] + Environment.NewLine);
+                                    }
+                                   
+                                }
+                            }
+                    }
+                    else if (Path.GetExtension(path).Equals(".bin"))
+                    {
+                        System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
+           //             MessageBox.Show("test");
+
+                        using (StreamReader rdr = new StreamReader(fileStream))
+                            while ((line = rdr.ReadLine()) != null)
+                            {
+                                string[] items = line.Split(' ');
+
+                                sb.Clear();
+                                sb.Append(items[0]).Append(" ").Append(items[1]);
+
+                           //     MessageBox.Show(sb.ToString());
+
+                                y_time.Add(DateTime.Parse(sb.ToString()));
+                                x_rtt.Add(int.Parse(items[2]));
+                            }
                     }
                 }
-
+                    
                 return true;
             }
             catch (Exception)
@@ -148,6 +183,19 @@ namespace WindowsFormsApplication1
 
         }
 
-    
+        private void clearDataSetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clearGraph();
+        }
+
+        private void clearGraph()
+        {
+            x_rtt.Clear();
+            y_time.Clear();
+            chart1.Titles.Clear();
+
+            chart1.Series["Series1"].Points.Clear();
+            this.Text = "Data Set Visualizer";
+        }
     }
 }

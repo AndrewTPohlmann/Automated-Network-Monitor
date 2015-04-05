@@ -36,6 +36,7 @@
             this.dataSetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.systemMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,7 @@
             this.helpToolStripMenuItem});
             this.systemMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.systemMenuStrip.Name = "systemMenuStrip";
-            this.systemMenuStrip.Size = new System.Drawing.Size(941, 24);
+            this.systemMenuStrip.Size = new System.Drawing.Size(630, 24);
             this.systemMenuStrip.TabIndex = 35;
             this.systemMenuStrip.Text = "menuStrip1";
             // 
@@ -111,9 +112,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources._6a010534b1db25970b0147e0ae51b2970b_800wi;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(941, 478);
+            this.ClientSize = new System.Drawing.Size(630, 349);
             this.Controls.Add(this.systemMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Automated Network Monitor";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -134,6 +136,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataSetsToolStripMenuItem;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
