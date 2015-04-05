@@ -111,9 +111,10 @@ namespace WindowsFormsApplication1
 
                 using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
+                    System.Text.StringBuilder sb = new System.Text.StringBuilder();
+
                     if (Path.GetExtension(path).Equals(".raw"))
                     {
-                        System.Text.StringBuilder sb = new System.Text.StringBuilder();
 
                         sb.Append(Path.GetDirectoryName(path) + @"\").Append(Path.GetFileNameWithoutExtension(path)).Append(".bin");
 
@@ -124,42 +125,38 @@ namespace WindowsFormsApplication1
                             {
                                 while ((line = rdr.ReadLine()) != null)
                                 {
-                                    if (string.IsNullOrWhiteSpace(line) || line.Contains("Pi") ||
-                                            line.Contains("Re") || (line.Contains("Pa")) || line.Contains("Ap"))
-                                        continue;
+                                        if (string.IsNullOrWhiteSpace(line) || line.Contains("Pi") ||
+                                                line.Contains("Re") || (line.Contains("Pa")) || line.Contains("Ap"))
+                                            continue;
 
-                                    //      Console.Write(line + "\n");
+                                        //      Console.Write(line + "\n");
 
-                                    dateTime = RegexObjects.dateTimeObject.Match(line);
-                                    rtt = RegexObjects.rttDelayObject.Match(line);
+                                        dateTime = RegexObjects.dateTimeObject.Match(line);
+                                        rtt = RegexObjects.rttDelayObject.Match(line);
 
-                                    sb.Clear();
-                                    sb.Append(dateTime.Groups[1]).Append(" ").Append(dateTime.Groups[2]).Append(" ");
+                                        sb.Clear();
+                                        sb.Append(dateTime.Groups[1]).Append(" ").Append(dateTime.Groups[2]).Append(" ");
 
-                           //         MessageBox.Show(sb.ToString());
+                               //         MessageBox.Show(sb.ToString());
 
-                           //         MessageBox.Show(DateTime.Parse(sb.ToString()).ToString());
+                               //         MessageBox.Show(DateTime.Parse(sb.ToString()).ToString());
 
-                                    if (dateTime.Success)
-                                    {
-                                        y_time.Add(DateTime.Parse(sb.ToString()));
-                                            wtr.Write(sb.ToString());
-                                    }
-                                    else if (rtt.Success)
-                                    { 
-                                        x_rtt.Add(int.Parse(rtt.Groups[5].ToString()));
-                                             wtr.Write(rtt.Groups[5] + Environment.NewLine);
-                                    }
+                                        if (dateTime.Success)
+                                        {
+                                            y_time.Add(DateTime.Parse(sb.ToString()));
+                                                wtr.Write(sb.ToString());
+                                        }
+                                        else if (rtt.Success)
+                                        { 
+                                            x_rtt.Add(int.Parse(rtt.Groups[5].ToString()));
+                                                 wtr.Write(rtt.Groups[5] + Environment.NewLine);
+                                        }
                                    
                                 }
                             }
                     }
                     else if (Path.GetExtension(path).Equals(".bin"))
                     {
-                        System.Text.StringBuilder sb = new System.Text.StringBuilder();
-
-           //             MessageBox.Show("test");
-
                         using (StreamReader rdr = new StreamReader(fileStream))
                             while ((line = rdr.ReadLine()) != null)
                             {
