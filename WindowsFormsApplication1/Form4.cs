@@ -22,15 +22,11 @@ namespace WindowsFormsApplication1
 
         private async void Form4_Load(object sender, EventArgs e)
         {
-
-         //   MongoDriverHelper.dbs.DropCollectionAsync("sets");
-            CreateIndex();
-
+           // MongoDriverHelper.dbs.DropCollectionAsync("sets");
             await updateListBoxAsync();
 
             backgroundWorker1.DoWork += backgroundWorker1_DoWork;
             backgroundWorker1.RunWorkerCompleted += backgroundWorker1_RunWorkerCompleted;
-
         }
 
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,6 +38,7 @@ namespace WindowsFormsApplication1
         public void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             job = e.Argument as CurrentJob;
+
             TransformData.processData(job.resultPath, job);
 
             e.Result = job;
@@ -50,14 +47,11 @@ namespace WindowsFormsApplication1
 
         public async void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-
             job = e.Result as CurrentJob;
-
-       //     MongoDriverHelper.list = MongoDriverHelper.dbs.GetCollection<CurrentJob>("sets");
 
             try
             { 
-                await MongoDriverHelper.list.InsertOneAsync(job); 
+                await MongoDriverHelper.collection.InsertOneAsync(job); 
                 await updateListBoxAsync(); 
             }
             catch (MongoWriteException z)
@@ -65,86 +59,45 @@ namespace WindowsFormsApplication1
 
         }
 
-        private async void refreshList_Click(object sender, EventArgs e)
+        private async Task refreshList_Click(object sender, EventArgs e)
         {   await updateListBoxAsync();  }
 
-        private async void CreateIndex()
-        {
-            CreateIndexOptions indexopts = new CreateIndexOptions();
-            indexopts.Unique = true;
-            indexopts.Sparse = true;
-
-            await (MongoDriverHelper.dbs.GetCollection<CurrentJob>("sets")).Indexes.CreateOneAsync
-                (Builders<CurrentJob>.IndexKeys.Ascending(_ => _.resultPath), indexopts);
-
-        }
 
         private async Task updateListBoxAsync()
         {
-        //    MongoDriverHelper.list = MongoDriverHelper.dbs.GetCollection<CurrentJob>("sets");
+            await MongoDriverHelper.updatelistOfJobs();
 
-            IAsyncCursor<CurrentJob> cursor = await MongoDriverHelper.list.FindAsync<CurrentJob>("{}");
+            dataGridView1.Rows.Clear();
 
-            List<CurrentJob> list1 = await cursor.ToListAsync();
+            string[] tmp, paramss;
 
-            listBox1.Items.Clear();
+                foreach (CurrentJob e in MongoDriverHelper.listofjobs)
+                { 
+                     tmp = e.paramss.Split(' ');
+                     paramss = new string[] {   tmp[2], tmp[4], tmp[6],tmp[8],tmp[10], tmp[12], e.x_rtt.Count.ToString() };
 
-            foreach (CurrentJob e in list1)
-            {    listBox1.Items.Add(e);  }
+                     dataGridView1.Rows.Add(paramss);
+                }
             
         }        
-        private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private async Task loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            job = (CurrentJob)listBox1.SelectedItem;
+            await MongoDriverHelper.updatelistOfJobs();
 
-            toolTip1.SetToolTip(listBox1, job.paramss);
-        }        
+            job = MongoDriverHelper.listofjobs[dataGridView1.SelectedCells[0].RowIndex];
 
-        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CurrentJob nwj = new CurrentJob();
-
-            if ((nwj = (CurrentJob)listBox1.SelectedItem) != null)
+            if (job != null)
             {
-                Form3 frm3 = new Form3(nwj);
+                Form3 frm3 = new Form3(job);
                 frm3.ShowDialog();
             }
 
         }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {   }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {   }
-
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {   }
-
-        private async void pictureBox1_Click(object sender, EventArgs e)
-        {
-            await updateListBoxAsync();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
-            openFileDialog1.InitialDirectory = (new DirectoryInfo(@"C:\")).ToString();
-            openFileDialog1.Filter = "raw data (*.raw)|*.raw";
-            // openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                job = new CurrentJob(openFileDialog1.FileName);
-                backgroundWorker1.RunWorkerAsync(job);
-            }
-        }
 
         private async void button1_Click(object sender, EventArgs e)
-        {
-            await updateListBoxAsync();
-        }
+        {   await updateListBoxAsync(); }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -152,7 +105,6 @@ namespace WindowsFormsApplication1
 
             openFileDialog1.InitialDirectory = (new DirectoryInfo(@"C:\")).ToString();
             openFileDialog1.Filter = "raw data (*.raw)|*.raw";
-            // openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -163,6 +115,43 @@ namespace WindowsFormsApplication1
         }
 
 
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            await MongoDriverHelper.updatelistOfJobs();
+
+            if (MongoDriverHelper.listofjobs.Count != 0)
+            {
+                job = MongoDriverHelper.listofjobs[dataGridView1.SelectedCells[0].RowIndex];
+
+                    Form3 frm3 = new Form3(job);
+                    frm3.ShowDialog();
+            }
+        }
+
+        private async void button4_Click(object sender, EventArgs e)
+        {
+
+            await MongoDriverHelper.updatelistOfJobs();
+
+            if (MongoDriverHelper.listofjobs.Count != 0)
+            {
+                job = MongoDriverHelper.listofjobs[dataGridView1.SelectedCells[0].RowIndex];
+
+                await MongoDriverHelper.collection.DeleteOneAsync<CurrentJob>(x => x.Id == job.Id);
+                await updateListBoxAsync(); 
+            }
+
+               
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {   this.Close();   }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
 
 
     }

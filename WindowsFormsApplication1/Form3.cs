@@ -20,10 +20,11 @@ namespace WindowsFormsApplication1
         {   InitializeComponent();  }
 
         public Form3(CurrentJob j)
-        { InitializeComponent(); job = j; Console.Write(job.resultPath); }
+        {   InitializeComponent(); job = j;  }
 
         public void Form3_Load(object sender, EventArgs e)
         {
+            
             backgroundWorker1.DoWork +=backgroundWorker1_DoWork;
             backgroundWorker1.RunWorkerCompleted +=backgroundWorker1_RunWorkerCompleted;
 
@@ -33,14 +34,10 @@ namespace WindowsFormsApplication1
         }
 
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        {   this.Close();   }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        {   Application.Exit(); }
 
         public void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -83,19 +80,5 @@ namespace WindowsFormsApplication1
             backgroundWorker1.RunWorkerAsync(job);
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

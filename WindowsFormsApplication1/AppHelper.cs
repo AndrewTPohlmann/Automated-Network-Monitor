@@ -1,4 +1,5 @@
 ﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 using System;
@@ -16,8 +17,17 @@ namespace WindowsFormsApplication1
             [BsonId]
             public ObjectId Id { get; set; }
             public string resultPath { get; set; }
-            public string resultFilename { get; set; }
+
             public string paramss { get; set;  }
+            public string paramss_taskname { get; set; }
+            public string paramss_target { get; set; }
+            public string paramss_packets { get; set; }
+            public string paramss_interval { get; set; }
+            public string paramss_startd { get; set; }
+            public string paramss_endd { get; set; }
+            public int paramss_count { get; set; }
+      //      public string paramss_filepath
+
 
             [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
             public List<DateTime> y_time { get; set; }
@@ -26,13 +36,7 @@ namespace WindowsFormsApplication1
             public CurrentJob() { }
 
             public CurrentJob(string setpath)
-            {
-                resultPath = setpath;
-
-                string[] tmpResultFileName = resultPath.Split('\\');
-
-                resultFilename = tmpResultFileName[1];
-            }
+            {   resultPath = setpath;   }
 
         }
 
@@ -40,15 +44,38 @@ namespace WindowsFormsApplication1
         {
             static public MongoClient client { get; set; }
             static public IMongoDatabase dbs { get; set; }
-            static public IMongoCollection<CurrentJob> list { get; set; }
+            static public IMongoCollection<CurrentJob> collection { get; set; }
+            static public IAsyncCursor<CurrentJob> cursor { get; set; }
+            static public List<CurrentJob> listofjobs { get; set; }
 
-            static public void setupInstance()
+            static public async Task setupInstance()
             {
+                BsonClassMap.RegisterClassMap<CurrentJob>();
                 client = new MongoClient();
                 dbs = client.GetDatabase("rtt");
-                list = dbs.GetCollection<CurrentJob>("sets");
+                collection = dbs.GetCollection<CurrentJob>("sets");
+
+                await createIndex();
      
             }
+
+            static public async  Task updatelistOfJobs()
+            {
+                 cursor = await collection.FindAsync<CurrentJob>("{}");
+                 listofjobs = await cursor.ToListAsync();
+            }
+
+            static public async  Task createIndex()
+            {
+                CreateIndexOptions indexopts = new CreateIndexOptions();
+                indexopts.Unique = true;
+                indexopts.Sparse = true;
+
+                await (MongoDriverHelper.dbs.GetCollection<CurrentJob>("sets")).Indexes.CreateOneAsync(
+                    Builders<CurrentJob>.IndexKeys.Ascending(_ => _.resultPath), indexopts);
+
+            }
+
         }
 
         public static class RegexObjects
@@ -81,28 +108,27 @@ namespace WindowsFormsApplication1
 
             public static bool processData(string path, CurrentJob job)
             {
+
                 try
                 {
                     Match dateTime, rtt;
                     string line;
+
+                    y_time.Clear();
+                    x_rtt.Clear();
                     
                     using (FileStream fileStream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                     {
-              //              sb.Append(Path.GetDirectoryName(path) + @"\").Append(Path.GetFileNameWithoutExtension(path)).Append(".bin");
 
                             using (StreamReader rdr = new StreamReader(fileStream))
                             {
-
                                 line = rdr.ReadLine();
 
                                 string[] parameters = line.Split(' ');
 
                                 StringBuilder sb = new StringBuilder();
 
-                         //       sb.Append(parameters[2]).Append(parameters[4]).Append(parameters[6]).
-                           //             Append(parameters[8]).Append(parameters[10]).Append(parameters[12]);
-
-                                job.paramss = line;// sb.ToString();
+                                job.paramss = line;
 
 
                                 while ((line = rdr.ReadLine()) != null)
@@ -130,8 +156,8 @@ namespace WindowsFormsApplication1
                             }
                         }
 
-                    job.x_rtt = x_rtt;
-                    job.y_time = y_time;
+                        job.x_rtt = x_rtt;
+                        job.y_time = y_time;
 
                     return true;
                 }

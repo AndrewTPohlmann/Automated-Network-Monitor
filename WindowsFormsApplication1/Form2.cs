@@ -14,14 +14,11 @@ namespace WindowsFormsApplication1
 {
     public partial class Form2 : Form
     {
-        string resultPath;
-        string batPath;
+
         string processargs;
 
         public Form2()
-        {
-            InitializeComponent();
-        }
+        {   InitializeComponent();  }
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -63,10 +60,9 @@ namespace WindowsFormsApplication1
 
                     int jobnum = (new Random()).Next(101); 
 
-
-                    string common = ((new DirectoryInfo(@"C:\")).ToString() + remoteHostTxtBox.Text + "-" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm"));
-                    resultPath = common + "-results.raw";
-                    batPath = common + ".bat";
+                    string common = ((new DirectoryInfo(@"C:\")).ToString() + remoteHostTxtBox.Text + "-" + DateTime.Now.ToString("dd-MM-yyyy_HH-mm"));
+                    string resultPath = common + "-results.raw";
+                    string batPath = common + ".bat";
 
                     string batxt =
                         "@ECHO OFF" + Environment.NewLine +
@@ -260,24 +256,16 @@ namespace WindowsFormsApplication1
         } 
 
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        {   this.Close();   }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        {   Application.Exit(); }
         
         private void autoExecutePingTasksToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            autoExecutePingTasksToolStripMenuItem.Checked = !(autoExecutePingTasksToolStripMenuItem.Checked);
-        }
+        {    autoExecutePingTasksToolStripMenuItem.Checked = !(autoExecutePingTasksToolStripMenuItem.Checked);  }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        {   this.Close();   }
  
        
 
