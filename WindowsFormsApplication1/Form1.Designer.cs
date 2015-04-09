@@ -33,7 +33,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scriptsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataSetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mongoDBControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -72,7 +72,7 @@
             // 
             this.scriptsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadToolStripMenuItem1,
-            this.dataSetsToolStripMenuItem});
+            this.mongoDBControlToolStripMenuItem});
             this.scriptsToolStripMenuItem.Name = "scriptsToolStripMenuItem";
             this.scriptsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.scriptsToolStripMenuItem.Text = "Actions";
@@ -81,16 +81,16 @@
             // loadToolStripMenuItem1
             // 
             this.loadToolStripMenuItem1.Name = "loadToolStripMenuItem1";
-            this.loadToolStripMenuItem1.Size = new System.Drawing.Size(169, 22);
+            this.loadToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.loadToolStripMenuItem1.Text = "Script Generator";
             this.loadToolStripMenuItem1.Click += new System.EventHandler(this.loadToolStripMenuItem1_Click);
             // 
-            // dataSetsToolStripMenuItem
+            // mongoDBControlToolStripMenuItem
             // 
-            this.dataSetsToolStripMenuItem.Name = "dataSetsToolStripMenuItem";
-            this.dataSetsToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.dataSetsToolStripMenuItem.Text = "Data Set Visualizer";
-            this.dataSetsToolStripMenuItem.Click += new System.EventHandler(this.dataSetsToolStripMenuItem_Click);
+            this.mongoDBControlToolStripMenuItem.Name = "mongoDBControlToolStripMenuItem";
+            this.mongoDBControlToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.mongoDBControlToolStripMenuItem.Text = "Graph Generator";
+            this.mongoDBControlToolStripMenuItem.Click += new System.EventHandler(this.mongoDBControlToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -135,8 +135,8 @@
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataSetsToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ToolStripMenuItem mongoDBControlToolStripMenuItem;
     }
 }
 

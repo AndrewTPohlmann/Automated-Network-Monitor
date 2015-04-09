@@ -6,7 +6,12 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Drawing;
 using System.Collections.Generic;
-
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver;
+using MongoDB.Bson.Serialization;
+using System.Threading.Tasks;
+using System.Security.Policy;
 
 
 namespace WindowsFormsApplication1
@@ -21,7 +26,9 @@ namespace WindowsFormsApplication1
        
         private void Form1_Load(object sender, EventArgs e)
         {
+            BsonClassMap.RegisterClassMap<CurrentJob>();
 
+            MongoDriverHelper.setupInstance();
         }
 
         private void loadToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -130,45 +137,16 @@ namespace WindowsFormsApplication1
             }
         }
 
-        }
-        public class JobState
+        private void mongoDBControlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            public string resultPath { get; set; }
-            public string resultFilename { get; set; }
-
-            public JobState() { }
-
-            public JobState(string setpath)
-            {
-                resultPath = setpath;
-
-                string[] tmpResultFileName = resultPath.Split('\\');
-
-                resultFilename = tmpResultFileName[1];
-            }
+            Form4 newForm4 = new Form4();
+            newForm4.Show();
         }
 
-    public static class RegexObjects
-    {
-        private static string re1_dateTime = ".*?";	// Non-greedy match on filler
-        private static string re2_dateTime = "((?:[0]?[1-9]|[1][012])[-:\\/.](?:(?:[0-2]?\\d{1})|(?:[3][01]{1}))[-:\\/.](?:(?:[1]{1}\\d{1}\\d{1}\\d{1})|(?:[2]{1}\\d{3})))(?![\\d])";	// MMDDYYYY 1
-        private static string re3_dateTime = ".*?";	// Non-greedy match on filler
-        private static string re4_dateTime = "((?:(?:[0-1][0-9])|(?:[2][0-3])|(?:[0-9])):(?:[0-5][0-9])(?::[0-5][0-9])?(?:\\s?(?:am|AM|pm|PM))?)";	// HourMinuteSec 1
+        
+        }
 
-        private static string re1_rtt = ".*?";	// Non-greedy match on filler
-        private static string re2_rtt = "(Average)";	// Word 1
-        private static string re3_rtt = "(\\s+)";	// White Space 1
-        private static string re4_rtt = "(=)";	// Any Single Character 1
-        private static string re5_rtt = "(\\s+)";	// White Space 2
-        private static string re6_rtt = "(\\d+)";	// Integer Number 1
 
-        private static string regexStringDateTime = re1_dateTime + re2_dateTime + re3_dateTime + re4_dateTime;
-        private static string regexStringRTT = re1_rtt + re2_rtt + re3_rtt + re4_rtt + re5_rtt + re6_rtt;
-
-        public static Regex dateTimeObject = new Regex(regexStringDateTime, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-        public static Regex rttDelayObject = new Regex(regexStringRTT, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-
-    }
 
 }
 

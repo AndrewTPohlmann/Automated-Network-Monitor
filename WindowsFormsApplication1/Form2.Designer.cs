@@ -41,6 +41,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.endDatePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTaskName = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.startDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.step1 = new System.Windows.Forms.Label();
             this.step2 = new System.Windows.Forms.Label();
@@ -54,9 +57,7 @@
             this.loadExistingFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scriptSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoExecutePingTasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.autoCleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backButton = new System.Windows.Forms.Button();
-            this.startDatePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.packetsPerPingNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pingIntervalNumeric)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -66,7 +67,7 @@
             // 
             // packetsPerPingNumeric
             // 
-            this.packetsPerPingNumeric.Location = new System.Drawing.Point(124, 17);
+            this.packetsPerPingNumeric.Location = new System.Drawing.Point(124, 46);
             this.packetsPerPingNumeric.Maximum = new decimal(new int[] {
             5,
             0,
@@ -90,7 +91,7 @@
             // 
             this.remoteHostTxtBox.BackColor = System.Drawing.SystemColors.Window;
             this.remoteHostTxtBox.FormattingEnabled = true;
-            this.remoteHostTxtBox.Location = new System.Drawing.Point(122, 144);
+            this.remoteHostTxtBox.Location = new System.Drawing.Point(122, 162);
             this.remoteHostTxtBox.Name = "remoteHostTxtBox";
             this.remoteHostTxtBox.Size = new System.Drawing.Size(165, 21);
             this.remoteHostTxtBox.TabIndex = 43;
@@ -99,17 +100,16 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(57, 106);
+            this.label8.Location = new System.Drawing.Point(57, 135);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 41;
             this.label8.Text = "End Date";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 17);
+            this.label4.Location = new System.Drawing.Point(21, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 39;
@@ -117,18 +117,18 @@
             // 
             // setValuesButton
             // 
-            this.setValuesButton.Location = new System.Drawing.Point(185, 220);
+            this.setValuesButton.Location = new System.Drawing.Point(185, 230);
             this.setValuesButton.Name = "setValuesButton";
             this.setValuesButton.Size = new System.Drawing.Size(164, 27);
             this.setValuesButton.TabIndex = 37;
-            this.setValuesButton.Text = "Validate Script Settings";
+            this.setValuesButton.Text = "Validate Parameters";
             this.setValuesButton.UseVisualStyleBackColor = true;
             this.setValuesButton.Click += new System.EventHandler(this.setValuesButton_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 147);
+            this.label2.Location = new System.Drawing.Point(23, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 35;
@@ -137,16 +137,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 46);
+            this.label1.Location = new System.Drawing.Point(43, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 34;
             this.label1.Text = "Ping Interval ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pingIntervalNumeric
             // 
-            this.pingIntervalNumeric.Location = new System.Drawing.Point(124, 46);
+            this.pingIntervalNumeric.Location = new System.Drawing.Point(124, 75);
             this.pingIntervalNumeric.Maximum = new decimal(new int[] {
             1439,
             0,
@@ -165,12 +164,11 @@
             0,
             0,
             0});
-            this.pingIntervalNumeric.ValueChanged += new System.EventHandler(this.pingIntervalNumeric_ValueChanged);
             // 
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(12, 220);
+            this.button2.Location = new System.Drawing.Point(12, 230);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 27);
             this.button2.TabIndex = 48;
@@ -181,7 +179,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(186, 24);
+            this.label3.Location = new System.Drawing.Point(186, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 13);
             this.label3.TabIndex = 49;
@@ -190,7 +188,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(186, 52);
+            this.label5.Location = new System.Drawing.Point(186, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 13);
             this.label5.TabIndex = 50;
@@ -200,14 +198,16 @@
             // 
             this.endDatePicker.CustomFormat = "MM/dd/yyyy";
             this.endDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endDatePicker.Location = new System.Drawing.Point(124, 106);
+            this.endDatePicker.Location = new System.Drawing.Point(124, 135);
             this.endDatePicker.Name = "endDatePicker";
             this.endDatePicker.Size = new System.Drawing.Size(106, 20);
             this.endDatePicker.TabIndex = 52;
-            this.endDatePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblTaskName);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.startDatePicker);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label1);
@@ -222,15 +222,44 @@
             this.groupBox1.Controls.Add(this.packetsPerPingNumeric);
             this.groupBox1.Location = new System.Drawing.Point(12, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(337, 187);
+            this.groupBox1.Size = new System.Drawing.Size(337, 192);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+
+            // 
+            // lblTaskName
+            // 
+            this.lblTaskName.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTaskName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTaskName.Location = new System.Drawing.Point(122, 20);
+            this.lblTaskName.Name = "lblTaskName";
+            this.lblTaskName.Size = new System.Drawing.Size(108, 15);
+            this.lblTaskName.TabIndex = 56;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.TabIndex = 55;
+            this.label7.Text = "Ping Task Name";
+
+            // 
+            // startDatePicker
+            // 
+            this.startDatePicker.CustomFormat = "MM/dd/yyyy";
+            this.startDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.startDatePicker.Location = new System.Drawing.Point(124, 106);
+            this.startDatePicker.Name = "startDatePicker";
+            this.startDatePicker.Size = new System.Drawing.Size(106, 20);
+            this.startDatePicker.TabIndex = 54;
+
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 77);
+            this.label6.Location = new System.Drawing.Point(54, 106);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 53;
@@ -258,7 +287,7 @@
             // step3
             // 
             this.step3.AutoSize = true;
-            this.step3.Location = new System.Drawing.Point(114, 11);
+            this.step3.Location = new System.Drawing.Point(112, 11);
             this.step3.Name = "step3";
             this.step3.Size = new System.Drawing.Size(46, 13);
             this.step3.TabIndex = 57;
@@ -269,7 +298,7 @@
             this.groupBox2.Controls.Add(this.step1);
             this.groupBox2.Controls.Add(this.step3);
             this.groupBox2.Controls.Add(this.step2);
-            this.groupBox2.Location = new System.Drawing.Point(185, 253);
+            this.groupBox2.Location = new System.Drawing.Point(185, 263);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(164, 34);
             this.groupBox2.TabIndex = 58;
@@ -283,7 +312,7 @@
             this.scriptSettingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(354, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(359, 24);
             this.menuStrip1.TabIndex = 59;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -319,7 +348,7 @@
             this.scriptActionsToolStripMenuItem.Name = "scriptActionsToolStripMenuItem";
             this.scriptActionsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.scriptActionsToolStripMenuItem.Text = "Actions";
-            this.scriptActionsToolStripMenuItem.Click += new System.EventHandler(this.scriptActionsToolStripMenuItem_Click);
+
             // 
             // loadExistingFileToolStripMenuItem
             // 
@@ -331,8 +360,7 @@
             // scriptSettingsToolStripMenuItem
             // 
             this.scriptSettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.autoExecutePingTasksToolStripMenuItem,
-            this.autoCleToolStripMenuItem});
+            this.autoExecutePingTasksToolStripMenuItem});
             this.scriptSettingsToolStripMenuItem.Name = "scriptSettingsToolStripMenuItem";
             this.scriptSettingsToolStripMenuItem.Size = new System.Drawing.Size(116, 20);
             this.scriptSettingsToolStripMenuItem.Text = "Generator Settings";
@@ -340,21 +368,14 @@
             // autoExecutePingTasksToolStripMenuItem
             // 
             this.autoExecutePingTasksToolStripMenuItem.Name = "autoExecutePingTasksToolStripMenuItem";
-            this.autoExecutePingTasksToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.autoExecutePingTasksToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.autoExecutePingTasksToolStripMenuItem.Text = "Auto-Execute Task ";
             this.autoExecutePingTasksToolStripMenuItem.Click += new System.EventHandler(this.autoExecutePingTasksToolStripMenuItem_Click);
-            // 
-            // autoCleToolStripMenuItem
-            // 
-            this.autoCleToolStripMenuItem.Name = "autoCleToolStripMenuItem";
-            this.autoCleToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.autoCleToolStripMenuItem.Text = "Auto-Clear Settings";
-            this.autoCleToolStripMenuItem.Click += new System.EventHandler(this.autoCleToolStripMenuItem_Click);
             // 
             // backButton
             // 
             this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.backButton.Location = new System.Drawing.Point(151, 220);
+            this.backButton.Location = new System.Drawing.Point(151, 230);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(38, 27);
             this.backButton.TabIndex = 60;
@@ -363,22 +384,12 @@
             this.backButton.Visible = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
-            // startDatePicker
-            // 
-            this.startDatePicker.CustomFormat = "MM/dd/yyyy";
-            this.startDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startDatePicker.Location = new System.Drawing.Point(124, 77);
-            this.startDatePicker.Name = "startDatePicker";
-            this.startDatePicker.Size = new System.Drawing.Size(106, 20);
-            this.startDatePicker.TabIndex = 54;
-            this.startDatePicker.ValueChanged += new System.EventHandler(this.startDatePicker_ValueChanged);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(354, 312);
+            this.ClientSize = new System.Drawing.Size(359, 302);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -432,9 +443,10 @@
         private System.Windows.Forms.ToolStripMenuItem loadExistingFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scriptSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem autoExecutePingTasksToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem autoCleToolStripMenuItem;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker startDatePicker;
+        private System.Windows.Forms.Label lblTaskName;
+        private System.Windows.Forms.Label label7;
     }
 }
