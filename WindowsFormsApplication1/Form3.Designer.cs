@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -54,29 +53,54 @@
             // 
             // chart1
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.chart1.BackColor = System.Drawing.Color.LightGray;
+            chartArea1.AlignmentOrientation = ((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations)((System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Vertical | System.Windows.Forms.DataVisualization.Charting.AreaAlignmentOrientations.Horizontal)));
+            chartArea1.AxisX.Interval = 1D;
             chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
             chartArea1.AxisX.LabelStyle.Format = "dd.MM.yyyy HH:mm:ss";
+            chartArea1.AxisX.MajorGrid.Interval = 1D;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Red;
+            chartArea1.AxisX.MajorGrid.LineWidth = 2;
+            chartArea1.AxisX.MajorTickMark.Interval = 1D;
+            chartArea1.AxisX.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Red;
+            chartArea1.AxisX.MajorTickMark.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            chartArea1.AxisX.MajorTickMark.LineWidth = 5;
+            chartArea1.AxisX.MajorTickMark.Size = 2F;
             chartArea1.AxisX.MinorGrid.Enabled = true;
-            chartArea1.CursorY.IsUserEnabled = true;
+            chartArea1.AxisX.MinorGrid.Interval = 6D;
+            chartArea1.AxisX.MinorGrid.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Hours;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.Blue;
+            chartArea1.AxisX.MinorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisX.MinorGrid.LineWidth = 2;
+            chartArea1.AxisX.MinorTickMark.Enabled = true;
+            chartArea1.AxisX.MinorTickMark.Interval = 6D;
+            chartArea1.AxisX.MinorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Hours;
+            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.Blue;
+            chartArea1.AxisX.MinorTickMark.LineWidth = 4;
+            chartArea1.AxisY.MinorGrid.Enabled = true;
+            chartArea1.AxisY2.MajorGrid.Interval = 20D;
+            chartArea1.AxisY2.MajorTickMark.Interval = 20D;
+            chartArea1.AxisY2.MinorGrid.Enabled = true;
+            chartArea1.AxisY2.MinorGrid.Interval = 10D;
+            chartArea1.AxisY2.MinorTickMark.Enabled = true;
+            chartArea1.AxisY2.MinorTickMark.Interval = 10D;
+            chartArea1.CursorX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.CursorX.IsUserSelectionEnabled = true;
             chartArea1.CursorY.IsUserSelectionEnabled = true;
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(6, 19);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
             series1.MarkerSize = 1;
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
             series1.Name = "Series1";
+            series1.SmartLabelStyle.Enabled = false;
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
             this.chart1.Series.Add(series1);
@@ -95,14 +119,14 @@
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 

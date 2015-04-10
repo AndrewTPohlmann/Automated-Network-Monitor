@@ -59,7 +59,6 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.toolStripMenuItem1.Text = "File";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -76,7 +75,6 @@
             this.scriptsToolStripMenuItem.Name = "scriptsToolStripMenuItem";
             this.scriptsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.scriptsToolStripMenuItem.Text = "Actions";
-            this.scriptsToolStripMenuItem.Click += new System.EventHandler(this.scriptsToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem1
             // 
@@ -117,6 +115,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Automated Network Monitor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.systemMenuStrip.ResumeLayout(false);

@@ -24,9 +24,9 @@ namespace WindowsFormsApplication1
         public Form1()
         {   InitializeComponent();  }
        
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
-            MongoDriverHelper.setupInstance();
+            await MongoDriverHelper.setupInstance();
         }
 
         private void loadToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -49,73 +49,6 @@ namespace WindowsFormsApplication1
             Form2 newForm2 = new Form2();
             newForm2.ShowDialog();
         }
-
-    private void label1_Click(object sender, EventArgs e)
-    {
-
-    }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void remoteHostTxtBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sampleDurationTxtBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pingIntervalTxtBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void packetsPerPingTxtBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void remoteHostTxtBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-    private void toolStripMenuItem1_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-    {
-
-    }
-
-    private void setSaveDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-
-    }
-
-    private void scriptsToolStripMenuItem_Click(object sender, EventArgs e)
-    {
-    }
 
         private void showForm(int x)
         {

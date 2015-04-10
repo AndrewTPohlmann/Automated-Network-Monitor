@@ -172,7 +172,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(66, 27);
             this.button2.TabIndex = 48;
-            this.button2.Text = "Return ";
+            this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -202,7 +202,6 @@
             this.endDatePicker.Name = "endDatePicker";
             this.endDatePicker.Size = new System.Drawing.Size(106, 20);
             this.endDatePicker.TabIndex = 52;
-            
             // 
             // groupBox1
             // 
@@ -225,7 +224,6 @@
             this.groupBox1.Size = new System.Drawing.Size(337, 192);
             this.groupBox1.TabIndex = 53;
             this.groupBox1.TabStop = false;
-
             // 
             // lblTaskName
             // 
@@ -244,7 +242,6 @@
             this.label7.Size = new System.Drawing.Size(86, 13);
             this.label7.TabIndex = 55;
             this.label7.Text = "Ping Task Name";
-
             // 
             // startDatePicker
             // 
@@ -254,7 +251,6 @@
             this.startDatePicker.Name = "startDatePicker";
             this.startDatePicker.Size = new System.Drawing.Size(106, 20);
             this.startDatePicker.TabIndex = 54;
-
             // 
             // label6
             // 
@@ -348,7 +344,6 @@
             this.scriptActionsToolStripMenuItem.Name = "scriptActionsToolStripMenuItem";
             this.scriptActionsToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.scriptActionsToolStripMenuItem.Text = "Actions";
-
             // 
             // loadExistingFileToolStripMenuItem
             // 
