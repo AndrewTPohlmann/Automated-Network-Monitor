@@ -78,8 +78,8 @@ namespace WindowsFormsApplication1
 
                     processargs = 
                         @"/CREATE /SC minute /MO " + pingIntervalNumeric.Text + " /TN PingTask" + jobnum + "_" + 
-                        remoteHostTxtBox.Text + " /SD " + startDatePicker.Value.ToString("MM/dd/yyyy")  + " /ED " + 
-                                endDatePicker.Value.ToString("MM/dd/yyyy") + " /TR " + batPath;
+                        remoteHostTxtBox.Text + " /SD " + startDatePicker.Value.ToString("MM/dd/yyyy") + " /ST 00:00:00"  + " /ED " + 
+                                endDatePicker.Value.ToString("MM/dd/yyyy") + " /ET 01:00:00 /TR " + batPath;
 
                         Console.WriteLine(processargs);
 
