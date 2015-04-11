@@ -106,7 +106,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(197, 226);
+            this.button1.Location = new System.Drawing.Point(202, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 25);
             this.button1.TabIndex = 10;
@@ -116,7 +116,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(345, 226);
+            this.button2.Location = new System.Drawing.Point(350, 248);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 25);
             this.button2.TabIndex = 11;
@@ -155,16 +155,15 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 27);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(586, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(586, 215);
             this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -224,7 +223,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(525, 226);
+            this.button3.Location = new System.Drawing.Point(530, 248);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(68, 25);
             this.button3.TabIndex = 13;
@@ -234,7 +233,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(271, 226);
+            this.button4.Location = new System.Drawing.Point(276, 248);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(68, 25);
             this.button4.TabIndex = 14;
@@ -245,7 +244,7 @@
             // button5
             // 
             this.button5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button5.Location = new System.Drawing.Point(7, 226);
+            this.button5.Location = new System.Drawing.Point(12, 248);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(68, 25);
             this.button5.TabIndex = 15;
@@ -258,7 +257,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button5;
-            this.ClientSize = new System.Drawing.Size(603, 258);
+            this.ClientSize = new System.Drawing.Size(603, 278);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);

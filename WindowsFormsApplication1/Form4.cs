@@ -148,10 +148,6 @@ namespace WindowsFormsApplication1
         private void button5_Click(object sender, EventArgs e)
         {   this.Close();   }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
 
     }

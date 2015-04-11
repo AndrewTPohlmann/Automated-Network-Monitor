@@ -52,7 +52,8 @@ namespace WindowsFormsApplication1
             {
                 BsonClassMap.RegisterClassMap<CurrentJob>();
 
-                client = new MongoClient(@"mongodb://atp1916:andrew123@ds061681.mongolab.com:61681/rtt");
+                   client = new MongoClient(@"mongodb://atp1916:andrew123@ds061681.mongolab.com:61681/rtt");
+
                 dbs = client.GetDatabase("rtt");
                 collection = dbs.GetCollection<CurrentJob>("sets");
 
