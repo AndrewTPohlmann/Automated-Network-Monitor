@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1
                 job = MongoDriverHelper.listofjobs[dataGridView1.SelectedCells[0].RowIndex];
 
                     Form3 frm3 = new Form3(job);
-                    frm3.ShowDialog();
+                    frm3.Show();
             }
         }
 

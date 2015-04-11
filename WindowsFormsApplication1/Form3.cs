@@ -80,5 +80,15 @@ namespace WindowsFormsApplication1
             backgroundWorker1.RunWorkerAsync(job);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            toolStrip1.v
+        }
+
     }
 }
