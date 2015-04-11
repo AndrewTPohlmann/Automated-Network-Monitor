@@ -57,6 +57,7 @@ namespace WindowsFormsApplication1
             while (z < job.x_rtt.Count)
             {
                 chart1.Series["Series1"].Points.AddXY(job.y_time[z], job.x_rtt[z]);
+
                 z++;
             }
 
@@ -83,6 +84,11 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

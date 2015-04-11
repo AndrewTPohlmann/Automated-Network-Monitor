@@ -144,9 +144,13 @@ namespace WindowsFormsApplication1
                                     sb.Clear();
                                     sb.Append(dateTime.Groups[1]).Append(" ").Append(dateTime.Groups[2]).Append(" ");
 
+                               //    Console.WriteLine( DateTime.Parse(dateTime.Groups[1].ToString()).ToString("h:mm"));
+
                                     if (dateTime.Success)
                                     {
                                         y_time.Add(DateTime.Parse(sb.ToString()));
+
+                                        Console.WriteLine(DateTime.Parse(sb.ToString()));
                                     }
                                     else if (rtt.Success)
                                     {
