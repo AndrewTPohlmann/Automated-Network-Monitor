@@ -85,10 +85,5 @@ namespace WindowsFormsApplication1
             this.Close();
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-            toolStrip1.v
-        }
-
     }
 }
