@@ -268,6 +268,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.addDataSet);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.KeyPreview = true;
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mongo Control";

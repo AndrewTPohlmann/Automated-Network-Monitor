@@ -45,10 +45,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.startDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.step1 = new System.Windows.Forms.Label();
-            this.step2 = new System.Windows.Forms.Label();
-            this.step3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.packetsPerPingNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pingIntervalNumeric)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -261,45 +256,6 @@
             this.label6.TabIndex = 53;
             this.label6.Text = "Start Date";
             // 
-            // step1
-            // 
-            this.step1.AutoSize = true;
-            this.step1.ForeColor = System.Drawing.Color.Black;
-            this.step1.Location = new System.Drawing.Point(6, 11);
-            this.step1.Name = "step1";
-            this.step1.Size = new System.Drawing.Size(51, 13);
-            this.step1.TabIndex = 55;
-            this.step1.Text = "Validated";
-            // 
-            // step2
-            // 
-            this.step2.AutoSize = true;
-            this.step2.Location = new System.Drawing.Point(57, 11);
-            this.step2.Name = "step2";
-            this.step2.Size = new System.Drawing.Size(57, 13);
-            this.step2.TabIndex = 56;
-            this.step2.Text = "Generated";
-            // 
-            // step3
-            // 
-            this.step3.AutoSize = true;
-            this.step3.Location = new System.Drawing.Point(112, 11);
-            this.step3.Name = "step3";
-            this.step3.Size = new System.Drawing.Size(46, 13);
-            this.step3.TabIndex = 57;
-            this.step3.Text = "Execute";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.step1);
-            this.groupBox2.Controls.Add(this.step3);
-            this.groupBox2.Controls.Add(this.step2);
-            this.groupBox2.Location = new System.Drawing.Point(185, 263);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(164, 34);
-            this.groupBox2.TabIndex = 58;
-            this.groupBox2.TabStop = false;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -384,14 +340,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(359, 302);
+            this.ClientSize = new System.Drawing.Size(359, 267);
             this.Controls.Add(this.backButton);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.setValuesButton);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form2";
@@ -402,8 +358,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pingIntervalNumeric)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -426,10 +380,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker endDatePicker;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label step1;
-        private System.Windows.Forms.Label step2;
-        private System.Windows.Forms.Label step3;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;

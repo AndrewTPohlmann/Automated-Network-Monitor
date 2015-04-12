@@ -176,6 +176,7 @@
             this.ClientSize = new System.Drawing.Size(1026, 684);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form3";

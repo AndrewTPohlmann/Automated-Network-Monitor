@@ -74,6 +74,12 @@ namespace WindowsFormsApplication1
             newForm4.Show();
         }
 
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form5 newForm5 = new Form5();
+            newForm5.ShowDialog();
+        }
+
         
         }
 

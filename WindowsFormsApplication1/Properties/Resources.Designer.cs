@@ -63,9 +63,9 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _6a010534b1db25970b0147e0ae51b2970b_800wi {
+        internal static System.Drawing.Bitmap frmbckgrnd {
             get {
-                object obj = ResourceManager.GetObject("6a010534b1db25970b0147e0ae51b2970b-800wi", resourceCulture);
+                object obj = ResourceManager.GetObject("frmbckgrnd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -76,6 +76,26 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap left_arrow_512 {
             get {
                 object obj = ResourceManager.GetObject("left_arrow-512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Matrix_Background_Mac_wallpaper {
+            get {
+                object obj = ResourceManager.GetObject("Matrix-Background-Mac-wallpaper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Matrix_Background_Mac_wallpaper1 {
+            get {
+                object obj = ResourceManager.GetObject("Matrix-Background-Mac-wallpaper1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

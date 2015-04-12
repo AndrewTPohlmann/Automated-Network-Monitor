@@ -39,7 +39,6 @@ namespace WindowsFormsApplication1
                     {
                         setValuesButton.Text = "Generate Task Files";
                         backButton.Visible = true;
-                        step1.ForeColor = Color.Green;
                         lockScriptSettings(true);
 
                     }
@@ -48,7 +47,6 @@ namespace WindowsFormsApplication1
                         MessageBox.Show("The remote host did not respond.");
 
                         setValuesButton.Text = "Validate Parameters";
-                        step1.ForeColor = Color.Black;
                         remoteHostTxtBox.BackColor = Color.White;
                         backButton.Visible = false;
                         lockScriptSettings(false);
@@ -94,8 +92,6 @@ namespace WindowsFormsApplication1
                                 batwtr.Write(batxt);
 
                                 resultwtr.WriteLine("Params: " + processparams + Environment.NewLine);
-                                step2.ForeColor = Color.Green;
-                                step3.ForeColor = Color.Blue;
                                 setValuesButton.Text = "Execute Ping Task";
 
                                 if (autoExecutePingTasksToolStripMenuItem.Checked)
@@ -106,7 +102,6 @@ namespace WindowsFormsApplication1
                             {
                                 MessageBox.Show("Error: Unable to create batch file.");
 
-                                step2.ForeColor = step3.ForeColor = Color.Black;
                                 setValuesButton.Text = "Generate Task Files";
                             }
                         }
@@ -130,7 +125,6 @@ namespace WindowsFormsApplication1
                     {
                         MessageBox.Show("Error: Unable to create start batch file.");
 
-                        step3.ForeColor = Color.Black;
                         setValuesButton.Text = ("Generate Task Files");
 
                         break;
@@ -162,12 +156,7 @@ namespace WindowsFormsApplication1
                             if (!line.Contains("REM")) return;
 
                             string[] parameters = line.Split(' ');
-/*
-                            foreach (string r in parameters)
-                            {
-                                Console.WriteLine(r);
-                            }
-                            */
+
                             resetScriptProcess();
 
                             lblTaskName.Text = parameters[2];
@@ -227,7 +216,6 @@ namespace WindowsFormsApplication1
         {
             lockScriptSettings(false);
             lblTaskName.Text = "";
-            step1.ForeColor = step2.ForeColor = step3.ForeColor = Color.Black;
             
             setValuesButton.Text = "Validate Parameters";
         }
