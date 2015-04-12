@@ -80,6 +80,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(603, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // fileToolStripMenuItem
             // 
@@ -106,7 +107,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(202, 248);
+            this.button1.Location = new System.Drawing.Point(191, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 25);
             this.button1.TabIndex = 10;
@@ -116,7 +117,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(350, 248);
+            this.button2.Location = new System.Drawing.Point(339, 248);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 25);
             this.button2.TabIndex = 11;
@@ -155,7 +156,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 27);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 27);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -233,7 +234,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(276, 248);
+            this.button4.Location = new System.Drawing.Point(265, 248);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(68, 25);
             this.button4.TabIndex = 14;
@@ -269,7 +270,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "MongoDB Control";
+            this.Text = "Mongo Control";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

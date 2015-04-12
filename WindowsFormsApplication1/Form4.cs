@@ -148,6 +148,11 @@ namespace WindowsFormsApplication1
         private void button5_Click(object sender, EventArgs e)
         {   this.Close();   }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
 
 
     }
