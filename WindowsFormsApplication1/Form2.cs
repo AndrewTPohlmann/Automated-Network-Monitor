@@ -94,8 +94,8 @@ namespace WindowsFormsApplication1
                                 resultwtr.WriteLine("Params: " + processparams + Environment.NewLine);
                                 setValuesButton.Text = "Execute Ping Task";
 
-                                if (autoExecutePingTasksToolStripMenuItem.Checked)
-                                {   setValuesButton.PerformClick(); }
+                             //   if (autoExecutePingTasksToolStripMenuItem.Checked)
+                           //     {   setValuesButton.PerformClick(); }
 
                             }
                             catch (Exception)

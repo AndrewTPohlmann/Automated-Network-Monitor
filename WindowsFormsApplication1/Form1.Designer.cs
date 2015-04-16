@@ -48,7 +48,7 @@
             this.helpToolStripMenuItem});
             this.systemMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.systemMenuStrip.Name = "systemMenuStrip";
-            this.systemMenuStrip.Size = new System.Drawing.Size(630, 24);
+            this.systemMenuStrip.Size = new System.Drawing.Size(577, 24);
             this.systemMenuStrip.TabIndex = 35;
             this.systemMenuStrip.Text = "menuStrip1";
             // 
@@ -111,7 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.frmbckgrnd;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(630, 349);
+            this.ClientSize = new System.Drawing.Size(577, 303);
             this.Controls.Add(this.systemMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;

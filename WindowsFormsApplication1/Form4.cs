@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
 
         private async void Form4_Load(object sender, EventArgs e)
         {
-           // MongoDriverHelper.dbs.DropCollectionAsync("sets");
+            MongoDriverHelper.dbs.DropCollectionAsync("sets");
             await updateListBoxAsync();
 
             backgroundWorker1.DoWork += backgroundWorker1_DoWork;

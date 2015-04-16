@@ -18,9 +18,6 @@ namespace WindowsFormsApplication1
 {
     public partial class Form1 : Form
     {
-        int maxscriptforms = 0;
-        int maxgraphforms = 0;
-
         public Form1()
         {   InitializeComponent();  }
        
@@ -52,19 +49,15 @@ namespace WindowsFormsApplication1
 
         private void showForm(int x)
         {
-            if (x==2 && maxscriptforms < 3)
+            if (x==2)
             {
                 Form2 newForm2 = new Form2();
                 newForm2.Show();//Dialog();
-
-                maxscriptforms++;
             }
-            else if (x==3 && maxgraphforms < 3)
+            else if (x==3)
             {
                 Form3 newForm3 = new Form3();
                 newForm3.Show();//Dialog();
-
-                maxgraphforms++;
             }
         }
 
