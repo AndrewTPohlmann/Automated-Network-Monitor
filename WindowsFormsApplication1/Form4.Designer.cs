@@ -94,20 +94,20 @@
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(191, 248);
+            this.button1.Location = new System.Drawing.Point(146, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 25);
             this.button1.TabIndex = 10;
@@ -117,7 +117,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(339, 248);
+            this.button2.Location = new System.Drawing.Point(294, 248);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 25);
             this.button2.TabIndex = 11;
@@ -234,7 +234,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(265, 248);
+            this.button4.Location = new System.Drawing.Point(220, 248);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(68, 25);
             this.button4.TabIndex = 14;

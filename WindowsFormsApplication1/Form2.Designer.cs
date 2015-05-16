@@ -304,8 +304,8 @@
             // loadExistingFileToolStripMenuItem
             // 
             this.loadExistingFileToolStripMenuItem.Name = "loadExistingFileToolStripMenuItem";
-            this.loadExistingFileToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.loadExistingFileToolStripMenuItem.Text = "Load Existing .Bat";
+            this.loadExistingFileToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.loadExistingFileToolStripMenuItem.Text = "Import from .bat";
             this.loadExistingFileToolStripMenuItem.Click += new System.EventHandler(this.loadExistingFileToolStripMenuItem_Click);
             // 
             // scriptSettingsToolStripMenuItem
