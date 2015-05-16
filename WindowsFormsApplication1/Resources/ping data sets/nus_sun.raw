@@ -1,0 +1,1198 @@
+Params: -taskname PingTask79 -target www.nus.edu -packets 5 -interval 15 -start 04/12/2015 -end 04/13/2015
+
+Date:Sat 04/11/2015 Time:23:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 214ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 0:00:00.17 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=221ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=225ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 225ms, Average = 217ms
+Date:Sun 04/12/2015 Time: 0:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 216ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 0:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=222ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 222ms, Average = 215ms
+Date:Sun 04/12/2015 Time: 0:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 219ms, Average = 215ms
+Date:Sun 04/12/2015 Time: 1:00:00.21 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=222ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 222ms, Average = 216ms
+Date:Sun 04/12/2015 Time: 1:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 216ms, Average = 214ms
+Date:Sun 04/12/2015 Time: 1:30:00.18 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=221ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 221ms, Average = 215ms
+Date:Sun 04/12/2015 Time: 1:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=223ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 223ms, Average = 215ms
+Date:Sun 04/12/2015 Time: 2:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 214ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 2:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 2:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 219ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 2:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 3:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 213ms, Average = 212ms
+Date:Sun 04/12/2015 Time: 3:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 214ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 3:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 3:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 216ms, Average = 214ms
+Date:Sun 04/12/2015 Time: 4:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 214ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 4:15:00.17 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 219ms, Average = 214ms
+Date:Sun 04/12/2015 Time: 4:30:00.18 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 214ms, Average = 212ms
+Date:Sun 04/12/2015 Time: 4:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 216ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 5:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 5:15:00.17 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 213ms, Average = 211ms
+Date:Sun 04/12/2015 Time: 5:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 213ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 5:45:00.17 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=230ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 230ms, Average = 216ms
+Date:Sun 04/12/2015 Time: 6:00:00.18 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=221ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=235ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 235ms, Average = 218ms
+Date:Sun 04/12/2015 Time: 6:15:00.16 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 216ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 6:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 213ms, Average = 212ms
+Date:Sun 04/12/2015 Time: 6:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 215ms, Average = 212ms
+Date:Sun 04/12/2015 Time: 7:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 217ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 7:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 216ms, Average = 214ms
+Date:Sun 04/12/2015 Time: 7:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 213ms, Average = 212ms
+Date:Sun 04/12/2015 Time: 7:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 217ms, Average = 214ms
+Date:Sun 04/12/2015 Time: 8:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time: 8:15:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 212ms, Average = 211ms
+Date:Sun 04/12/2015 Time: 8:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 213ms, Average = 212ms
+Date:Sun 04/12/2015 Time: 8:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 220ms, Average = 214ms
+Date:Sun 04/12/2015 Time: 9:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 219ms, Average = 215ms
+Date:Sun 04/12/2015 Time: 9:15:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 214ms, Average = 212ms
+Date:Sun 04/12/2015 Time: 9:30:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 216ms, Average = 214ms
+Date:Sun 04/12/2015 Time: 9:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time:10:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 215ms, Average = 212ms
+Date:Sun 04/12/2015 Time:10:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time:10:30:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time:10:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 214ms, Average = 213ms
+Date:Sun 04/12/2015 Time:11:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=230ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 214ms, Maximum = 230ms, Average = 217ms
+Date:Sun 04/12/2015 Time:11:15:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=230ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 230ms, Average = 217ms
+Date:Sun 04/12/2015 Time:11:30:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=231ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 214ms, Maximum = 231ms, Average = 219ms
+Date:Sun 04/12/2015 Time:11:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 214ms, Maximum = 217ms, Average = 215ms
+Date:Sun 04/12/2015 Time:12:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 214ms, Maximum = 217ms, Average = 216ms
+Date:Sun 04/12/2015 Time:12:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=221ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=225ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 214ms, Maximum = 225ms, Average = 218ms
+Date:Sun 04/12/2015 Time:12:30:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 216ms, Average = 214ms
+Date:Sun 04/12/2015 Time:12:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 218ms, Average = 214ms
+Date:Sun 04/12/2015 Time:13:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=234ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 234ms, Average = 218ms
+Date:Sun 04/12/2015 Time:13:15:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=221ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=222ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=227ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=236ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 218ms, Maximum = 236ms, Average = 224ms
+Date:Sun 04/12/2015 Time:13:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=223ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 223ms, Average = 216ms
+Date:Sun 04/12/2015 Time:13:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 219ms, Average = 215ms
+Date:Sun 04/12/2015 Time:14:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 214ms, Average = 212ms
+Date:Sun 04/12/2015 Time:14:15:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 214ms, Average = 212ms
+Date:Sun 04/12/2015 Time:14:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 217ms, Average = 214ms
+Date:Sun 04/12/2015 Time:14:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 216ms, Average = 213ms
+Date:Sun 04/12/2015 Time:15:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=229ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 229ms, Average = 217ms
+Date:Sun 04/12/2015 Time:15:15:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=243ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=222ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 216ms, Maximum = 243ms, Average = 223ms
+Date:Sun 04/12/2015 Time:15:30:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=224ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=222ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 224ms, Average = 219ms
+Date:Sun 04/12/2015 Time:15:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=225ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 216ms, Maximum = 225ms, Average = 220ms
+Date:Sun 04/12/2015 Time:16:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=223ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 223ms, Average = 215ms
+Date:Sun 04/12/2015 Time:16:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=223ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=223ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 214ms, Maximum = 223ms, Average = 218ms
+Date:Sun 04/12/2015 Time:16:30:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=221ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 221ms, Average = 214ms
+Date:Sun 04/12/2015 Time:16:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=232ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 232ms, Average = 218ms
+Date:Sun 04/12/2015 Time:17:00:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=222ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=224ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=240ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 240ms, Average = 222ms
+Date:Sun 04/12/2015 Time:17:15:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=224ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 215ms, Maximum = 224ms, Average = 217ms
+Date:Sun 04/12/2015 Time:17:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=224ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 224ms, Average = 215ms
+Date:Sun 04/12/2015 Time:17:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 220ms, Average = 216ms
+Date:Sun 04/12/2015 Time:18:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=228ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=236ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 236ms, Average = 221ms
+Date:Sun 04/12/2015 Time:18:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=226ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=229ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 215ms, Maximum = 229ms, Average = 222ms
+Date:Sun 04/12/2015 Time:18:30:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time:18:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 220ms, Average = 215ms
+Date:Sun 04/12/2015 Time:19:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=222ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 222ms, Average = 216ms
+Date:Sun 04/12/2015 Time:19:15:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 214ms, Average = 213ms
+Date:Sun 04/12/2015 Time:19:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Request timed out.
+Reply from 137.132.21.27: bytes=32 time=219ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 4, Lost = 1 (20% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 219ms, Average = 215ms
+Date:Sun 04/12/2015 Time:19:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 215ms, Average = 212ms
+Date:Sun 04/12/2015 Time:20:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time:20:15:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 214ms, Average = 213ms
+Date:Sun 04/12/2015 Time:20:30:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Request timed out.
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=228ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 4, Lost = 1 (20% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 228ms, Average = 217ms
+Date:Sun 04/12/2015 Time:20:45:00.14 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 213ms, Average = 212ms
+Date:Sun 04/12/2015 Time:21:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=215ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 215ms, Average = 213ms
+Date:Sun 04/12/2015 Time:21:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=212ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 212ms, Maximum = 214ms, Average = 213ms
+Date:Sun 04/12/2015 Time:21:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=221ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 221ms, Average = 216ms
+Date:Sun 04/12/2015 Time:21:45:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=221ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=220ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 221ms, Average = 217ms
+Date:Sun 04/12/2015 Time:22:00:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=211ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 211ms, Maximum = 214ms, Average = 213ms
+Date:Sun 04/12/2015 Time:22:15:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=214ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=223ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=224ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=330ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=331ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 214ms, Maximum = 331ms, Average = 264ms
+Date:Sun 04/12/2015 Time:22:30:00.15 
+
+Pinging www.nus.edu [137.132.21.27] with 32 bytes of data:
+Reply from 137.132.21.27: bytes=32 time=213ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=217ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=216ms TTL=42
+Reply from 137.132.21.27: bytes=32 time=218ms TTL=42
+
+Ping statistics for 137.132.21.27:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 213ms, Maximum = 218ms, Average = 216ms

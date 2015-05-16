@@ -1,0 +1,1250 @@
+Params: -taskname PingTask42 -target www.ox.ac.uk -packets 5 -interval 15 -start 04/10/2015 -end 04/11/2015
+
+Date:Fri 04/10/2015 Time: 0:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 128ms, Maximum = 136ms, Average = 129ms
+Date:Fri 04/10/2015 Time: 0:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 127ms, Maximum = 129ms, Average = 127ms
+Date:Fri 04/10/2015 Time: 0:30:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=149ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 137ms, Maximum = 149ms, Average = 139ms
+Date:Fri 04/10/2015 Time: 0:45:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=132ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 132ms, Average = 128ms
+Date:Fri 04/10/2015 Time: 1:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 127ms, Maximum = 134ms, Average = 128ms
+Date:Fri 04/10/2015 Time: 1:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 127ms, Maximum = 128ms, Average = 127ms
+Date:Fri 04/10/2015 Time: 1:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=142ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 136ms, Maximum = 142ms, Average = 137ms
+Date:Fri 04/10/2015 Time: 1:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 137ms, Average = 136ms
+Date:Fri 04/10/2015 Time: 2:00:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=131ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 131ms, Average = 128ms
+Date:Fri 04/10/2015 Time: 2:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=140ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 136ms, Maximum = 140ms, Average = 137ms
+Date:Fri 04/10/2015 Time: 2:30:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 137ms, Average = 136ms
+Date:Fri 04/10/2015 Time: 2:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 129ms, Average = 126ms
+Date:Fri 04/10/2015 Time: 3:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 127ms, Maximum = 129ms, Average = 128ms
+Date:Fri 04/10/2015 Time: 3:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 136ms, Average = 128ms
+Date:Fri 04/10/2015 Time: 3:30:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 129ms, Average = 126ms
+Date:Fri 04/10/2015 Time: 3:45:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=131ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 131ms, Average = 127ms
+Date:Fri 04/10/2015 Time: 4:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 130ms, Average = 127ms
+Date:Fri 04/10/2015 Time: 4:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 137ms, Average = 135ms
+Date:Fri 04/10/2015 Time: 4:30:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 130ms, Average = 127ms
+Date:Fri 04/10/2015 Time: 4:45:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=133ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 133ms, Maximum = 139ms, Average = 135ms
+Date:Fri 04/10/2015 Time: 5:00:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 139ms, Average = 135ms
+Date:Fri 04/10/2015 Time: 5:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 136ms, Average = 135ms
+Date:Fri 04/10/2015 Time: 5:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 138ms, Average = 136ms
+Date:Fri 04/10/2015 Time: 5:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=151ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=140ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 151ms, Average = 139ms
+Date:Fri 04/10/2015 Time: 6:00:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 128ms, Average = 126ms
+Date:Fri 04/10/2015 Time: 6:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 139ms, Average = 135ms
+Date:Fri 04/10/2015 Time: 6:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 128ms, Average = 126ms
+Date:Fri 04/10/2015 Time: 6:45:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 127ms, Maximum = 127ms, Average = 127ms
+Date:Fri 04/10/2015 Time: 7:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 130ms, Average = 127ms
+Date:Fri 04/10/2015 Time: 7:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=133ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 127ms, Maximum = 133ms, Average = 129ms
+Date:Fri 04/10/2015 Time: 7:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=132ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 127ms, Maximum = 132ms, Average = 128ms
+Date:Fri 04/10/2015 Time: 7:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 130ms, Average = 127ms
+Date:Fri 04/10/2015 Time: 8:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=133ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 133ms, Maximum = 135ms, Average = 134ms
+Date:Fri 04/10/2015 Time: 8:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 129ms, Average = 127ms
+Date:Fri 04/10/2015 Time: 8:30:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=141ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 141ms, Average = 136ms
+Date:Fri 04/10/2015 Time: 8:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 128ms, Average = 126ms
+Date:Fri 04/10/2015 Time: 9:00:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 136ms, Average = 135ms
+Date:Fri 04/10/2015 Time: 9:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 128ms, Average = 126ms
+Date:Fri 04/10/2015 Time: 9:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=140ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=142ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 142ms, Average = 138ms
+Date:Fri 04/10/2015 Time: 9:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 128ms, Average = 126ms
+Date:Fri 04/10/2015 Time:10:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 129ms, Average = 126ms
+Date:Fri 04/10/2015 Time:10:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=140ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 140ms, Average = 137ms
+Date:Fri 04/10/2015 Time:10:30:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 137ms, Average = 136ms
+Date:Fri 04/10/2015 Time:10:45:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=145ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 145ms, Average = 138ms
+Date:Fri 04/10/2015 Time:11:00:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 139ms, Average = 136ms
+Date:Fri 04/10/2015 Time:11:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 128ms, Average = 126ms
+Date:Fri 04/10/2015 Time:11:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 139ms, Average = 136ms
+Date:Fri 04/10/2015 Time:11:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 138ms, Average = 135ms
+Date:Fri 04/10/2015 Time:12:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 127ms, Average = 126ms
+Date:Fri 04/10/2015 Time:12:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=134ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 134ms, Average = 128ms
+Date:Fri 04/10/2015 Time:12:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 127ms, Average = 126ms
+Date:Fri 04/10/2015 Time:12:45:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 127ms, Average = 125ms
+Date:Fri 04/10/2015 Time:13:00:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 129ms, Average = 127ms
+Date:Fri 04/10/2015 Time:13:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 126ms, Average = 126ms
+Date:Fri 04/10/2015 Time:13:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 127ms, Average = 126ms
+Date:Fri 04/10/2015 Time:13:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=141ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 136ms, Maximum = 141ms, Average = 137ms
+Date:Fri 04/10/2015 Time:14:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 138ms, Average = 136ms
+Date:Fri 04/10/2015 Time:14:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 138ms, Average = 136ms
+Date:Fri 04/10/2015 Time:14:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=148ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=148ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 148ms, Average = 141ms
+Date:Fri 04/10/2015 Time:14:45:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=141ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=158ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=142ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=141ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 139ms, Maximum = 158ms, Average = 144ms
+Date:Fri 04/10/2015 Time:15:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=146ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=149ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=140ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 139ms, Maximum = 149ms, Average = 142ms
+Date:Fri 04/10/2015 Time:15:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=140ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=146ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=143ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=144ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=141ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 140ms, Maximum = 146ms, Average = 142ms
+Date:Fri 04/10/2015 Time:15:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 136ms, Maximum = 139ms, Average = 138ms
+Date:Fri 04/10/2015 Time:15:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 137ms, Average = 135ms
+Date:Fri 04/10/2015 Time:16:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=147ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 147ms, Average = 138ms
+Date:Fri 04/10/2015 Time:16:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 129ms, Average = 127ms
+Date:Fri 04/10/2015 Time:16:30:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=153ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 153ms, Average = 140ms
+Date:Fri 04/10/2015 Time:16:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=140ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=146ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 136ms, Maximum = 146ms, Average = 139ms
+Date:Fri 04/10/2015 Time:17:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=148ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 148ms, Average = 138ms
+Date:Fri 04/10/2015 Time:17:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=141ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 141ms, Average = 136ms
+Date:Fri 04/10/2015 Time:17:30:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=143ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=164ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 164ms, Average = 143ms
+Date:Fri 04/10/2015 Time:17:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 129ms, Average = 126ms
+Date:Fri 04/10/2015 Time:18:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 137ms, Average = 135ms
+Date:Fri 04/10/2015 Time:18:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=140ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 140ms, Average = 137ms
+Date:Fri 04/10/2015 Time:18:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=156ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 156ms, Average = 132ms
+Date:Fri 04/10/2015 Time:18:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 137ms, Average = 135ms
+Date:Fri 04/10/2015 Time:19:00:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 129ms, Average = 126ms
+Date:Fri 04/10/2015 Time:19:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 136ms, Average = 135ms
+Date:Fri 04/10/2015 Time:19:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 136ms, Average = 134ms
+Date:Fri 04/10/2015 Time:19:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=140ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 140ms, Average = 136ms
+Date:Fri 04/10/2015 Time:20:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 126ms, Average = 125ms
+Date:Fri 04/10/2015 Time:20:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 130ms, Average = 127ms
+Date:Fri 04/10/2015 Time:20:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=125ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 125ms, Maximum = 129ms, Average = 126ms
+Date:Fri 04/10/2015 Time:20:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 128ms, Average = 127ms
+Date:Fri 04/10/2015 Time:21:00:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 139ms, Average = 135ms
+Date:Fri 04/10/2015 Time:21:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=137ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 138ms, Average = 136ms
+Date:Fri 04/10/2015 Time:21:30:00.20 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 135ms, Maximum = 136ms, Average = 135ms
+Date:Fri 04/10/2015 Time:21:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 127ms, Maximum = 130ms, Average = 128ms
+Date:Fri 04/10/2015 Time:22:00:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=133ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=132ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 133ms, Average = 130ms
+Date:Fri 04/10/2015 Time:22:15:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=139ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 139ms, Average = 135ms
+Date:Fri 04/10/2015 Time:22:30:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=156ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 156ms, Average = 132ms
+Date:Fri 04/10/2015 Time:22:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=132ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=130ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=129ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 132ms, Average = 128ms
+Date:Fri 04/10/2015 Time:23:00:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=146ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=152ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=144ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=143ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=142ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 142ms, Maximum = 152ms, Average = 145ms
+Date:Fri 04/10/2015 Time:23:15:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=138ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 138ms, Average = 135ms
+Date:Fri 04/10/2015 Time:23:30:00.14 
+
+Pinging www.ox.ac.uk [129.67.242.154] with 32 bytes of data:
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=131ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=128ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=127ms TTL=37
+Reply from 129.67.242.154: bytes=32 time=126ms TTL=37
+
+Ping statistics for 129.67.242.154:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 126ms, Maximum = 131ms, Average = 127ms
+Date:Fri 04/10/2015 Time:23:45:00.15 
+
+Pinging www.ox.ac.uk [129.67.242.155] with 32 bytes of data:
+Reply from 129.67.242.155: bytes=32 time=141ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=134ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=135ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+Reply from 129.67.242.155: bytes=32 time=136ms TTL=37
+
+Ping statistics for 129.67.242.155:
+    Packets: Sent = 5, Received = 5, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 141ms, Average = 136ms
