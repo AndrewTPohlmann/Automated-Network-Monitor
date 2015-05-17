@@ -51,17 +51,12 @@ namespace WindowsFormsApplication1
         {
 
             CurrentJob job = e.Result as CurrentJob;
-            double oldRTT = 0;
 
             int z = 0;
 
             while (z < job.x_rtt.Count)
             {
-                oldRTT = Math.Round((.25 * oldRTT) + ((1 - .25) * (double.Parse(job.x_rtt[z].ToString()))),2,MidpointRounding.AwayFromZero);
-
-
-                chart1.Series["Series1"].Points.AddXY(job.y_time[z], oldRTT);
-
+                chart1.Series["Series1"].Points.AddXY(job.y_time[z], job.x_rtt[z]);
                 z++;
             }
 

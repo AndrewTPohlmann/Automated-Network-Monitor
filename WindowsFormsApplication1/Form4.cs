@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
 
         private async void Form4_Load(object sender, EventArgs e)
         {
-            MongoDriverHelper.dbs.DropCollectionAsync("sets");
+            await MongoDriverHelper.dbs.DropCollectionAsync("sets");
             await updateListBoxAsync();
 
             backgroundWorker1.DoWork += backgroundWorker1_DoWork;
@@ -69,12 +69,11 @@ namespace WindowsFormsApplication1
 
             dataGridView1.Rows.Clear();
 
-            string[] tmp, paramss;
+            string[] paramss;
 
                 foreach (CurrentJob e in MongoDriverHelper.listofjobs)
                 { 
-                     tmp = e.paramss.Split(' ');
-                     paramss = new string[] {   tmp[2], tmp[4], tmp[6],tmp[8],tmp[10], tmp[12], e.x_rtt.Count.ToString() };
+                     paramss = new string[] { e.paramss_taskname, e.paramss_target, e.paramss_packets, e.paramss_interval, e.paramss_startd, e.paramss_endd, e.x_rtt.Count.ToString() };
 
                      dataGridView1.Rows.Add(paramss);
                 }
@@ -100,10 +99,11 @@ namespace WindowsFormsApplication1
 
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {            
+            string pathtoresources = @"D:\Google Drive\Visual Studio Projects\Projects\WindowsFormsApplication1\WindowsFormsApplication1\Resources\ping data sets"; 
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = (new DirectoryInfo(@"C:\")).ToString();
+            openFileDialog1.InitialDirectory = (new DirectoryInfo(pathtoresources)).ToString();
             openFileDialog1.Filter = "raw data (*.raw)|*.raw";
             openFileDialog1.RestoreDirectory = true;
 
@@ -120,7 +120,7 @@ namespace WindowsFormsApplication1
         {
             await MongoDriverHelper.updatelistOfJobs();
 
-            if (MongoDriverHelper.listofjobs.Count != 0)
+            if (dataGridView1.SelectedCells[0].RowIndex < MongoDriverHelper.listofjobs.Count)
             {
                 job = MongoDriverHelper.listofjobs[dataGridView1.SelectedCells[0].RowIndex];
 
@@ -131,7 +131,6 @@ namespace WindowsFormsApplication1
 
         private async void button4_Click(object sender, EventArgs e)
         {
-
             await MongoDriverHelper.updatelistOfJobs();
 
             if (MongoDriverHelper.listofjobs.Count != 0)
@@ -148,11 +147,10 @@ namespace WindowsFormsApplication1
         private void button5_Click(object sender, EventArgs e)
         {   this.Close();   }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
 
 
     }

@@ -14,7 +14,12 @@ namespace WindowsFormsApplication1
 {
     public partial class Form2 : Form
     {
-
+        string common;
+        string resultPath;
+        string batPath;
+        int jobnum;
+        string batxt;
+        string processparams;
         string processargs;
 
         public Form2()
@@ -33,11 +38,14 @@ namespace WindowsFormsApplication1
         {
             switch (setValuesButton.Text)
             {
+
                 case ("Validate Parameters"):
 
+                    backButton.Visible = false;
+                    
                     if (validateURL())
                     {
-                        setValuesButton.Text = "Generate Task Files";
+                        setValuesButton.Text = "Generate Task Data";
                         backButton.Visible = true;
                         lockScriptSettings(true);
 
@@ -54,22 +62,22 @@ namespace WindowsFormsApplication1
 
                     break;
 
-                case ("Generate Task Files"):
+                case ("Generate Task Data"):
 
-                    int jobnum = (new Random()).Next(101); 
+                     jobnum = (new Random()).Next(101); 
 
-                    string common = ((new DirectoryInfo(@"C:\")).ToString() + remoteHostTxtBox.Text + "-" + DateTime.Now.ToString("dd-MM-yyyy_HH-mm"));
-                    string resultPath = common + "-results.raw";
-                    string batPath = common + ".bat";
+                     common = ((new DirectoryInfo(@"C:\")).ToString() + remoteHostTxtBox.Text + "-" + DateTime.Now.ToString("dd-MM-yyyy_HH-mm"));
+                     resultPath = common + "-results.raw";
+                     batPath = common + ".bat";
 
-                    string batxt =
+                    batxt =
                         "@ECHO OFF" + Environment.NewLine +
                         "SET IPADDRESS=" + remoteHostTxtBox.Text + Environment.NewLine +
                         "SET PACKETSPERPING=" + int.Parse(packetsPerPingNumeric.Text) + Environment.NewLine +
                         @"ECHO Date:%Date% Time:%Time% >>" + resultPath + Environment.NewLine +
                         @"C:\windows\system32\ping %IPADDRESS% -n %PACKETSPERPING% >>" + resultPath;
 
-                    string processparams = 
+                    processparams = 
                          @"-taskname PingTask" + jobnum + " -target " + remoteHostTxtBox.Text + 
                                 " -packets " + int.Parse(packetsPerPingNumeric.Text) + " -interval " + pingIntervalNumeric.Text + 
                                 " -start " + startDatePicker.Value.ToString("MM/dd/yyyy")  + " -end " + endDatePicker.Value.ToString("MM/dd/yyyy");
@@ -83,7 +91,13 @@ namespace WindowsFormsApplication1
 
                         lblTaskName.Text = "PingTask" + jobnum;
 
-                        using (StreamWriter batwtr = new System.IO.StreamWriter(batPath))
+                        setValuesButton.Text = "Execute Ping Task";
+
+                    break;
+
+                case ("Execute Ping Task"):
+
+                     using (StreamWriter batwtr = new System.IO.StreamWriter(batPath))
                         using (StreamWriter resultwtr = new System.IO.StreamWriter(resultPath))
                         {
                             try
@@ -94,23 +108,16 @@ namespace WindowsFormsApplication1
                                 resultwtr.WriteLine("Params: " + processparams + Environment.NewLine);
                                 setValuesButton.Text = "Execute Ping Task";
 
-                             //   if (autoExecutePingTasksToolStripMenuItem.Checked)
-                           //     {   setValuesButton.PerformClick(); }
-
                             }
                             catch (Exception)
                             {
                                 MessageBox.Show("Error: Unable to create batch file.");
 
-                                setValuesButton.Text = "Generate Task Files";
+                                setValuesButton.Text = "Generate Task Data";
                             }
                         }
 
                         backButton.Visible = true;
-
-                    break;
-
-                case ("Execute Ping Task"):
 
                     try
                     { 
@@ -125,7 +132,7 @@ namespace WindowsFormsApplication1
                     {
                         MessageBox.Show("Error: Unable to create start batch file.");
 
-                        setValuesButton.Text = ("Generate Task Files");
+                        setValuesButton.Text = ("Generate Task Data");
 
                         break;
                     }
@@ -137,8 +144,10 @@ namespace WindowsFormsApplication1
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = (new DirectoryInfo(@"C:\")).ToString();
-            openFileDialog1.Filter = "batch files (*.bat)|*.bat";
+            string pathtoresources = @"D:\Google Drive\Visual Studio Projects\Projects\WindowsFormsApplication1\WindowsFormsApplication1\Resources\ping data sets"; 
+
+            openFileDialog1.InitialDirectory = (new DirectoryInfo(pathtoresources)).ToString();
+            openFileDialog1.Filter = ".raw files (*.raw)|*.raw";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
 
@@ -153,7 +162,7 @@ namespace WindowsFormsApplication1
                         {
                             string line = rdr.ReadLine();
 
-                            if (!line.Contains("REM")) return;
+                            if (!line.Contains("Params:")) return;
 
                             string[] parameters = line.Split(' ');
 
@@ -215,6 +224,7 @@ namespace WindowsFormsApplication1
         private void resetScriptProcess()
         {
             lockScriptSettings(false);
+            backButton.Visible = false;
             lblTaskName.Text = "";
             
             setValuesButton.Text = "Validate Parameters";
@@ -223,7 +233,7 @@ namespace WindowsFormsApplication1
         public bool testURL(string host, int port)
         {
             int timeout = 10;
-            string data = "aaaa";
+            string data = "123";
             byte[] buffer = Encoding.ASCII.GetBytes(data);
 
             try

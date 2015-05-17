@@ -18,16 +18,12 @@ namespace WindowsFormsApplication1
             public ObjectId Id { get; set; }
             public string resultPath { get; set; }
 
-            public string paramss { get; set;  }
             public string paramss_taskname { get; set; }
             public string paramss_target { get; set; }
             public string paramss_packets { get; set; }
             public string paramss_interval { get; set; }
             public string paramss_startd { get; set; }
             public string paramss_endd { get; set; }
-            public int paramss_count { get; set; }
-      //      public string paramss_filepath
-
 
             [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
             public List<DateTime> y_time { get; set; }
@@ -82,10 +78,14 @@ namespace WindowsFormsApplication1
 
         public static class RegexObjects
         {
+
+     //       private static string re1_dateTime = @"(.*?)(\d{2}\/\d{2}\/\d{4})(.*?)(\d{1,2}:\d{1,2}.\d{1,2})";
+            
             private static string re1_dateTime = ".*?";	// Non-greedy match on filler
             private static string re2_dateTime = "((?:[0]?[1-9]|[1][012])[-:\\/.](?:(?:[0-2]?\\d{1})|(?:[3][01]{1}))[-:\\/.](?:(?:[1]{1}\\d{1}\\d{1}\\d{1})|(?:[2]{1}\\d{3})))(?![\\d])";	// MMDDYYYY 1
             private static string re3_dateTime = ".*?";	// Non-greedy match on filler
             private static string re4_dateTime = "((?:(?:[0-1][0-9])|(?:[2][0-3])|(?:[0-9])):(?:[0-5][0-9])(?::[0-5][0-9])?(?:\\s?(?:am|AM|pm|PM))?)";	// HourMinuteSec 1
+            
 
             private static string re1_rtt = ".*?";	// Non-greedy match on filler
             private static string re2_rtt = "(Average)";	// Word 1
@@ -130,9 +130,15 @@ namespace WindowsFormsApplication1
 
                                 StringBuilder sb = new StringBuilder();
 
-                                job.paramss = line;
+                           //     job.paramss = line;
 
-
+                                    job.paramss_taskname = parameters[2];
+                                    job.paramss_target= parameters[4];
+                                    job.paramss_packets= parameters[6];
+                                    job.paramss_interval= parameters[8];
+                                    job.paramss_startd= parameters[10];
+                                    job.paramss_endd= parameters[12];
+                                    
                                 while ((line = rdr.ReadLine()) != null)
                                 {
                                     if (string.IsNullOrWhiteSpace(line) || line.Contains("Pi") ||
@@ -151,7 +157,7 @@ namespace WindowsFormsApplication1
                                     {
                                         y_time.Add(DateTime.Parse(sb.ToString()));
 
-                                        Console.WriteLine(DateTime.Parse(sb.ToString()));
+                           //             Console.WriteLine(DateTime.Parse(sb.ToString()));
                                     }
                                     else if (rtt.Success)
                                     {
